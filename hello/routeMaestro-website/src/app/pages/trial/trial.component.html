@@ -1,0 +1,53 @@
+<!-- trial.component.html -->
+
+<main >
+    <!-- <app-cancel-package style="width: 100vw; height: 100vh;"></app-cancel-package> -->
+    <select [(ngModel)]="selectedItem" (ngModelChange)="logSelectedItem()">
+      <option *ngFor="let item of items" [ngValue]="item">{{ item.name }}</option>
+    </select>
+    
+    <p>Selected item: {{ selectedItem | json }}</p>
+
+    <input type="text " [(ngModel)]="name">
+    
+    <!-- <app-input-sidebar></app-input-sidebar> -->
+    <!-- your.component.html -->
+        <!-- your.component.html -->
+<!-- your.component.html -->
+<!-- <label for="datepicker">Select Date:</label>
+<div class="input-group">
+  <input
+    id="datepicker"
+    class="form-control"
+    placeholder="yyyy-mm-dd"
+    name="datepicker"
+    [ngModel]="selectedDate | date:'yyyy-MM-dd'"
+    (ngModelChange)="onDateChanged($event)"
+    ngbDatepicker
+    #dp="ngbDatepicker"
+    [minDate]="minDate"
+  />
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" (click)="toggleDatepicker(dp)">
+      <i class="fa fa-calendar"></i>
+    </button>
+  </div>
+</div>
+
+<ngb-datepicker
+  #dpPopup
+  [(ngModel)]="selectedDate"
+  (ngModelChange)="onDateChanged($event)"
+  [minDate]="minDate"
+  *ngIf="showDatepicker"
+></ngb-datepicker> -->
+
+
+    <!-- preview -->
+   <p>trial works</p>
+   <!-- Inside your component template -->
+<button (click)="shareOnGmail()">Share on Gmail</button>
+<!-- Inside your component template -->
+<button (click)="shareOnWhatsApp()">Share on WhatsApp</button>
+
+</main>

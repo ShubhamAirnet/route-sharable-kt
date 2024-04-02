@@ -1,0 +1,115 @@
+.first {
+    background-color: #03254A;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px solid white;
+    button {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #E24729;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+.person {
+    display: flex;
+    flex-direction: column;
+    small {
+        color: white;
+        padding-left: 10px;
+    }
+}
+.second {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+    width: 100%;
+    padding-bottom: 8px;
+}
+.price-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4px;
+    small {
+        color: white;
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+}
+.sub-details{
+    width: 150px;
+}
+.taxes-section {
+    width: 100%;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.taxes-section:hover {
+    background-color: #1A335E;
+}
+.taxes-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+}
+.third {
+    display: flex;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    p {
+        color: white;
+        font-weight: 600;
+    }
+}
+.fourth {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #E24729;
+}
+.fifth{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    span{
+        color: white;
+    }
+}
+
+.taxes-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 42px;
+}
+
+.v-arrow,
+.v-arrow-up {
+    width: 0;
+    height: 0;
+    border: 5px solid  transparent;
+}
+
+.v-arrow {
+    border-bottom-color: white;
+}
+
+.v-arrow-up {
+    border-top-color: white;
+}
+
+.arrow-hidden {
+    display: none;
+}

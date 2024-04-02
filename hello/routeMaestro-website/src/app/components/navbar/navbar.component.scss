@@ -1,0 +1,75 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-custom{
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff !important;
+  z-index: 1;
+  height: 68px;
+}
+.navbar-logo{
+  height: 65px;
+  padding-top: 5px;
+}
+.navbar-listitem{
+  margin-right: 23px;
+  margin-left: 23px;
+  
+  /* border: solid 1px red; */
+  a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #063E68;
+    font-weight: 500;
+  }
+}
+.navbar-leftside{
+  margin-left: 20px;
+}
+
+.navbar-rightside{
+  display: flex;
+  align-items: center;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+ padding: 0;
+}
+
+.btn-login{
+  border-radius: 5px;
+  background-color: #bf7408;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1.3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 80px;
+  border: 0;
+}
+.btn-signout{
+border-radius: 5px;
+background-color: #bf7408;
+color: #fff;
+font-size: 15px;
+letter-spacing: 1.3px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 35px;
+width: 75px;
+border: 0;
+}
+
+.btn-login:hover{
+background-color: #975a05;
+}
+.navbar-collapse{
+display: flex !important;
+align-items: center !important;
+justify-content: flex-end !important;
+}

@@ -1,0 +1,14 @@
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #339199; height: 100vh;">
+    <div class="card text-start p-md-5" style="border-radius: 9px;">
+        <div class="card-body" style="font-family: 'Lato', sans-serif; display: flex; flex-direction: column; justify-content: center;">
+            <h3 class="card-title"><span><a class="btn"><i class="fas fa-arrow-left fa-sm"></i></a></span> Enter OTP</h3>
+            <p class="card-subtitle text-muted pb-4">OTP has been sent to your Mobile number</p>
+            <!-- <p class="card-subtitle text-muted mb-2">91+ 9999999991 <span><a style="text-decoration: underline;">Edit</a></span></p> -->
+            <div class="my-4 d-flex justify-content-center">
+                <ng-otp-input name="otpInput" (onInputChange)="onOtpChange($event)" ngDefaultControl [config]="{length:6}" id="otp" [(ngModel)]="otp"></ng-otp-input>
+            </div>
+            <p class="text-muted mt-4">By clicking on continue, I agree to receive important information through Whatsapp and SMS.</p>
+            <button type="button" class="btn text-white p-3" style="background-color: #339199; border-radius: 12px;" (click)="verifyOtp()" [disabled]="verificationInProgress">Continue</button>
+        </div>
+    </div>
+</div>

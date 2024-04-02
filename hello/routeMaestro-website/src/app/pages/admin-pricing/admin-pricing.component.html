@@ -1,0 +1,503 @@
+<main class="main">
+
+    <div class="pricing-heading">
+        <h1>RouteMaestro Pricing Plans</h1>
+        <h3>A Plan For Your Every Plan</h3>
+        <h5>(No Credit Card Required)</h5>
+        <br>
+
+        <button type="button" *ngIf="!edit" class="btn btn-primary p-10" (click)="toggleEditable()">Edit</button>
+        <div class="d-flex justify-content-center" *ngIf="edit">
+            <button type="button" class="btn btn-primary p-10" (click)="toggleEditable()">Update</button>
+            <button type="button" class="btn btn-primary p-10" (click)="toggleEdit()">Cancel</button>
+        </div>
+       
+
+    </div>
+    <div class="container  pricing-main"  style="margin-bottom: 30px;">
+        <div class="d-flex container-all">
+            <div class="col">
+
+                <div class="col1">
+                    <div class="pricing-card">
+                     
+                    </div>
+                  
+                    <!-- Use *ngFor to iterate through planLayout keys -->
+                    <div *ngIf="planLayout">
+                        <div *ngFor="let item of planLayout; let i = index" class="pricing-block" style="height: 130px;">
+                          <h2 *ngIf="!edit">{{ item?.heading }}</h2>
+                          <input *ngIf="edit" [(ngModel)]="item.heading" />
+                      
+                          <div *ngFor="let value of item?.subtitles; let j = index">
+                            <span *ngIf="!edit">{{ value || '' }}</span>
+                            <input *ngIf="edit" [(ngModel)]="item.subtitles[j]" />
+                          </div>
+                      
+                          <!-- Add button to add new subtitle input -->
+                          <button *ngIf="true" (click)="addSubtitle(i)">+</button>
+                        </div>
+                      
+                        <button *ngIf="edit" (click)="addHeadingAndSubtitles(i)" style="height: 30px;
+                                        z-index: 999;
+                                        width: 50px;
+                                        margin-left: 30px;
+                                        border: 0;">+
+                        </button>
+                      </div>
+                    </div>
+                      
+
+            </div>
+
+            <!-- FREE ROUTEMAESTRO PLAN -->
+            <div class="col pricing-col-main">
+                <div class="col2 pricing-col-inner" >
+                    <div class="pricing-card" style="  background-color: #063e68;justify-content: space-evenly;">
+                        <h3 class="pricing-col-heading">Free</h3>
+                        <h5 *ngIf="!edit">₹{{pricing?.free}}/Month/User</h5>
+                        <input *ngIf="edit" [(ngModel)]="pricing.free" />
+                               
+                        <button type="button" class="btn btn-primary p-1 buyNow-btn" value="basic" >Start Trial</button>
+
+                    </div>
+                    <ng-container *ngFor="let item of planLayout">
+                        <div class="pricing-block-plans" style="height: 130px;">
+                            <ng-container >
+                              <h4 *ngIf="(!edit && item?.free!=='true') || edit"  >{{ item?.free || '-' }}</h4>
+                              <select *ngIf="edit" [(ngModel)]="item.free">
+                                <option value="Unlimited">Unlimited</option>
+                                <option value="true">True(tick)</option>
+                                <option value="" [ngValue]="undefined">-</option>
+                                <option  value="custom">Custom</option>
+                              </select>
+                              <input *ngIf="edit && item?.free==='custom'" [(ngModel)]="item.freeCustomValue" />
+                            
+                            </ng-container>
+                            <ng-container *ngIf="!edit && item?.free === 'true'; ">
+                            
+                              <img *ngIf="item.free === 'true'" src="../../../assets/img/brand/check-mark_5290058.png" class="correct-img" alt="" />
+                            </ng-container>
+                          
+                          </div>
+                          
+                      </ng-container>
+                </div>
+            </div>
+
+            <!-- BASIC ROUTE MAESTRO PLAN -->
+            <div class="col pricing-col-main">
+                <div class="col3 pricing-col-inner"  >
+                    <div class="pricing-card" style="  background-color: #063e68;">
+                        <h3>Route Maestro Basic</h3>
+                        <h5 *ngIf="!edit">₹{{pricing?.basic}}/Month/User</h5>
+                        <input *ngIf="edit" [(ngModel)]="pricing.basic" />
+                        <!-- <h5>₹8,500/Month/User</h5> -->
+                        <button type="button" class="btn btn-primary p-1 buyNow-btn" value="basic">Buy Now</button>
+                    </div>
+                    <!-- 1 -->
+                    <ng-container *ngFor="let item of planLayout">
+                        <div class="pricing-block-plans" style="height: 130px;">
+                            <ng-container >
+                              <h4 *ngIf="(!edit && item?.basic!=='true') || edit"  >{{ item?.basic || '-' }}</h4>
+                              <select *ngIf="edit" [(ngModel)]="item.basic">
+                                <option value="Unlimited">Unlimited</option>
+                                <option value="true">True(tick)</option>
+                                <option value="" >-</option>
+                                <option  value="custom">Custom</option>
+                              </select>
+                              <input *ngIf="edit && item?.basic==='custom'" [(ngModel)]="item.basicCustomValue" />
+                            
+                            </ng-container>
+                            <ng-container *ngIf="!edit && item?.basic === 'true'; ">
+                            
+                              <img *ngIf="item?.basic === 'true'" src="../../../assets/img/brand/check-mark_5290058.png" class="correct-img" alt="" />
+                            </ng-container>
+                          
+                          </div>
+                          
+                      </ng-container>
+                      
+                 
+                </div>
+            </div>
+            <div class="col pricing-col-main">
+                <div class="col4 pricing-col-inner" >
+                    <div class="pricing-card" style="background-color: #063e68;">
+                        <h3>Route Maestro Pro</h3>
+                        <h5 *ngIf="!edit">₹{{pricing?.pro}}/Month/User</h5>
+                        <input *ngIf="edit" [(ngModel)]="pricing.pro" />
+                        <button type="button" class="btn btn-primary p-1 buyNow-btn" value="pro" >Buy Now</button>
+                        
+                    </div>
+                    <!-- 1 -->
+                    <ng-container *ngFor="let item of planLayout">
+                        <div class="pricing-block-plans" style="height: 130px;">
+                            <ng-container >
+                              <h4 *ngIf="(!edit && item?.pro!=='true') || edit"  >{{ item?.pro || '-' }}</h4>
+                              <select *ngIf="edit" [(ngModel)]="item.pro">
+                                <option value="Unlimited">Unlimited</option>
+                                <option value="true">True(tick)</option>
+                                <option value="" >-</option>
+                                <option  value="custom">Custom</option>
+                              </select>
+                              <input *ngIf="edit && item?.pro==='custom'" [(ngModel)]="item.proCustomValue" />
+                            </ng-container>
+                            <ng-container *ngIf="!edit && item?.pro === 'true'; ">
+                            
+                              <img *ngIf="item?.pro === 'true'" src="../../../assets/img/brand/check-mark_5290058.png" class="correct-img" alt="" />
+                            </ng-container>
+                          
+                          </div>
+                          
+                      </ng-container>
+                </div>
+
+            </div>
+            <div class="col pricing-col-main w-25" *ngIf="edit">
+                <div class="col4 pricing-col-inner" style="background-color: #ffffff; box-shadow: none;">
+                    <div class="pricing-card w-50" >
+                        
+                        
+                    </div>
+                    <!-- 1 -->
+                    <ng-container *ngFor="let item of planLayout; let i = index">
+                        
+                          <div class="pricing-block w-50" style="height: 130px; border-bottom: 0;">
+                            <button type="button" class="btn btn-outline-danger" (click)="removeBtn(i)">Remove</button>
+                          </div>
+                        
+                      </ng-container>
+                      
+                      
+                </div>
+
+            </div>
+
+           
+        </div>
+    </div>
+    
+
+
+    <!-- ////////////////////////////////////////////////// -->
+
+    <div class="all-plans-smaller-screens" >
+
+        <!-- free plan -->
+        <div class="plan">
+            <div class="plan-brief" (click)="toggleAnswer1()"> 
+                <h2>Free</h2>
+
+            </div>
+            <div class=" plan-inclusions" *ngIf="isAnswerVisible1" [@fadeInOut]>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>Agency CRM Software</h2>
+                        <h3>Enquiry & Branch Management</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>Create  your own professional itineraries</h2>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>Unlimited</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>generate customized ai itineraries</h2>
+                        <h3>• Highly Convertible Itineraries</h3>
+                        <h3>• Use Your Own Company Logo</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>3</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>GENERATE REAL TIME PACKAGES</h2>
+                        <h3>• 10Lakh + Hotels</h3>
+                        <h3>
+                            • 17+ Airlines</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div> 
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>ONLINE PAYMENT COLLECTION FACILITY</h2>
+                       
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>REAL TIME AVAILABILTY & INSTANT BOOKING</h2>
+                        
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>EXCLUSIVE INVENTORY RATES</h2>
+                        <h3>
+                            • 0% Platform Commission On Booking</h3>
+                            <h3> • Agent Coommissionable Rates</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>DEMOGRAPHICALLY UNRESTRICTED SERVICE AREA</h2>
+                        
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- basic routeMaestro -->
+        <div class="plan">
+            <div class="plan-brief" (click)="toggleAnswer2()"> 
+                <h2>Basic RouteMaestro</h2>
+                    <h4> ₹5,500/MONTH/USER </h4>
+                    <button type="button" class="btn btn-primary p-1 buyNow-btn" value="basic" >Buy Now</button>
+
+            </div>
+            <div class=" plan-inclusions" *ngIf="isAnswerVisible2" [@fadeInOut]>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>Agency CRM Software</h2>
+                        <h3>Enquiry & Branch Management</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <img src="../../../assets/img/brand/check-mark_5290058.png" alt="">
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>Create  your own professional itineraries</h2>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>25</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>generate customized ai itineraries</h2>
+                        <h3>• Highly Convertible Itineraries</h3>
+                        <h3>• Use Your Own Company Logo</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>25</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>GENERATE REAL TIME PACKAGES</h2>
+                        <h3>• 10Lakh + Hotels</h3>
+                        <h3>
+                            • 17+ Airlines</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div> 
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>ONLINE PAYMENT COLLECTION FACILITY</h2>
+                       
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>REAL TIME AVAILABILTY & INSTANT BOOKING</h2>
+                        
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>EXCLUSIVE INVENTORY RATES</h2>
+                        <h3>
+                            • 0% Platform Commission On Booking</h3>
+                            <h3> • Agent Coommissionable Rates</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>DEMOGRAPHICALLY UNRESTRICTED SERVICE AREA</h2>
+                        
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>-</p>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+
+        <!-- routeMaestro Pro -->
+        <div class="plan">
+            <div class="plan-brief" (click)="toggleAnswer3()"> 
+                <h2>RouteMaestro Pro</h2>
+                <h4> 
+                    ₹ 10,500/MONTH/USER </h4>
+                    <button type="button" class="btn btn-primary p-1 buyNow-btn" value="pro" >Buy Now</button>
+
+            </div>
+            <div class=" plan-inclusions" *ngIf="isAnswerVisible3"  [@fadeInOut]>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>Agency CRM Software</h2>
+                        <h3>Enquiry & Branch Management</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <img src="../../../assets/img/brand/check-mark_5290058.png" alt="">
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>Create  your own professional itineraries</h2>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>Unlimited</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>generate customized ai itineraries</h2>
+                        <h3>• Highly Convertible Itineraries</h3>
+                        <h3>• Use Your Own Company Logo</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>Unlimited</p>
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>GENERATE REAL TIME PACKAGES</h2>
+                        <h3>• 10Lakh + Hotels</h3>
+                        <h3>
+                            • 17+ Airlines</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <p>Unlimited</p>
+                    </div>                    
+
+                </div> 
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>ONLINE PAYMENT COLLECTION FACILITY</h2>
+                       
+                    </div>
+                    <div class="plan-specific-answer">
+                       <img src="../../../assets/img/brand/check-mark_5290058.png" alt="">
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>REAL TIME AVAILABILTY & INSTANT BOOKING</h2>
+                        
+                    </div>
+                    <div class="plan-specific-answer">
+                        <img src="../../../assets/img/brand/check-mark_5290058.png" alt="">
+
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>EXCLUSIVE INVENTORY RATES</h2>
+                        <h3>
+                            • 0% Platform Commission On Booking</h3>
+                            <h3> • Agent Coommissionable Rates</h3>
+                    </div>
+                    <div class="plan-specific-answer">
+                        <img src="../../../assets/img/brand/check-mark_5290058.png" alt="">
+
+                    </div>                    
+
+                </div>
+                <div class="plan-description" >
+
+                    <div class="plan-specific-heading">
+                        <h2>DEMOGRAPHICALLY UNRESTRICTED SERVICE AREA</h2>
+                        
+                    </div>
+                    <div class="plan-specific-answer">
+                        <img src="../../../assets/img/brand/check-mark_5290058.png" alt="">
+
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>

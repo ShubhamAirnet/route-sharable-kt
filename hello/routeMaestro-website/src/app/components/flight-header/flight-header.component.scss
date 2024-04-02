@@ -1,0 +1,84 @@
+
+.container{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+
+.box{
+    height: fit-content;
+    width: fit-content;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+
+.item{
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 100%;
+    
+}
+
+.containers {
+    height: 100%;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 715px;
+    overflow-x: scroll;
+}
+
+.containers::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+    height: 5px; /* Height of the scrollbar */
+    border-radius: 5px;
+  }
+  
+  .containers::-webkit-scrollbar-thumb {
+    background-color: #E2472B; /* Color of the scrollbar thumb */
+  }
+  
+  .containers::-webkit-scrollbar-track {
+    background-color: #888; /* Color of the scrollbar track */
+  }
+
+/* Style the scrollbar for WebKit browsers */
+
+
+
+
+.cardss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    height: 75%;
+    width: 130px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    span{
+        font-size: 0.7rem;
+    }
+}

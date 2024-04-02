@@ -1,0 +1,120 @@
+
+<main>
+    <div class="container">
+        <div class="head">
+            <span>Flters</span>
+        </div>
+        
+            <div class="content">
+                <div class="airline">
+                    <span style="font-weight: 600;">Refundibility</span>
+                    <div class="box">
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleRefundable($event.target.checked)" >
+                        <span>Refundable</span>
+                      </div>
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleNonRefundable($event.target.checked)" >
+                        <span>Non Refundable</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="airline">
+                    <span style="font-weight: 600;">Cost Carriers</span>
+                    <div class="box">
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleLCC($event.target.checked)" >
+                        <span>LCC</span>
+                      </div>
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleNonLCC($event.target.checked)" >
+                        <span>Non LCC</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="airline">
+                    <span style="font-weight: 600;">No Of Stops</span>
+                    <div class="box">
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleStops(0,$event.target.checked)" >
+                        <span>0</span>
+                      </div>
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleStops(1,$event.target.checked)" >
+                        <span>1</span>
+                      </div>
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleStops(2,$event.target.checked)" >
+                        <span>2</span>
+                      </div>
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleStops(3,$event.target.checked)" >
+                        <span>3</span>
+                      </div>
+                      <div class="item">
+                        <input type="checkbox" (change)="toggleStops(null,$event.target.checked)">
+                        <span>3 or more</span>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="airline">
+                    <span style="font-weight: 600;">Cabin Class</span>
+                    <div class="box">
+                      <div class="item">
+                        <input type="radio" name="cabinClass" (change)="toggleCabin(1,$event.target.checked)" >
+                        <span>All</span>
+                      </div>
+                      <div class="item">
+                        <input type="radio" name="cabinClass" (change)="toggleCabin(2,$event.target.checked)" >
+                        <span>Economy</span>
+                      </div>
+                      <div class="item">
+                        <input type="radio" name="cabinClass" (change)="toggleCabin(3,$event.target.checked)" >
+                        <span>Premium Economy</span>
+                      </div>
+                      <div class="item">
+                        <input type="radio" name="cabinClass" (change)="toggleCabin(4,$event.target.checked)" >
+                        <span>Business</span>
+                      </div>
+                      <div class="item">
+                        <input type="radio" name="cabinClass" (change)="toggleCabin(5,$event.target.checked)" >
+                        <span>Premium Business</span>
+                      </div>
+                      <div class="item">
+                        <input type="radio" name="cabinClass" (change)="toggleCabin(6,$event.target.checked)">
+                        <span>First</span>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="airline">
+                    <span style="font-weight: 600;">Airlines</span>
+                    <div class="box">
+                     <ng-container *ngFor="let item of airlineNames">
+                      <div class="item">
+                        <input type="checkbox" (change)="updateNamesArray(item, $event.target.checked)">
+                        <span>{{item}}</span>
+                      </div>
+                     </ng-container>
+                    </div>
+                  </div>
+                  <div class="airline">
+                    <span style="font-weight: 600;">Layovers</span>
+                    <div class="box">
+                     <ng-container *ngFor="let item of layoffNames">
+                      <div class="item">
+                        <input type="checkbox" (change)="updateLayoffArray(item, $event.target.checked)">
+                        <span>{{item}}</span>
+                      </div>
+                     </ng-container>
+                    </div>
+                  </div>
+            </div>
+
+       
+    </div>
+</main>

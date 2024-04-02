@@ -1,0 +1,26 @@
+<main>
+    <div class="sub-container" (click)="close()"></div>
+    <div class="container">
+        <div class="head">
+            <span style="padding-left: 15px;">Terms & Conditions</span>
+            <span style="padding-right: 15px;" (click)="close()">X</span>
+        </div>
+        <div class="navbars">
+            <div class="item" (click)="packageBox()" [class.selected]="selectedItem === 'package'">
+                <span>Package Cancellation</span>
+            </div>
+            <div class="item" (click)="hotelBox()" [class.selected]="selectedItem === 'hotel'">
+                <span>Hotel Cancellation</span>
+            </div>
+            <div class="item" (click)="flightBox()" [class.selected]="selectedItem === 'flight'">
+                <span>Flight Cancellation</span>
+            </div>
+            
+        </div>
+        <div class="content">
+           <app-package-cancellation *ngIf="package" [hotelData]="hotelData" [flightData]="flightData" (flightBox)="flightBox()" ></app-package-cancellation>
+           <app-hotel-cancel *ngIf="hotel" [hotelData]="hotelData"></app-hotel-cancel>
+           <app-flight-cancel *ngIf="flight"></app-flight-cancel>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,108 @@
+<!-- form-component.component.html -->
+<app-admin-navbar></app-admin-navbar>
+
+<div class="d-flex w-100">
+
+  <div *ngIf="activeFeature==='addNewMember'" style="width: 100%;">
+    
+    <form #myForm="ngForm" class="main-content w-100 p-5 ml-30" (ngSubmit)="onSubmit(myForm.value)">
+      <div class="toggle-container">
+        <button class ="toggle" mat-raised-button color="primary" (click)="toggleFeature('addNewMember')" [class.active]="activeFeature === 'addNewMember'">
+          Add New Member
+        </button>
+      
+        <button class ="toggle" mat-raised-button color="primary" (click)="toggleFeature('activeUsers')" [class.active]="activeFeature === 'activeUsers'">
+          Active Users
+        </button>
+      </div>
+        
+        <div class="form-group">
+          <label for="exampleInputName">Name</label>
+          <input type="text" class="form-control" id="exampleInputName" name="name" ngModel required placeholder="Enter name">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputPhone">Phone</label>
+          <input type="number" class="form-control" id="exampleInputPhone" name="phone" ngModel required placeholder="Enter Phone Number">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" ngModel required placeholder="Enter email">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel required placeholder="Password">
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputPhone">Select Plan</label>
+          <select class="form-group w-100" name="plan" ngModel required>
+            <option disabled selected>Select Plan</option>
+            <option>Free</option>
+            <option>Basic</option>
+            <option>Pro</option>
+          </select>
+        </div>
+       
+        <div class="form-group">
+            <label for="exampleInputPhone">No. of active days</label>
+            <input type="number" class="form-control" id="exampleInputDays" name="days" ngModel required placeholder="Enter Number of days">
+          </div>
+          <div >
+            <small>A mail will be sent to the user with it email and password</small>
+  
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  
+    <div *ngIf="activeFeature==='activeUsers'" style="width: 80%;">
+      <div class="main-content w-100 p-5  "> 
+        <div class="toggle-container">
+          <button class ="toggle" mat-raised-button color="primary" (click)="toggleFeature('addNewMember')" [class.active]="activeFeature === 'addNewMember'">
+            Add New Member
+          </button>
+        
+          <button class ="toggle" mat-raised-button color="primary" (click)="toggleFeature('activeUsers')" [class.active]="activeFeature === 'activeUsers'">
+            Active Users
+          </button>
+        </div>
+        <div class="search">
+          <div>
+            <input type="text" placeholder="Search" [(ngModel)]="search" (input)="onSearchChange($event)" name="" id="" />
+          </div>
+          <div class="search-icon">
+            <img src="../../../assets/img/brand/search-icon.svg" alt="" />
+          </div>
+        </div>
+    
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Status</th>
+              <th scope="col">Plan</th>
+              <th scope="col">End Date</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="users && users.length > 0">
+           
+            <tr *ngFor="let element of users">
+          
+              <td>{{ element.userDetails.name }}</td>
+              <td>{{ element.userDetails.phone}}</td>
+              <td>{{ element.planDetails.status }}</td>
+              <td>{{ element.planDetails.plan }}</td>
+              <td>{{ element.planDetails.end_date }}</td>
+            </tr>
+      
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>

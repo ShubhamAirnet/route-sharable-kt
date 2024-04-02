@@ -1,0 +1,962 @@
+{
+  "data": {
+    "GetHotelRoomResult": {
+      "ResponseStatus": 1,
+      "Error": {
+        "ErrorCode": 0,
+        "ErrorMessage": ""
+      },
+      "TraceId": "e51f2034-5b30-4d65-9bde-d79a92cf8360",
+      "IsUnderCancellationAllowed": true,
+      "IsPolicyPerStay": false,
+      "HotelRoomsDetails": [
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 5,
+          "RoomTypeCode": "DBL.ST_3_20240422|20240427|W|207|57339|DBL.ST|NRF-BAR RO|RO||1~2~0||P",
+          "RoomDescription": "DOUBLE STANDARD",
+          "RoomTypeName": "DOUBLE STANDARD",
+          "RatePlanCode": "20240422|20240427|W|207|57339|DBL.ST|NRF-BAR RO|RO||1~2~0||P^#^3",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "3",
+          "DayRates": [
+            {
+              "Amount": 5296.51,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 5296.51,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 5296.51,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 4435.66,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 7141.15,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 27466.36,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 1156.48,
+            "Discount": 0,
+            "PublishedPrice": 30068.44,
+            "PublishedPriceRoundedOff": 30068,
+            "OfferedPrice": 28622.84,
+            "OfferedPriceRoundedOff": 28623,
+            "AgentCommission": 1445.6,
+            "AgentMarkUp": 0,
+            "ServiceTax": 208.17,
+            "TCS": 0,
+            "TDS": 578.24,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 208.166,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 208.166,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 1156.48
+            }
+          },
+          "RoomPromotion": "Exclusive discount|Non-refundable rate. No amendments permitted|",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "155",
+              "BedTypeDescription": "King-size bed 150-183 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-01-28T23:59:59",
+          "CancellationPolicies": [
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-01-29T00:00:00",
+              "ToDate": "2024-04-22T00:00:00"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-22T00:00:01",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-01-29T00:00:00",
+          "CancellationPolicy": "DOUBLE STANDARD#^#100.00% of total amount will be charged, If cancelled between 29-Jan-2024 00:00:00 and 22-Apr-2024 00:00:00.|100.00% of total amount will be charged, If cancelled between 22-Apr-2024 00:00:01 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 6,
+          "RoomTypeCode": "DBL.ST_3_20240422|20240427|W|207|57339|DBL.ST|CG-BAR RO|RO||1~2~0||P",
+          "RoomDescription": "DOUBLE STANDARD",
+          "RoomTypeName": "DOUBLE STANDARD",
+          "RatePlanCode": "20240422|20240427|W|207|57339|DBL.ST|CG-BAR RO|RO||1~2~0||P^#^3",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "3",
+          "DayRates": [
+            {
+              "Amount": 5885.01,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 5885.01,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 5885.01,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 4928.53,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 7934.62,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 30518.16,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 1284.97,
+            "Discount": 0,
+            "PublishedPrice": 33409.35,
+            "PublishedPriceRoundedOff": 33409,
+            "OfferedPrice": 31803.13,
+            "OfferedPriceRoundedOff": 31803,
+            "AgentCommission": 1606.22,
+            "AgentMarkUp": 0,
+            "ServiceTax": 231.3,
+            "TCS": 0,
+            "TDS": 642.49,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 231.2955,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 231.2955,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 1284.97
+            }
+          },
+          "RoomPromotion": "Exclusive discount|",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "155",
+              "BedTypeDescription": "King-size bed 150-183 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-02-02T00:00:00",
+          "CancellationPolicies": [
+            {
+              "Charge": 6204,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-02-03T00:00:00",
+              "ToDate": "2024-04-18T23:59:59"
+            },
+            {
+              "Charge": 32124,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-04-19T00:00:00",
+              "ToDate": "2024-04-19T23:59:59"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-20T00:00:00",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-02-02T00:00:00",
+          "CancellationPolicy": "DOUBLE STANDARD#^#INR 6204.00 will be charged, If cancelled between 03-Feb-2024 00:00:00 and 18-Apr-2024 23:59:59.|INR 32124.00 will be charged, If cancelled between 19-Apr-2024 00:00:00 and 19-Apr-2024 23:59:59.|100.00% of total amount will be charged, If cancelled between 20-Apr-2024 00:00:00 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 7,
+          "RoomTypeCode": "TPL.SU_4_20240422|20240427|W|207|57339|TPL.SU|NRF-BAR RO|RO||1~3~0||N",
+          "RoomDescription": "TRIPLE SUPERIOR",
+          "RoomTypeName": "TRIPLE SUPERIOR",
+          "RatePlanCode": "20240422|20240427|W|207|57339|TPL.SU|NRF-BAR RO|RO||1~3~0||N^#^4",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "4",
+          "DayRates": [
+            {
+              "Amount": 7855.11,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 7855.11,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 7855.11,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 6488.7,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 9904.74,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 39958.79,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 1682.48,
+            "Discount": 0,
+            "PublishedPrice": 43744.37,
+            "PublishedPriceRoundedOff": 43744,
+            "OfferedPrice": 41641.27,
+            "OfferedPriceRoundedOff": 41641,
+            "AgentCommission": 2103.1,
+            "AgentMarkUp": 0,
+            "ServiceTax": 302.85,
+            "TCS": 0,
+            "TDS": 841.24,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 302.8457,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 302.8457,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 1682.48
+            }
+          },
+          "RoomPromotion": "Non-refundable rate. No amendments permitted|",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "150",
+              "BedTypeDescription": "Double bed 131-150 width"
+            },
+            {
+              "BedTypeCode": "1",
+              "BedTypeDescription": "Single bed 80-130 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-01-28T23:59:59",
+          "CancellationPolicies": [
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-01-29T00:00:00",
+              "ToDate": "2024-04-22T00:00:00"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-22T00:00:01",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-01-29T00:00:00",
+          "CancellationPolicy": "TRIPLE SUPERIOR#^#100.00% of total amount will be charged, If cancelled between 29-Jan-2024 00:00:00 and 22-Apr-2024 00:00:00.|100.00% of total amount will be charged, If cancelled between 22-Apr-2024 00:00:01 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 8,
+          "RoomTypeCode": "TPL.SU_4_20240422|20240427|W|207|57339|TPL.SU|CG-BAR RO|RO||1~3~0||N",
+          "RoomDescription": "TRIPLE SUPERIOR",
+          "RoomTypeName": "TRIPLE SUPERIOR",
+          "RatePlanCode": "20240422|20240427|W|207|57339|TPL.SU|CG-BAR RO|RO||1~3~0||N^#^4",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "4",
+          "DayRates": [
+            {
+              "Amount": 8727.91,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 8727.91,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 8727.91,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 7209.68,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 11005.26,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 44398.65,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 1869.42,
+            "Discount": 0,
+            "PublishedPrice": 48604.84,
+            "PublishedPriceRoundedOff": 48605,
+            "OfferedPrice": 46268.07,
+            "OfferedPriceRoundedOff": 46268,
+            "AgentCommission": 2336.77,
+            "AgentMarkUp": 0,
+            "ServiceTax": 336.5,
+            "TCS": 0,
+            "TDS": 934.71,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 336.4951,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 336.4951,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 1869.42
+            }
+          },
+          "RoomPromotion": "",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "150",
+              "BedTypeDescription": "Double bed 131-150 width"
+            },
+            {
+              "BedTypeCode": "1",
+              "BedTypeDescription": "Single bed 80-130 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-02-02T00:00:00",
+          "CancellationPolicies": [
+            {
+              "Charge": 9194,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-02-03T00:00:00",
+              "ToDate": "2024-04-18T23:59:59"
+            },
+            {
+              "Charge": 46735,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-04-19T00:00:00",
+              "ToDate": "2024-04-19T23:59:59"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-20T00:00:00",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-02-02T00:00:00",
+          "CancellationPolicy": "TRIPLE SUPERIOR#^#INR 9194.00 will be charged, If cancelled between 03-Feb-2024 00:00:00 and 18-Apr-2024 23:59:59.|INR 46735.00 will be charged, If cancelled between 19-Apr-2024 00:00:00 and 19-Apr-2024 23:59:59.|100.00% of total amount will be charged, If cancelled between 20-Apr-2024 00:00:00 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 1,
+          "RoomTypeCode": "QUA.SU_1_20240422|20240427|W|207|57339|QUA.SU|NRF-BAR RO|RO||1~2~2|4~5|N",
+          "RoomDescription": "QUADRUPLE SUPERIOR",
+          "RoomTypeName": "QUADRUPLE SUPERIOR",
+          "RatePlanCode": "20240422|20240427|W|207|57339|QUA.SU|NRF-BAR RO|RO||1~2~2|4~5|N^#^1",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "1",
+          "DayRates": [
+            {
+              "Amount": 9824.69,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 9824.69,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 9824.69,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 8116.66,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 11874.28,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 49465.02,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 2082.74,
+            "Discount": 0,
+            "PublishedPrice": 54151.18,
+            "PublishedPriceRoundedOff": 54151,
+            "OfferedPrice": 51547.76,
+            "OfferedPriceRoundedOff": 51548,
+            "AgentCommission": 2603.42,
+            "AgentMarkUp": 0,
+            "ServiceTax": 374.89,
+            "TCS": 0,
+            "TDS": 1041.37,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 374.8926,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 374.8926,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 2082.74
+            }
+          },
+          "RoomPromotion": "Non-refundable rate. No amendments permitted|",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "150",
+              "BedTypeDescription": "Double bed 131-150 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-01-28T23:59:59",
+          "CancellationPolicies": [
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-01-29T00:00:00",
+              "ToDate": "2024-04-22T00:00:00"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-22T00:00:01",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-01-29T00:00:00",
+          "CancellationPolicy": "QUADRUPLE SUPERIOR#^#100.00% of total amount will be charged, If cancelled between 29-Jan-2024 00:00:00 and 22-Apr-2024 00:00:00.|100.00% of total amount will be charged, If cancelled between 22-Apr-2024 00:00:01 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 3,
+          "RoomTypeCode": "QUA.SU_2_20240422|20240427|W|207|57339|QUA.SU|NRF-BAR RO|RO||1~2~2|3~5|N",
+          "RoomDescription": "QUADRUPLE SUPERIOR",
+          "RoomTypeName": "QUADRUPLE SUPERIOR",
+          "RatePlanCode": "20240422|20240427|W|207|57339|QUA.SU|NRF-BAR RO|RO||1~2~2|3~5|N^#^2",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "2",
+          "DayRates": [
+            {
+              "Amount": 9824.69,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 9824.69,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 9824.69,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 8116.66,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 11874.28,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 49465.02,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 2082.74,
+            "Discount": 0,
+            "PublishedPrice": 54151.18,
+            "PublishedPriceRoundedOff": 54151,
+            "OfferedPrice": 51547.76,
+            "OfferedPriceRoundedOff": 51548,
+            "AgentCommission": 2603.42,
+            "AgentMarkUp": 0,
+            "ServiceTax": 374.89,
+            "TCS": 0,
+            "TDS": 1041.37,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 374.8926,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 374.8926,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 2082.74
+            }
+          },
+          "RoomPromotion": "Non-refundable rate. No amendments permitted|",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "150",
+              "BedTypeDescription": "Double bed 131-150 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-01-28T23:59:59",
+          "CancellationPolicies": [
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-01-29T00:00:00",
+              "ToDate": "2024-04-22T00:00:00"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-22T00:00:01",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-01-29T00:00:00",
+          "CancellationPolicy": "QUADRUPLE SUPERIOR#^#100.00% of total amount will be charged, If cancelled between 29-Jan-2024 00:00:00 and 22-Apr-2024 00:00:00.|100.00% of total amount will be charged, If cancelled between 22-Apr-2024 00:00:01 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 2,
+          "RoomTypeCode": "QUA.SU_1_20240422|20240427|W|207|57339|QUA.SU|CG-BAR RO|RO||1~2~2|4~5|N",
+          "RoomDescription": "QUADRUPLE SUPERIOR",
+          "RoomTypeName": "QUADRUPLE SUPERIOR",
+          "RatePlanCode": "20240422|20240427|W|207|57339|QUA.SU|CG-BAR RO|RO||1~2~2|4~5|N^#^1",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "1",
+          "DayRates": [
+            {
+              "Amount": 10916.31,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 10916.31,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 10916.31,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 9018.51,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 13193.66,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 54961.1,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 2314.15,
+            "Discount": 0,
+            "PublishedPrice": 60167.94,
+            "PublishedPriceRoundedOff": 60168,
+            "OfferedPrice": 57275.25,
+            "OfferedPriceRoundedOff": 57275,
+            "AgentCommission": 2892.69,
+            "AgentMarkUp": 0,
+            "ServiceTax": 416.55,
+            "TCS": 0,
+            "TDS": 1157.08,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 416.5473,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 416.5473,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 2314.15
+            }
+          },
+          "RoomPromotion": "",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "150",
+              "BedTypeDescription": "Double bed 131-150 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-02-02T00:00:00",
+          "CancellationPolicies": [
+            {
+              "Charge": 11494,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-02-03T00:00:00",
+              "ToDate": "2024-04-18T23:59:59"
+            },
+            {
+              "Charge": 57854,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-04-19T00:00:00",
+              "ToDate": "2024-04-19T23:59:59"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-20T00:00:00",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-02-02T00:00:00",
+          "CancellationPolicy": "QUADRUPLE SUPERIOR#^#INR 11494.00 will be charged, If cancelled between 03-Feb-2024 00:00:00 and 18-Apr-2024 23:59:59.|INR 57854.00 will be charged, If cancelled between 19-Apr-2024 00:00:00 and 19-Apr-2024 23:59:59.|100.00% of total amount will be charged, If cancelled between 20-Apr-2024 00:00:00 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        },
+        {
+          "AvailabilityType": "Confirm",
+          "ChildCount": 0,
+          "RequireAllPaxDetails": true,
+          "RoomId": 0,
+          "RoomStatus": 0,
+          "RoomIndex": 4,
+          "RoomTypeCode": "QUA.SU_2_20240422|20240427|W|207|57339|QUA.SU|CG-BAR RO|RO||1~2~2|3~5|N",
+          "RoomDescription": "QUADRUPLE SUPERIOR",
+          "RoomTypeName": "QUADRUPLE SUPERIOR",
+          "RatePlanCode": "20240422|20240427|W|207|57339|QUA.SU|CG-BAR RO|RO||1~2~2|3~5|N^#^2",
+          "RatePlan": 13,
+          "RatePlanName": "Room Only",
+          "InfoSource": "OpenCombination",
+          "SequenceNo": "2",
+          "DayRates": [
+            {
+              "Amount": 10916.31,
+              "Date": "2024-04-22T00:00:00"
+            },
+            {
+              "Amount": 10916.31,
+              "Date": "2024-04-23T00:00:00"
+            },
+            {
+              "Amount": 10916.31,
+              "Date": "2024-04-24T00:00:00"
+            },
+            {
+              "Amount": 9018.51,
+              "Date": "2024-04-25T00:00:00"
+            },
+            {
+              "Amount": 13193.66,
+              "Date": "2024-04-26T00:00:00"
+            }
+          ],
+          "IsPerStay": false,
+          "SupplierPrice": null,
+          "Price": {
+            "CurrencyCode": "INR",
+            "RoomPrice": 54961.1,
+            "Tax": 0,
+            "ExtraGuestCharge": 0,
+            "ChildCharge": 0,
+            "OtherCharges": 2314.15,
+            "Discount": 0,
+            "PublishedPrice": 60167.94,
+            "PublishedPriceRoundedOff": 60168,
+            "OfferedPrice": 57275.25,
+            "OfferedPriceRoundedOff": 57275,
+            "AgentCommission": 2892.69,
+            "AgentMarkUp": 0,
+            "ServiceTax": 416.55,
+            "TCS": 0,
+            "TDS": 1157.08,
+            "ServiceCharge": 0,
+            "TotalGSTAmount": 416.5473,
+            "GST": {
+              "CGSTAmount": 0,
+              "CGSTRate": 0,
+              "CessAmount": 0,
+              "CessRate": 0,
+              "IGSTAmount": 416.5473,
+              "IGSTRate": 18,
+              "SGSTAmount": 0,
+              "SGSTRate": 0,
+              "TaxableAmount": 2314.15
+            }
+          },
+          "RoomPromotion": "",
+          "Amenities": [
+            "ROOM ONLY"
+          ],
+          "Amenity": [
+            "Wi-fi"
+          ],
+          "SmokingPreference": "NoPreference",
+          "BedTypes": [
+            {
+              "BedTypeCode": "150",
+              "BedTypeDescription": "Double bed 131-150 width"
+            }
+          ],
+          "HotelSupplements": [],
+          "LastCancellationDate": "2024-02-02T00:00:00",
+          "CancellationPolicies": [
+            {
+              "Charge": 11494,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-02-03T00:00:00",
+              "ToDate": "2024-04-18T23:59:59"
+            },
+            {
+              "Charge": 57854,
+              "ChargeType": 1,
+              "Currency": "INR",
+              "FromDate": "2024-04-19T00:00:00",
+              "ToDate": "2024-04-19T23:59:59"
+            },
+            {
+              "Charge": 100,
+              "ChargeType": 2,
+              "Currency": "INR",
+              "FromDate": "2024-04-20T00:00:00",
+              "ToDate": "2024-04-27T23:59:59"
+            }
+          ],
+          "LastVoucherDate": "2024-02-02T00:00:00",
+          "CancellationPolicy": "QUADRUPLE SUPERIOR#^#INR 11494.00 will be charged, If cancelled between 03-Feb-2024 00:00:00 and 18-Apr-2024 23:59:59.|INR 57854.00 will be charged, If cancelled between 19-Apr-2024 00:00:00 and 19-Apr-2024 23:59:59.|100.00% of total amount will be charged, If cancelled between 20-Apr-2024 00:00:00 and 27-Apr-2024 23:59:59.|#!#",
+          "Inclusion": [
+            "ROOM ONLY"
+          ],
+          "IsPassportMandatory": false,
+          "IsPANMandatory": true
+        }
+      ],
+      "RoomCombinations": {
+        "InfoSource": "OpenCombination",
+        "IsPolicyPerStay": false,
+        "RoomCombination": [
+          {
+            "RoomIndex": [
+              1,
+              2
+            ]
+          },
+          {
+            "RoomIndex": [
+              3,
+              4
+            ]
+          },
+          {
+            "RoomIndex": [
+              5,
+              6
+            ]
+          },
+          {
+            "RoomIndex": [
+              7,
+              8
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

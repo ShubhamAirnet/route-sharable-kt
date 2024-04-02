@@ -1,0 +1,72 @@
+ "SeatDynamic" =[
+    {
+      "SegmentSeat": [
+        {
+          "RowSeats": [
+            {
+              "Seats": [
+                {
+                  "AirlineCode": "6E",
+                  "FlightNumber": "23",
+                  "CraftType": "A320",
+                  "Origin": "DEL",
+                  "Destination": "DXB",
+                  "AvailablityType": 0,
+                  "Description": 2,
+                  "Code": "NoSeat",
+                  "RowNo": "0",
+                  "SeatNo": null,
+                  "SeatType": 0,
+                  "SeatWayType": 2,
+                  "Compartment": 0,
+                  "Deck": 0,
+                  "Currency": "INR",
+                  "Price": 0
+                }
+              ]
+            },
+            {
+              "Seats": [
+                {
+                  "AirlineCode": "6E",
+                  "FlightNumber": "23",
+                  "CraftType": "A320",
+                  "Origin": "DEL",
+                  "Destination": "DXB",
+                  "AvailablityType": 3,
+                  "Description": 2,
+                  "Code": "1A",
+                  "RowNo": "1",
+                  "SeatNo": "A",
+                  "SeatType": 1,
+                  "SeatWayType": 2,
+                  "Compartment": 1,
+                  "Deck": 1,
+                  "Currency": "INR",
+                  "Price": 1000
+                },
+                {
+                  "AirlineCode": "6E",
+                  "FlightNumber": "23",
+                  "CraftType": "A320",
+                  "Origin": "DEL",
+                  "Destination": "DXB",
+                  "AvailablityType": 3,
+                  "Description": 2,
+                  "Code": "1B",
+                  "RowNo": "1",
+                  "SeatNo": "B",
+                  "SeatType": 3,
+                  "SeatWayType": 2,
+                  "Compartment": 1,
+                  "Deck": 1,
+                  "Currency": "INR",
+                  "Price": 1000
+               }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+]

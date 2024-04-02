@@ -1,0 +1,77 @@
+
+<div *ngIf="isHotelInfo">
+    <app-hotel-info (closeDialog)="showHotelInfo()" [nationality]="nationality" [countryCode]="countryCode" [cityId]="cityId" [checkOutDate]="checkOutDate" [cityName]="cityName" [RoomGuests]="RoomGuests" [hotelOnDisplayDetails]="hotel" (finalRoomsArrChange)="gotFinalRoomsArr($event)" ></app-hotel-info>
+  </div>
+        
+        <div class="cards" >
+      
+          <div class="left">
+            <img src="{{hotel?.search?.HotelPicture}}" />
+          </div>
+          <div class="middle">
+            <div>
+              <div style="width: 300px; height: 75px; padding: 0; padding-left: 10px; display: flex; flex-direction: column;">
+                <h4>{{hotel?.search?.HotelName}}</h4>
+                <small>{{cityName}}</small>
+                <small style="text-decoration: underline;" (click)="showHotelInfo()" >Select Rooms</small>
+              </div>
+           
+            
+                
+                
+                
+              <div style="padding: 0; padding-left: 10px;">
+                <!-- when the hotel facilities are coming in the form of array -->
+                  <div class="d-flex" style="justify-content: flex-start; padding: 0; width: 100%; font-weight: bold;" *ngIf="hotel?.info?.HotelInfoResult?.HotelDetails?.HotelFacilities?.length > 2; else lessThanThreeFacilities">
+                      <p style="font-size: 0.7rem;">{{hotel?.info?.HotelInfoResult?.HotelDetails?.HotelFacilities[0]}} |</p>
+                      <p style="font-size: 0.7rem;">{{hotel?.info?.HotelInfoResult?.HotelDetails?.HotelFacilities[1]}}</p>
+                  </div> 
+                  
+                  <!-- when the hotel facilities are coming in the form of string -->
+
+                  <ng-template #lessThanThreeFacilities>
+                      <p style="font-size: 0.7rem;">
+                        {{hotel?.info?.HotelInfoResult?.HotelDetails?.HotelFacilities?.[0]?.substring(0, 20)}}
+                        {{hotel?.info?.HotelInfoResult?.HotelDetails?.HotelFacilities?.[0]?.length > 20 ? '...' : ''}}
+                      </p>
+                    </ng-template>
+                    
+                  
+                  <small>
+                      <span *ngIf="hotel?.search?.StarRating; else noStars">
+    
+                          
+                          <span class="star" *ngFor="let star of getStarArray(hotel?.search?.StarRating)">&#9733;</span>
+                        </span>
+                      <ng-template #noStars>
+    
+                     
+                       <span>{{hotel?.info?.HotelInfoResult?.HotelDetails?.StarRating}}</span> 
+                        No star rating available
+                      </ng-template>
+                    </small>
+                    
+                    
+              </div>
+            </div>
+    
+            <div class="price" style="width: 100%; justify-content: space-around;">
+              <div class="d-flex" style="justify-content: flex-end; width: 100%; flex-direction: column; padding: 0;">
+                  <ng-container *ngIf="hotel?.search?.TripAdvisor?.Rating">
+                    <span class="append-rating">{{hotel?.search?.TripAdvisor?.Rating}}</span>
+                  <span style="font-size: 0.8rem;">(Ratings)</span>
+                  </ng-container>
+              </div>
+              <div class="d-flex" style="flex-direction: column; padding: 0;">
+                  <p style="font-weight: 800; color: black;">₹{{hotel?.search?.Price?.PublishedPrice}}</p>
+                  <small style="color: black;">includes only hotel stay</small>
+                  <small style="color: black;">₹{{hotel?.search?.Price?.AgentCommission}} incentives</small>
+              </div>
+              
+            </div>
+          </div>
+       
+        
+      </div>
+                   
+   

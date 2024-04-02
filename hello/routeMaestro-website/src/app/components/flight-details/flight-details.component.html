@@ -1,0 +1,220 @@
+
+<!-- extra details to show for a particular flight card [direct/Indirect , Cancellation charges , Date change Charge , Reissue Charge] -->
+
+<main>
+  <div class="main-body">
+    <!-- navbar -->
+    <div class="flightDetails-navbar">
+      <div class="navbar-items" (click)="showInfo('flightDetailsAndLayover')">
+        <h3>Flight Details</h3>
+      </div>
+      <div class="navbar-items" (click)="showInfo('fareSummary')">
+        <h3>Fare Summary</h3>
+      </div>
+      <div class="navbar-items" (click)="showInfo('cancellation')">
+        <h3>Cancellation</h3>
+      </div>
+      <div class="navbar-items" (click)="showInfo('dateChange')">
+        <h3>Date Change</h3>
+      </div>
+    </div>
+
+    <!-- flight details -->
+    <div class="flight-details" *ngIf="currentButton === 'flightDetailsAndLayover'">
+      <div class="flight-details-cities-strip">
+        <h4>New Delhi to New York , 15 Jan</h4>
+      </div>
+
+      <div>
+        <div class="flight-details-airline-strip">
+          IndiGo 6E | 11 <span> Boeing 777</span>
+        </div>
+        <div class="flight-details-all-stats">
+          <div class="flight-details-all-stats-section1">
+            <div class="flight-details-all-stats-section1-timings-flexbox">
+              <div class="all-stats-section1-date-time">
+                <h4>06:10</h4>
+                <h5>Mon, 15 Jan 24</h5>
+              </div>
+              <div class="all-stats-section1-terminal-info">
+                <h4>Terminal 3</h4>
+                <h5>New Delhi, India</h5>
+              </div>
+            </div>
+            <div class="flight-details-all-stats-section1-duration">
+              <h4>07h 05m</h4>
+            </div>
+            <div class="flight-details-all-stats-section1-timings-flexbox">
+              <div class="all-stats-section1-date-time">
+                <h4>10:40</h4>
+                <h5>Mon, 15 Jan 24</h5>
+              </div>
+              <div class="all-stats-section1-terminal-info">
+                <h4>Terminal 1</h4>
+                <h5>Istanbul, Turkey</h5>
+              </div>
+            </div>
+          </div>
+          <div class="flight-details-all-stats-section2">
+            <div class="flight-details-all-stats-section2-baggage-flexbox">
+              <h4>Baggage:</h4>
+              <h5>Adult</h5>
+            </div>
+            <div class="flight-details-all-stats-section2-checkIn-flexbox">
+              <h4>Check IN</h4>
+              <h5>46 Kgs (2 piece only)</h5>
+            </div>
+            <div class="flight-details-all-stats-section2-cabin-flexbox">
+              <h4>Cabin</h4>
+              <h5>8 Kgs(1 piece only)</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- fare summary -->
+    <div class="fare-summary" *ngIf="currentButton === 'fareSummary'">
+      <div class="flight-summary-header">
+        <h2>Fare Summary</h2>
+      </div>
+      <div class="flight-summary-stats">
+        <div class="flight-summary-stats-inner">
+          <div class="flight-summary-stats-inner-flexbox total">
+            <h3>Net Payable</h3>
+            <h4>₹ 40,760</h4>
+          </div>
+          <div class="flight-summary-stats-inner-flexbox published">
+            <h3>Published Fare (for the end-user )</h3>
+            <h4>₹44,314</h4>
+          </div>
+          <div class="flight-summary-stats-inner-flexbox Offered">
+            <h3>Offered Fare (for the merchant)</h3>
+            <h4>₹40,760</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cancellation -->
+
+    <div *ngIf="currentButton === 'cancellation'" class="cancellation">
+      <div class="cancellation-header">
+        <!-- header part -->
+        <h2>DEL to GOI</h2>
+      </div>
+      <div class="cancellation-body">
+        <!-- main content -->
+        <div class="cancellation-table">
+          <div class="cancellation-table-row">
+            <div class="cancellation-table-row-section">
+              <h3>Time Frame</h3>
+              <span>Number of days left for departure</span>
+            </div>
+            <div class="cancellation-table-row-section">
+              <h3>Airline fee + Markup</h3>
+            </div>
+          </div>
+          <div class="cancellation-table-row">
+            <div class="cancellation-table-row-section">
+              <h3>0-3 Days</h3>
+            </div>
+            <div class="cancellation-table-row-section">
+              <h3>Upto ₹5000</h3>
+            </div>
+          </div>
+          <div class="cancellation-table-row">
+            <div class="cancellation-table-row-section">
+              <h3>4 Days & above</h3>
+            </div>
+            <div class="cancellation-table-row-section">
+              <h3>Upto ₹4500</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- date Change -->
+    <div *ngIf="currentButton === 'dateChange'" class="dateChange">
+      <div class="dateChange-header">
+        <!-- header part -->
+        <h2>DEL to GOI</h2>
+      </div>
+      <div class="dateChange-body">
+        <!-- main content -->
+        <div class="dateChange-table">
+          <div class="dateChange-table-row">
+            <div class="dateChange-table-row-section">
+              <h3>Time Frame</h3>
+              <span>Number of days left for departure</span>
+            </div>
+            <div class="dateChange-table-row-section">
+              <h3>Airline fee + Markup</h3>
+            </div>
+          </div>
+          <div class="dateChange-table-row">
+            <div class="dateChange-table-row-section">
+              <h3>0-3 Days</h3>
+            </div>
+            <div class="dateChange-table-row-section">
+              <h3>Upto ₹6000</h3>
+            </div>
+          </div>
+          <div class="dateChange-table-row">
+            <div class="dateChange-table-row-section">
+              <h3>4 Days & above</h3>
+            </div>
+            <div class="dateChange-table-row-section">
+              <h3>Upto ₹6500</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="dateChange-body-warning">
+          <p class="dateChange-body-warning-message">
+            <span>*</span> Subject to change without prior notice. Note : We
+            should receive the request at least four hours prior to Airline Fare
+            Rules Policy.
+          </p>
+
+          <ng-template #termsAndConditionContent>
+            <div class="terms-condition-list-div">
+              <ul>
+                <li>
+                  Apart from airline charges,gst+raf+ applicable charges if any, will
+            be charged. 
+                </li>
+                <li>Mentioned fee are indicative per pax and per sector.</li>
+                <li>
+                  For domestic bookings, passengers are required to submit the
+            cancellation or reissue request at least 2 hours before the airlines
+            cancellation and reissue policy.
+                </li>
+                <li>
+                  For international bookings,
+            passengers are required to submit the cancellation or reissue
+            request at least 4 hours before the airlines cancellation and
+            reissue policy.
+                </li>
+              </ul>
+            </div>
+
+           
+          </ng-template>
+
+          <button
+            type="button"
+            class="terms-condition-btn"
+            triggers="click"
+            [autoClose]="true"
+            [ngbTooltip]="termsAndConditionContent"
+          >
+            T & C
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

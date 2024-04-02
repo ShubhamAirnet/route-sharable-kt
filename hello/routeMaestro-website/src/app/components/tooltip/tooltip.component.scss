@@ -1,0 +1,35 @@
+/* tooltip.component.scss */
+.tooltip-container {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+  // background-color: #3498db;
+  // color: #ffffff;
+  // border-radius: 4px;
+  // padding: 8px;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  // overflow: hidden;
+}
+
+.tooltip-container.visible {
+  opacity: 1;
+  visibility: visible;
+  // display: inline-block;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #3498db transparent;
+}
+
+.tooltip-content {
+  // font-size: 14px;
+  // max-height: 200px;
+  // overflow-y: auto;
+}

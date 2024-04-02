@@ -1,0 +1,97 @@
+<div style="width: 300px; height: fit-content; border: 1px solid white; border-radius: 20px; background-color: #03254A;">
+    <div class="first">
+        <div class="person">
+            <small style="font-size: 1.3rem; font-weight: 600;">Payment Breakdown</small>
+            
+        </div>
+        <!-- <button style="background-color: #e24729;"><span style="color: white; font-weight: 600;">Book Now</span></button> -->
+    </div>
+
+    <div class="second">
+        <div class="price-details" *ngIf="hotelCost">
+            <div class="sub-details" style="width: 120px;">
+                <small>Hotel Cost</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{hotelCost.toFixed(2)}}</small>
+            </div>
+        </div>
+        <div class="price-details" *ngIf="flightCost">
+            <div class="sub-details" style="width: 120px;">
+                <small>Flight Cost</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{flightCost.toFixed(2)}}</small>
+            </div>
+        </div>
+
+
+        <div class="price-details" >
+            <div class="sub-details" style="width: 120px;">
+                <small>Taxes</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{taxes.toFixed(2)}}</small>
+            </div>
+        </div>
+        <div class="price-details" >
+            <div class="sub-details" style="width: 120px;">
+                <small>Other Charges</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{otherCharges.toFixed(2)}}</small>
+            </div>
+        </div>
+        
+    
+      
+
+        
+
+
+        
+        
+       
+       
+    </div>
+
+    <div class="third">
+        <div class="total">
+            <div class="sub-details" style="width: 140px;">
+                <p>Total Amount</p>
+            </div>
+            <div class="sub-details" style="width: fit-content;">
+                <p>₹ {{totalCost.toFixed(2)}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth">
+        <div style="width: 33.33%; display: flex; justify-content: center; align-items: center;" class="options">
+            <small style="width: 100%; display: flex; color: white; justify-content: center; align-items: center; padding-left: 15px;">
+                Request Call Back</small>
+        </div>
+        <div style="width: 33.33%;" class="options">
+            <small style="width: 100%; color: white; display: flex; justify-content: center; align-items: center; padding-left: 15px;" (click)="handleClose()">Cancellation</small>
+        </div>
+        <div style="width: 33.33%;" class="options">
+            <small style="width: 100%; color: white; display: flex; justify-content: center; align-items: center; padding-left: 15px;">Mail this Bill</small>
+        </div>
+    </div>
+
+    <div class="fifth">
+        <div style="padding-left: 10px;">
+            <span >Important Information</span>
+        </div>
+        <div style="display: flex; padding-left: 10px; flex-direction: column;">
+            <span style="color: #e24729; font-size: 0.7rem; text-decoration: underline; cursor: pointer;" (click)="package()">Package Cancellation Policies</span>
+            <span style="font-size: 0.7rem;">By clicking on the checkbox below to proceed with the booking, I confirm that I have read and I accept <span style="color: #e24729; cursor: pointer;" (click)="privacy()">Privacy Policy</span>, <span style="color: #e24729; cursor: pointer;" (click)="terms()">Terms & Conditions</span> and <span style="color: #e24729; cursor: pointer;" (click)="refundible()">Refundible Policy</span> of RouteMaestro</span>
+
+        </div>
+    </div>
+
+</div>

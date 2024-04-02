@@ -1,0 +1,300 @@
+{
+    "Response": {
+        "Error": {
+            "ErrorCode": 0,
+            "ErrorMessage": ""
+        },
+        "FlightDetailChangeInfo": null,
+        "IsPriceChanged": false,
+        "ResponseStatus": 1,
+        "Results": {
+            "FirstNameFormat": null,
+            "IsHoldAllowedWithSSR": false,
+            "LastNameFormat": null,
+            "ResultIndex": "OB1",
+            "Source": 3,
+            "IsLCC": true,
+            "IsRefundable": true,
+            "IsPanRequiredAtBook": false,
+            "IsPanRequiredAtTicket": false,
+            "IsPassportRequiredAtBook": true,
+            "IsPassportRequiredAtTicket": true,
+            "GSTAllowed": true,
+            "IsCouponAppilcable": true,
+            "IsGSTMandatory": false,
+            "AirlineRemark": "SpiceJet Main.",
+            "IsPassportFullDetailRequiredAtBook": false,
+            "ResultFareType": "RegularFare",
+            "Fare": {
+                "Currency": "INR",
+                "BaseFare": 34800,
+                "Tax": 6888,
+                "TaxBreakup": [
+                    {
+                        "key": "K3",
+                        "value": 1776
+                    },
+                    {
+                        "key": "YQTax",
+                        "value": 0
+                    },
+                    {
+                        "key": "YR",
+                        "value": 600
+                    },
+                    {
+                        "key": "PSF",
+                        "value": 546
+                    },
+                    {
+                        "key": "UDF",
+                        "value": 324
+                    },
+                    {
+                        "key": "INTax",
+                        "value": 0
+                    },
+                    {
+                        "key": "TransactionFee",
+                        "value": 0
+                    },
+                    {
+                        "key": "OtherTaxes",
+                        "value": 3642
+                    }
+                ],
+                "YQTax": 0,
+                "AdditionalTxnFeeOfrd": 0,
+                "AdditionalTxnFeePub": 0,
+                "PGCharge": 0,
+                "OtherCharges": 778.8,
+                "ChargeBU": [
+                    {
+                        "key": "TBOMARKUP",
+                        "value": 0
+                    },
+                    {
+                        "key": "GLOBALPROCUREMENTCHARGE",
+                        "value": 0
+                    },
+                    {
+                        "key": "CONVENIENCECHARGE",
+                        "value": 0
+                    },
+                    {
+                        "key": "OTHERCHARGE",
+                        "value": 778.8
+                    }
+                ],
+                "Discount": 0,
+                "PublishedFare": 42466.8,
+                "CommissionEarned": 591.6,
+                "PLBEarned": 1066.83,
+                "IncentiveEarned": 1683.05,
+                "OfferedFare": 39125.32,
+                "TdsOnCommission": 236.64,
+                "TdsOnPLB": 426.73,
+                "TdsOnIncentive": 673.22,
+                "ServiceFee": 0,
+                "TotalBaggageCharges": 0,
+                "TotalMealCharges": 0,
+                "TotalSeatCharges": 0,
+                "TotalSpecialServiceCharges": 0
+            },
+            "FareBreakdown": [
+                {
+                    "Currency": "INR",
+                    "PassengerType": 1,
+                    "PassengerCount": 4,
+                    "BaseFare": 23200,
+                    "Tax": 4592,
+                    "TaxBreakUp": [
+                        {
+                            "key": "PSF",
+                            "value": 364
+                        },
+                        {
+                            "key": "UDF",
+                            "value": 216
+                        },
+                        {
+                            "key": "YR",
+                            "value": 400
+                        },
+                        {
+                            "key": "SGST",
+                            "value": 592
+                        },
+                        {
+                            "key": "CGST",
+                            "value": 592
+                        },
+                        {
+                            "key": "OtherTaxes",
+                            "value": 2428
+                        }
+                    ],
+                    "YQTax": 0,
+                    "AdditionalTxnFeeOfrd": 0,
+                    "AdditionalTxnFeePub": 0,
+                    "PGCharge": 0,
+                    "SupplierReissueCharges": 0
+                },
+                {
+                    "Currency": "INR",
+                    "PassengerType": 2,
+                    "PassengerCount": 2,
+                    "BaseFare": 11600,
+                    "Tax": 2296,
+                    "TaxBreakUp": [
+                        {
+                            "key": "PSF",
+                            "value": 182
+                        },
+                        {
+                            "key": "UDF",
+                            "value": 108
+                        },
+                        {
+                            "key": "YR",
+                            "value": 200
+                        },
+                        {
+                            "key": "SGST",
+                            "value": 296
+                        },
+                        {
+                            "key": "CGST",
+                            "value": 296
+                        },
+                        {
+                            "key": "OtherTaxes",
+                            "value": 1214
+                        }
+                    ],
+                    "YQTax": 0,
+                    "AdditionalTxnFeeOfrd": 0,
+                    "AdditionalTxnFeePub": 0,
+                    "PGCharge": 0,
+                    "SupplierReissueCharges": 0
+                }
+            ],
+            "Segments": [
+                [
+                    {
+                        "Baggage": "30 KG",
+                        "CabinBaggage": "7 KG",
+                        "CabinClass": 2,
+                        "SupplierFareClass": null,
+                        "TripIndicator": 1,
+                        "SegmentIndicator": 1,
+                        "Airline": {
+                            "AirlineCode": "SG",
+                            "AirlineName": "SpiceJet",
+                            "FlightNumber": "11",
+                            "FareClass": "V",
+                            "OperatingCarrier": ""
+                        },
+                        "Origin": {
+                            "Airport": {
+                                "AirportCode": "DEL",
+                                "AirportName": "Indira Gandhi Airport",
+                                "Terminal": "3",
+                                "CityCode": "DEL",
+                                "CityName": "Delhi",
+                                "CountryCode": "IN",
+                                "CountryName": "India"
+                            },
+                            "DepTime": "2023-12-15T07:30:00"
+                        },
+                        "Destination": {
+                            "Airport": {
+                                "AirportCode": "DXB",
+                                "AirportName": "Dubai",
+                                "Terminal": "1",
+                                "CityCode": "DXB",
+                                "CityName": "Dubai",
+                                "CountryCode": "AE",
+                                "CountryName": "United Arab Emirates"
+                            },
+                            "ArrTime": "2023-12-15T10:10:00"
+                        },
+                        "Duration": 250,
+                        "GroundTime": 0,
+                        "Mile": 0,
+                        "StopOver": false,
+                        "FlightInfoIndex": "",
+                        "StopPoint": "",
+                        "StopPointArrivalTime": "0001-01-01T00:00:00",
+                        "StopPointDepartureTime": "0001-01-01T00:00:00",
+                        "Craft": "737",
+                        "Remark": null,
+                        "IsETicketEligible": true,
+                        "FlightStatus": "Confirmed",
+                        "Status": "",
+                        "FareClassification": {
+                            "Type": ""
+                        }
+                    }
+                ]
+            ],
+            "LastTicketDate": null,
+            "TicketAdvisory": null,
+            "FareRules": [
+                {
+                    "Origin": "DEL",
+                    "Destination": "DXB",
+                    "Airline": "SG",
+                    "FareBasisCode": "VSAVER",
+                    "FareRuleDetail": "",
+                    "FareRestriction": "",
+                    "FareFamilyCode": "",
+                    "FareRuleIndex": ""
+                }
+            ],
+            "AirlineCode": "SG",
+            "MiniFareRules": [
+                [
+                    {
+                        "JourneyPoints": "DEL-DXB",
+                        "Type": "Reissue",
+                        "From": "0",
+                        "To": "3",
+                        "Unit": "Days",
+                        "Details": "INR 4250"
+                    },
+                    {
+                        "JourneyPoints": "DEL-DXB",
+                        "Type": "Reissue",
+                        "From": "4",
+                        "To": "",
+                        "Unit": "Days",
+                        "Details": "INR 3750"
+                    },
+                    {
+                        "JourneyPoints": "DEL-DXB",
+                        "Type": "Cancellation",
+                        "From": "0",
+                        "To": "3",
+                        "Unit": "Days",
+                        "Details": "INR 5000"
+                    },
+                    {
+                        "JourneyPoints": "DEL-DXB",
+                        "Type": "Cancellation",
+                        "From": "4",
+                        "To": "",
+                        "Unit": "Days",
+                        "Details": "INR 4500"
+                    }
+                ]
+            ],
+            "ValidatingAirline": "SG",
+            "FareClassification": {
+                "Color": "lightBlue",
+                "Type": "Publish"
+            }
+        },
+        "TraceId": "ccd813cd-b514-48d3-89f1-026b04f35a2c"
+    }
+}

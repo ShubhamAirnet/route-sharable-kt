@@ -1,0 +1,54 @@
+{
+    "ssr": {
+        "Response": {
+            
+            "Meal": [
+                {
+                    "Code": "BBML",
+                    "Description": "BABY MEAL"
+                },
+                {
+                    "Code": "DBML",
+                    "Description": "DIABETIC MEAL"
+                },
+                {
+                    "Code": "HNML",
+                    "Description": "HINDU (NON VEGETARIAN) MEAL"
+                },
+                {
+                    "Code": "MOML",
+                    "Description": "MUSLIM MEAL"
+                },
+                {
+                    "Code": "SFML",
+                    "Description": "SEA FOOD MEAL"
+                },
+                {
+                    "Code": "VGML",
+                    "Description": "VEGETARIAN VEGAN MEAL"
+                },
+                {
+                    "Code": "VJML",
+                    "Description": "VEGETARIAN INDIAN MEAL"
+                }
+            ],
+            "SeatPreference": [
+                {
+                    "Code": "A",
+                    "Description": "Aisle"
+                },
+                {
+                    "Code": "W",
+                    "Description": "Window"
+                }
+            ],
+
+            "ResponseStatus": 1,
+            "Error": {
+                "ErrorCode": 0,
+                "ErrorMessage": ""
+            },
+            "TraceId": "1fec828a-e0a2-4db7-be31-1dd09102272c"
+        }
+    }
+}

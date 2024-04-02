@@ -1,0 +1,176 @@
+{
+    "AllFlights": [
+        {
+            "flightData": {
+                "resultIndex": "OB1",
+                "fare": 356880,
+                "Duration": 920,
+                "airline": "Air India"
+            },
+            "origin": "DEL",
+            "destination": "JFK",
+            "flightDate": "2024-02-15T00:00:00"
+        },
+        {
+            "flightData": {
+                "resultIndex": "OB1",
+                "fare": 3981798,
+                "Duration": 366,
+                "airline": "jetBlue"
+            },
+            "origin": "JFK",
+            "destination": "SEA",
+            "flightDate": "2024-02-18T00:00:00"
+        },
+        {
+            "flightData": {
+                "resultIndex": "OB1",
+                "fare": 49488,
+                "Duration": 151,
+                "airline": "United Airlines"
+            },
+            "origin": "SEA",
+            "destination": "DEN",
+            "flightDate": "2024-02-21T00:00:00"
+        },
+        {
+            "flightData": {
+                "resultIndex": "OB1",
+                "fare": 81996,
+                "Duration": 167,
+                "airline": "United Airlines"
+            },
+            "origin": "DEN",
+            "destination": "SFO",
+            "flightDate": "2024-02-24T00:00:00"
+        },
+        {
+            "flightData": {
+                "resultIndex": "OB1",
+                "fare": 1384510,
+                "Duration": 960,
+                "airline": "Air India"
+            },
+            "origin": "SFO",
+            "destination": "DEL",
+            "flightDate": "2024-02-28T00:00:00"
+        }
+    ]
+}
+
+
+
+
+                                 {
+                                    "Baggage": "2 PC(s)",
+                                    "CabinBaggage": "Included",
+                                    "CabinClass": 2,
+                                    "SupplierFareClass": null,
+                                    "TripIndicator": 1,
+                                    "SegmentIndicator": 1,
+                                    "Airline": {
+                                        "AirlineCode": "EY",
+                                        "AirlineName": "Etihad Airways",
+                                        "FlightNumber": "223",
+                                        "FareClass": "E",
+                                        "OperatingCarrier": "EY"
+                                    },
+                                    "NoOfSeatAvailable": 9,
+                                    "Origin": {
+                                        "Airport": {
+                                            "AirportCode": "DEL",
+                                            "AirportName": "Indira Gandhi Airport",
+                                            "Terminal": "3",
+                                            "CityCode": "DEL",
+                                            "CityName": "Delhi",
+                                            "CountryCode": "IN",
+                                            "CountryName": "India"
+                                        },
+                                        "DepTime": "2024-02-15T20:50:00"
+                                    },
+                                    "Destination": {
+                                        "Airport": {
+                                            "AirportCode": "AUH",
+                                            "AirportName": "Abu Dhabi Int'l",
+                                            "Terminal": "1",
+                                            "CityCode": "AUH",
+                                            "CityName": "Abu Dhabi",
+                                            "CountryCode": "AE",
+                                            "CountryName": "United Arab Emirates"
+                                        },
+                                        "ArrTime": "2024-02-15T23:20:00"
+                                    },
+                                    "Duration": 240,
+                                    "GroundTime": 0,
+                                    "Mile": 0,
+                                    "StopOver": false,
+                                    "FlightInfoIndex": "",
+                                    "StopPoint": "",
+                                    "StopPointArrivalTime": null,
+                                    "StopPointDepartureTime": null,
+                                    "Craft": "789",
+                                    "Remark": null,
+                                    "IsETicketEligible": true,
+                                    "FlightStatus": "Confirmed",
+                                    "Status": "",
+                                    "FareClassification": {
+                                        "Type": ""
+                                    }
+                                },
+                                {
+                                    "Baggage": "2 PC(s)",
+                                    "CabinBaggage": "Included",
+                                    "CabinClass": 2,
+                                    "SupplierFareClass": null,
+                                    "TripIndicator": 1,
+                                    "SegmentIndicator": 2,
+                                    "Airline": {
+                                        "AirlineCode": "EY",
+                                        "AirlineName": "Etihad Airways",
+                                        "FlightNumber": "103",
+                                        "FareClass": "E",
+                                        "OperatingCarrier": "EY"
+                                    },
+                                    "NoOfSeatAvailable": 9,
+                                    "Origin": {
+                                        "Airport": {
+                                            "AirportCode": "AUH",
+                                            "AirportName": "Abu Dhabi Int'l",
+                                            "Terminal": "3",
+                                            "CityCode": "AUH",
+                                            "CityName": "Abu Dhabi",
+                                            "CountryCode": "AE",
+                                            "CountryName": "United Arab Emirates"
+                                        },
+                                        "DepTime": "2024-02-16T03:55:00"
+                                    },
+                                    "Destination": {
+                                        "Airport": {
+                                            "AirportCode": "JFK",
+                                            "AirportName": "John F Kennedy Int'l",
+                                            "Terminal": "4",
+                                            "CityCode": "NYC",
+                                            "CityName": "New York",
+                                            "CountryCode": "US",
+                                            "CountryName": "United States"
+                                        },
+                                        "ArrTime": "2024-02-16T10:05:00"
+                                    },
+                                    "AccumulatedDuration": 1425,
+                                    "Duration": 910,
+                                    "GroundTime": 0,
+                                    "Mile": 0,
+                                    "StopOver": false,
+                                    "FlightInfoIndex": "",
+                                    "StopPoint": "",
+                                    "StopPointArrivalTime": null,
+                                    "StopPointDepartureTime": null,
+                                    "Craft": "789",
+                                    "Remark": null,
+                                    "IsETicketEligible": true,
+                                    "FlightStatus": "Confirmed",
+                                    "Status": "",
+                                    "FareClassification": {
+                                        "Type": ""
+                                    }
+                                }

@@ -1,0 +1,192 @@
+<main>
+
+    <div
+      style="background-color: #fff; border: 1px solid grey; border-radius: 20px; width: 700px;"
+    >
+      <!-- city heading strip -->
+      <div
+        style="
+          border-radius: 20px 20px 0 0;
+          border-bottom: 2px solid #000;
+          height: 34px;
+          width: 100%;
+          background-color: #2f3268;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+        "
+      >
+        <h2
+          style="
+            margin: 0;
+            margin-left: 10px;
+            font-size: 19px;
+            color: #fff;
+            text-align: center;
+          "
+        >
+          <!--       {{getNumberOfDaysInCity(citySchedule)}} Days in {{getCityName(citySchedule)}} -->
+  
+          {{ city?.days?.length }} Days in
+          {{ city?.cityDetails?.cityName }}
+        </h2>
+      </div>
+  
+      <!-- city body -->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          border-radius: 0 0 20px 20px;
+        "
+      >
+        <!-- particular property itinerary -->
+        <div
+         
+          style="width: 100%; background-color: white; border-radius: 20px"
+        >
+          <!-- heading for the property -->
+          <div
+            style="
+              border-radius: 8px;
+              height: 34px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              position: relative;
+            "
+          >
+            <h1
+              style="
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+                color: #ff4040;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 75%;
+                padding-right: 20px;
+                padding-left: 20px;
+              "
+            >
+              <!-- {{ getNumberOfDaysInProperty(property) }} Nights @ -->
+             <ng-container *ngIf="hotelData">
+              <span 
+              >{{ hotelData[0].search.HotelName }}
+            </span>
+             </ng-container>
+             <ng-container *ngIf="!hotelData">
+              <span 
+              >Pickup from {{city?.cityDetails?.cityName}} Airport
+            </span>
+             </ng-container>
+            </h1>
+  
+            <!-- butttons -->
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                width: 25%;
+                justify-content: flex-end;
+                padding-right: 10px;
+              "
+            >
+             
+  
+            
+            </div>
+          </div>
+  
+          <!-- itinerary when staying in particular property -->
+          <div>
+            <!-- row 1 -->
+            <div
+              *ngFor="let days of city.days"
+              style="
+                height: 65px;
+                width: 100%;
+                display: flex;
+                border-top: 1px solid grey;
+               
+              "
+            >
+              <!-- date -->
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  width: 20%;
+                  height: 100%;
+                  justify-content: center;
+                  border-right: 1px solid grey;
+                "
+              >
+                <h2 style="margin: 0; font-size: 1rem; color: #ff4040">{{formatDate(addDays(arrivalDate,days?.dayNumber))}}</h2>
+              </div>
+  
+              <!-- morning -->
+              <ng-container *ngFor="let activity of days.activities">
+                <div
+                style="
+                  width: 20%;
+                  display: flex;
+                  flex-direction: column;
+                  height: 100%;
+                  align-items: center;
+                  justify-content: space-evenly;
+                  border-right: 2px solid #000;
+                  border-right: 1px solid grey;
+                "
+              >
+                <h2 style="margin: 0; font-size: 15px; color: #ff4040">
+                    {{ activity.activity_timeperiod }}
+                </h2>
+                <p
+                  style="
+                    margin: 0;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 110px;
+                    height: 30px;
+
+                  "
+                  data-toggle="tooltip" data-placement="top" title={{activity.activity_name}}
+                >
+                {{ activity.activity_name }}
+                </p>
+              </div>
+              </ng-container>
+  
+              
+  
+              
+            </div>
+          </div>
+  
+         
+  
+          
+  
+        </div>
+      </div>
+  
+      
+    </div>
+  
+  
+  
+  
+  
+  
+  </main>
+  

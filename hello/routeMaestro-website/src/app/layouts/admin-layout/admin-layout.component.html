@@ -1,0 +1,16 @@
+<main style="background-color: #fff; display: flex;width: 100vw;box-sizing: border-box;" >
+
+<!-- <app-sidebar></app-sidebar> -->
+<app-admin-sidebar ></app-admin-sidebar>
+
+<div class="main-content" style=" width: 85%;flex-grow: 1; display: flex; flex-direction: column; background: #f8f9fe;">
+  <!-- Top navbar -->
+  <app-navbar></app-navbar>
+  <!-- Pages -->
+  <router-outlet></router-outlet>
+  <!-- <div class="container-fluid"> -->
+    <app-footer></app-footer>
+  <!-- </div> -->
+</div>
+
+</main>

@@ -1,0 +1,8 @@
+<div class="tooltip-container" [ngClass]="{ 'visible': showTooltip }" 
+    [ngStyle]="{ 'top': position.top, 'left': position.left }"
+    (mouseleave)="onMouseLeave()" (mouseenter)="onMouseEnter()">
+    <!-- <div class="tooltip-arrow"></div> -->
+    <div class="tooltip-content">
+      <ng-content></ng-content>
+    </div>
+</div>

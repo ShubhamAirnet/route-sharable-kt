@@ -1,0 +1,391 @@
+<!-- strip/card to accomodate an alternate flight Set available other than the defualt flight Set -->
+
+<!-- <button #myButton class="alternate-flightSet-Btn" [value]="getBtnValue()" (click)="flightSetBtnClicked($event)" > -->
+
+<!-- <main [ngClass]="{'normal-main':!isSelected , 'hightlighted-main':isSelected}" (click)="changeStyles()" > -->
+<main class="normal-main">
+  <!-- airline section -->
+  <section class="airline-section">
+    <div
+      *ngFor="let oneCompleteFlight of flightSetSegmentsArray; let i = index"
+      style="
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 62px;
+      "
+    >
+      <img
+        src="{{ getAirlineLogo(i, j) }}"
+        alt="logo"
+        *ngFor="let flight of oneCompleteFlight; let j = index"
+        height="48px"
+        width="46px"
+      />
+    </div>
+  </section>
+
+  <!-- flights section -->
+  <section class="flights-section">
+    <div
+      *ngFor="let oneCompleteFlight of flightSetSegmentsArray; let i = index"
+      class="flights-section-one-complete-flight"
+    >
+      <div class="flights-section-one-complete-flight-origin-destination-block">
+        <div class="origin-destination-block-timings">
+          <h3>{{ getDepartureTime(oneCompleteFlight) }}</h3>
+          <h3>{{ getOriginAirportCode(oneCompleteFlight) }}</h3>
+          <h3>{{ getOriginFlightDate(oneCompleteFlight) }}</h3>
+        </div>
+        <div class="origin-destination-block-location">
+          <div>
+            <h4 *ngIf="isTerminalExist(oneCompleteFlight)">
+              T {{ getOriginAirportTerminal(oneCompleteFlight) }}
+            </h4>
+            <h4>{{ getOriginAirportName(oneCompleteFlight) }}</h4>
+          </div>
+          <h4>{{ getOriginAirportCityName(oneCompleteFlight) }}</h4>
+        </div>
+      </div>
+
+      <div class="flights-section-one-complete-flight-duration">
+        <h3>{{ getFlightDuration(oneCompleteFlight) }}</h3>
+
+        <img
+          src="{{ getStopsImageUrl(oneCompleteFlight) }}"
+          alt="stopsBar"
+          height="12px"
+          width="54px"
+        />
+        <h5>{{ getLayoverCities(oneCompleteFlight) }}</h5>
+      </div>
+
+      <div class="flights-section-one-complete-flight-origin-destination-block">
+        <div class="origin-destination-block-timings">
+          <h3>{{ getArrivalTime(oneCompleteFlight) }}</h3>
+          <h3>{{ getDestinationCityAirportCode(oneCompleteFlight) }}</h3>
+          <h3>{{ getDestinationFlightDate(oneCompleteFlight) }}</h3>
+        </div>
+        <div style="padding: 10px;" class="origin-destination-block-location">
+          <div >
+            <h4 *ngIf="isTerminalExist(oneCompleteFlight)">
+              T{{ getDestinationAirportTerminal(oneCompleteFlight) }}
+            </h4>
+            <h4>{{ getDestinationAirportName(oneCompleteFlight) }}</h4>
+          </div>
+          <h4>{{ getDestinationAirportCityName(oneCompleteFlight) }}</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- fare section -->
+  <section class="fare-section">
+
+    <!-- three hoverable buttons (Baggage,Fare Rule, Refundable) -->
+    <div
+      style="
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+      "
+    >
+      <!-- BAGGAGE -->
+      <div style="position: relative">
+        <img
+          src="../../../assets/img/brand/travel-luggage.png"
+          alt="Baggage"
+          height="29px"
+          width="29px"
+          (mouseenter)="mouseEntered(0)"
+          (mouseleave)="mouseLeft(0)"
+          style="cursor: grab"
+        />
+        <div
+          *ngIf="tooltipStates[0]"
+          [ngClass]="{ tooltipContainer: true, baggageTooltip: true }"
+          (mouseenter)="mouseOnTooltip(0)"
+        >
+          <div class="tooltipContent">
+            <div class="scrollable-container">
+              <table border="1" style="border-color: #fff">
+                <tr>
+                  <th>Flight</th>
+                  <th>Baggage</th>
+                  <th>Cabin Baggage</th>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>DEL -> DXB</td>
+                  <td>2 PC(s)</td>
+                  <td>Included</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FARE RULE -->
+      <div style="position: relative">
+        <img
+          src="../../../assets/img/brand/fareRule.png"
+          alt="Fare Rule"
+          height="29px"
+          width="29px"
+          (mouseenter)="mouseEntered(1)"
+          (mouseleave)="mouseLeft(1)"
+          style="cursor: grab"
+        />
+        <div
+          *ngIf="tooltipStates[1]"
+          [ngClass]="{ tooltipContainer: true, fareRuleTooltip: true }"
+          (mouseenter)="mouseOnTooltip(0)"
+        >
+          <div class="tooltipContent">
+            <div
+              style="
+                height: 100%;
+                width: 100%;
+                border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+              "
+            >
+              <!-- Header -->
+              <div
+                style="
+                  background-color: #000046;
+                  height: 10%;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                "
+              >
+                <h1 style="margin: 0; font-size: 18px">Fare Rule</h1>
+              </div>
+
+              <!-- Route Overview -->
+              <div
+                style="
+                  background-color: rgb(255, 255, 255);
+                  height: 10%;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                "
+              >
+                <h2 style="margin: 0; font-size: 16px; color: white">
+                  Route Overview
+                </h2>
+              </div>
+
+              <!-- Cancellation and Reissue -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  height: 20%;
+                  padding: 0 20px;
+                  background-color: #fff;
+                "
+              >
+                <!-- Cancellation -->
+                <div style="display: flex; flex-direction: column">
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: 14px;
+                      text-transform: capitalize;
+                    "
+                  >
+                    Cancellation
+                  </h3>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 13px;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Refer to detailed fare rules
+                  </h4>
+                </div>
+                <!-- Reissue -->
+                <div style="display: flex; flex-direction: column">
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: 14px;
+                      text-transform: capitalize;
+                    "
+                  >
+                    Reissue
+                  </h3>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 13px;
+                      text-transform: uppercase;
+                    "
+                  >
+                    INR 13,390*
+                  </h4>
+                </div>
+              </div>
+
+              <!-- Important Section -->
+              <div
+                style="
+                  background-color: white;
+                  height: 60%;
+                  width: 100%;
+                  padding: 20px;
+                  overflow-x: hidden;
+                  overflow-y: auto;
+                  color: #000;
+                  text-align: left;
+                "
+              >
+                <h3
+                  style="margin: 0; font-size: 15px; text-transform: capitalize"
+                >
+                  Important:
+                </h3>
+                <ul
+                style="
+                  list-style: circle;
+                  padding: 0;
+                  margin: 10px 0;
+                  width: 100%;
+                "
+              >
+                <li
+                  style="
+                    font-size: 14px;
+                    line-height: 1.5;
+                    word-break: break-word;
+                  "
+                >
+                  Mentioned fee is indicative per pax and per sector.
+                </li>
+                <li
+                  style="
+                    font-size: 14px;
+                    line-height: 1.5;
+                    word-break: break-word;
+                  "
+                >
+                  Apart from airline charges, GST + RAF + applicable charges, if any, will be charged.
+                </li>
+                <li
+                  style="
+                    font-size: 14px;
+                    line-height: 1.5;
+                    word-break: break-word;
+                  "
+                >
+                  For domestic bookings, passengers are required to submit the cancellation or reissue request at least 2 hours before the airline's cancellation and reissue policy.
+                </li>
+                <li
+                  style="
+                    font-size: 14px;
+                    line-height: 1.5;
+                    word-break: break-word;
+                  "
+                >
+                <p style="font-size: 12px;">  
+                  For international bookings, passengers are required to submit the cancellation or reissue request at least 4 hours before the airline's cancellation and reissue policy.
+                </p>
+                </li>
+              </ul>
+                <p
+                  style="
+                    margin: 0;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    color: #0066cc;
+                  "
+                  onclick="alert('Clicked!')"
+                >
+                  Click here for more details
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REFUNDABLE -->
+      <div style="position: relative">
+        <img
+          src="../../../assets/img/brand/refundable.png"
+          alt="Refundable"
+          height="29px"
+          width="29px"
+          (mouseenter)="mouseEntered(2)"
+          (mouseleave)="mouseLeft(2)"
+          style="cursor: grab"
+        />
+        <div
+          *ngIf="tooltipStates[2]"
+          [ngClass]="{ tooltipContainer: true, refundableTooltip: true }"
+          (mouseenter)="mouseOnTooltip(0)"
+        >
+          <div class="tooltipContent">
+            <h1 style="margin: 0; color: #fff; font-size: 14px">Refundable</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="published-fare-diff">
+      <h2>Fare Difference:</h2>
+      <h3 style="color: green; font-size: 20px">
+        <i>
+          <b> ₹ {{ getPublishedFareDifference() }} </b>
+        </i>
+      </h3>
+    </div>
+
+    <div class="incentive-earned">
+      <h2>Incentive Earned:</h2>
+      <h3 style="color: green; font-size: 20px">
+        ₹ {{ getIncentiveEarned() }}
+      </h3>
+    </div>
+  </section>
+</main>
+<!-- </button> -->

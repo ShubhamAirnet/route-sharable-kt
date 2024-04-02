@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container{
+    height: 100vh;
+    width: 160px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   
+ 
+    background-color: white;
+    border-radius: 5px;
+    right: 0;
+    top: 100px;
+    margin-right: 15px;
+}
+
+.head{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    border-bottom: 1px solid;
+    border-radius: 5px;
+    span{
+        color: black;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+.content{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 8px;
+    border-right: 1px solid;
+    padding-right: 3px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.airline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .item{
+    display: flex;
+    gap: 5px
+  }
+  .item span{
+    font-size: 0.8rem;
+  }
+
+  .btns{
+    display: flex;
+    
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  .button{
+    padding: 6px 12px;
+    background-color: white;
+    border: 0;
+    span{
+        color: black;
+      
+        font-size: 0.9rem;
+    }
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;    border-radius: 5px;
+  }

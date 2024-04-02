@@ -1,0 +1,91 @@
+<body>
+    <div class="sub-containers" (click)="handleClose()"></div>
+    <div class="containers">
+        <div class="heads">
+            <span>Cancel Request</span>
+            <span (click)="handleClose()">X</span>
+        </div>
+        <div class="contents">
+            <div class="details">
+                <div class="note">
+                    <span style="font-weight: 600; font-size: 0.9rem;">Note: </span>
+                    <span style="font-size: 0.9rem;">The Reissuance of Hotels and Flights can not be done. For the reissuance of flights please contact helpdesk.</span>
+                </div>
+                <div class="sub-details">
+                    <!-- for flight cancellation -->
+                    <div class="items">
+                        <label for="request-type">Request Type</label>
+                        <select id="request-type" [(ngModel)]="selectedRequestType" (change)="onRequestTypeChange()">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="1">Full Cancellation</option>
+                            <option value="2">Partial Cancellation</option>
+                            <option value="3">Reissuance</option>
+                        </select>
+                    </div>
+                    <!-- for flight cancellation -->
+                    <div class="items">
+                        <label for="cancellation-type">Cancellation Type</label>
+                        <select id="cancellation-type" [(ngModel)]="selectedCancellationType">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="1">Flight Missed</option>
+                            <option value="2">Flight Cancelled</option>
+                            <option value="3">Other Reasons</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- for partial cancellation -->
+                <div class="sub-details" *ngIf="isPartial">
+                    <fieldset style="width: 200px;">
+                        <legend>Sectors</legend>
+                        <!-- your-component.component.html -->
+                        <div class="items">
+                            <div class="options" *ngFor="let item of sectors">
+                            <input type="checkbox"   (change)="updateSectorArray(item, $event.target.checked)"/>
+                            <label><span>{{item.Origin}} - {{item.Destination}}</span></label>
+                            </div>
+                        </div>
+  
+                      </fieldset>
+                      
+                    <fieldset style="width: 240px;">
+                        <!-- partial hotel cancellation in case of package -->
+                        <legend>Cancelled Hotels</legend>
+                       
+                           
+                            <!-- <div class="boxs">
+                                <div class="options" *ngFor="let item of cancelledHotels">
+                                    <input type="checkbox" (change)="updateHotelsArray(item, $event.target.checked)">
+                                    <span>{{item.hotelName}} ({{item.Destination}})</span>
+                                </div>
+                            </div> -->
+                       
+                    </fieldset>
+                </div>
+                <!-- for reissuance -->
+                 <div class="items" *ngIf="selectedRequestType==='3'">
+                        <label for="cancellation-type">Date</label>
+                        <input type="date" [(ngModel)]="selectedDate" (ngModelChange)="onDateChange()">
+                    </div>
+            </div>
+            <div class="further-details">
+                <div class="item-remarks">
+                    <label for="remarks">Remarks: </label>
+                    <textarea id="remarks" cols="30" rows="4" [(ngModel)]="remarks"></textarea>
+                </div>
+            </div>
+            <div class="btns">
+                <!-- for cancellatio or partial cancellation  -->
+                <ng-container *ngIf="selectedRequestType!=='3'">
+                    <button class="btn-submits" (click)="authenticateFlightApi()"><span style="font-size: 1rem; font-weight: 600;">Submit</span></button>
+
+                </ng-container>
+                <!-- for reissuance -->
+                <ng-container *ngIf="selectedRequestType==='3'">
+                    <button class="btn-submits" (click)="handleReissuance()"><span style="font-size: 1rem; font-weight: 600;">Submit</span></button>
+
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</body>

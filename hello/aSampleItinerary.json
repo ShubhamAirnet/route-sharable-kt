@@ -1,0 +1,322 @@
+"{
+    "trip": {
+      "departure_airport": "IXC",
+      "arrival_airport": "",
+      "start_date": "2024-03-02",
+      "end_date": "2024-03-09",
+      "numbers_of_days": 8,
+      "travellers": "Family",
+      "trip_duration": 8,
+      "nature_of_trip": "Family",
+      "origin_mode_of_transport": "Flying",
+      "cities": ["Yerevan", "Gyumri", "Vanadzor", "Sevan"]
+    },
+    
+    "itinerary": [
+      {
+        "day": 1,
+        "date": "2024-03-02",
+        "city_name": "Yerevan",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Arrival at Yerevan",
+            "image": "activity_image_path",
+            "location": "Yerevan Airport"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Yerevan City Center",
+            "image": "activity_image_path",
+            "location": "Yerevan City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Yerevan"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "date": "2024-03-03",
+        "city_name": "Gyumri",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Yerevan",
+            "to_city": "Gyumri",
+            "total_duration": 2
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Gyumri",
+            "image": "activity_image_path",
+            "location": "Gyumri"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Gyumri City Center",
+            "image": "activity_image_path",
+            "location": "Gyumri City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Gyumri"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "date": "2024-03-04",
+        "city_name": "Vanadzor",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Gyumri",
+            "to_city": "Vanadzor",
+            "total_duration": 3
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Vanadzor",
+            "image": "activity_image_path",
+            "location": "Vanadzor"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Vanadzor City Center",
+            "image": "activity_image_path",
+            "location": "Vanadzor City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Vanadzor"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "date": "2024-03-05",
+        "city_name": "Sevan",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Vanadzor",
+            "to_city": "Sevan",
+            "total_duration": 2
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Sevan",
+            "image": "activity_image_path",
+            "location": "Sevan"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Sevan City Center",
+            "image": "activity_image_path",
+            "location": "Sevan City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Sevan"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "date": "2024-03-06",
+        "city_name": "Yerevan",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Sevan",
+            "to_city": "Yerevan",
+            "total_duration": 2
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Yerevan",
+            "image": "activity_image_path",
+            "location": "Yerevan"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Yerevan City Center",
+            "image": "activity_image_path",
+            "location": "Yerevan City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Yerevan"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "date": "2024-03-07",
+        "city_name": "Gyumri",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Yerevan",
+            "to_city": "Gyumri",
+            "total_duration": 2
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Gyumri",
+            "image": "activity_image_path",
+            "location": "Gyumri"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Gyumri City Center",
+            "image": "activity_image_path",
+            "location": "Gyumri City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Gyumri"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "date": "2024-03-08",
+        "city_name": "Vanadzor",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Gyumri",
+            "to_city": "Vanadzor",
+            "total_duration": 3
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Vanadzor",
+            "image": "activity_image_path",
+            "location": "Vanadzor"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Vanadzor City Center",
+            "image": "activity_image_path",
+            "location": "Vanadzor City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Vanadzor"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "date": "2024-03-09",
+        "city_name": "Sevan",
+        "cityCode": "",
+        "cityId": "",
+        "countryCode": "",
+        "suggested_duration": 1,
+        "suggested_hotelname": "",
+        "transfer_option": "",
+        "connections": [
+          {
+            "mode_of_transport": "Driving",
+            "from_city": "Vanadzor",
+            "to_city": "Sevan",
+            "total_duration": 2
+          }
+        ],
+        "activities": [
+          {
+            "activity_timeperiod": "Morning",
+            "activity_name": "Visit Sevan",
+            "image": "activity_image_path",
+            "location": "Sevan"
+          },
+          {
+            "activity_timeperiod": "Afternoon",
+            "activity_name": "Explore Sevan City Center",
+            "image": "activity_image_path",
+            "location": "Sevan City Center"
+          },
+          {
+            "activity_timeperiod": "Evening",
+            "activity_name": "Dinner at a local restaurant",
+            "image": "activity_image_path",
+            "location": "Sevan"
+          }
+        ]
+      }
+    ]
+  }"

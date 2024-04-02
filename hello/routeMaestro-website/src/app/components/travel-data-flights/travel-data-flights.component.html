@@ -1,0 +1,483 @@
+<app-flight-seat-map *ngIf="seatMapDialog" style="width: 100vw; height: 100vh;" [ssrNo]="ssrNo" [index]="selectedSeatMapIndex" [ssr]="RowSeats"  [seatsArray]="seatsArray" [seatMapDaialog]="seatMapDialog" (closeDialog)="handleSeatMapClick()" (seatMapData)="handleSeatMapData($event)" ></app-flight-seat-map>
+
+<body>
+
+  <div class="sub-container" (click)="dialogbox()"></div>
+    <main>
+        <div class="header">
+            <h2 style="padding-left: 10px;">Add Traveeller Details</h2>
+            <h2 style="padding-right: 15px; cursor: pointer;" (click)="dialogbox()">X</h2>
+        </div>
+
+
+        <div class="travellers">
+            <div style="display: flex; justify-content: flex-start; align-items: center;  padding-left:20px;">
+                <h2>Traveller {{currentIndex? currentIndex+1 :currentTravellerCount}} </h2>
+                <span> /{{adults+childs+infants}}</span>
+            </div>
+           
+        
+         
+              <div class="container">
+            
+                <div class="boxes">
+                
+            
+                    
+                
+                  <div style="display: flex; gap:12px" *ngIf="adults+childs+infants > 0; else noContent" >
+                    <ng-container *ngFor="let star of getArray(adults+childs+infants); let j = index">
+                      <div class="card" (click)=" handleCardClick(j) " 
+                          [ngClass]="{'selected': selectedCard === j}">
+                         
+                      
+                          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                              <ng-container *ngIf="j < adults">
+                                  <i (click)="adult()" class="fa-solid fa-user adult-icon"></i>
+                                  <p>Traveller</p>
+                              </ng-container>
+                              <ng-container *ngIf="j >= adults">
+                                  <i (click)="child()" class="fa-solid fa-baby child-icon"></i>
+                                  <p>Traveller</p>
+                              </ng-container>
+                          </div>
+                      </div>
+                  </ng-container>
+                    </div>
+                    <ng-template #noContent>
+                      <p>No content to display.</p>
+                    </ng-template>
+
+
+
+                    
+                  
+               
+                </div>
+              </div>
+            
+            
+              
+             
+            
+            
+              
+                  
+                
+              <form [formGroup]="travelerForm" >
+                  
+                <div class="info">
+                  <div class="head">
+                    <h2>Mandatory Information</h2>
+                  </div>
+                  <hr>
+                 
+                    
+                      <div class="traveller-info">
+                        <div style="padding-top: 20px; padding-bottom: 20px; width: 100%; display: flex; justify-content: flex-start; gap: 20px;">
+                          <span>Enter Mandatory Details</span> 
+                          <ng-container> <i class="fa-solid fa-pen-to-square"></i></ng-container>
+                        </div>
+                        
+                        <fieldset class="inputs" formGroupName="personalInfo">
+                          <legend>Personal Info</legend>
+                          <div>
+                            <label><span>Title</span></label>
+                            <select  formControlName="Title" required [value]="travelers[currentIndex]?.personalInfo?.Title || ''">
+                              <option></option>
+                              <option>Mr</option>
+                              <option>Mrs</option>
+                              <option>Miss</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label><span>First Name</span></label>
+                            <input type="text" formControlName="FirstName" required [value]="travelers[currentIndex]?.personalInfo?.FirstName || ''" />
+                          </div>
+                          <div>
+                            <label><span>Last Name</span></label>
+                            <input type="text" formControlName="LastName" required [value]="travelers[currentIndex]?.personalInfo?.LastName || ''" />
+                          </div>
+                          <div>
+                            <label><span>Date of Birth</span></label>
+                            <input type="date" formControlName="DateOfBirth" required [value]="travelers[currentIndex]?.personalInfo?.DateOfBirth || ''" />
+                          </div>
+                           
+                        
+                          
+                          
+                          <div>
+                            <label><span>Gender</span></label>
+                            <select formControlName="Gender" required [value]="travelers[currentIndex]?.personalInfo?.Gender || ''" >
+                              <option></option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label><span>Nationality</span></label>
+                            <select id="form1"
+                            class="form-control"
+                            placeholder="Search Airports"
+                            [(ngModel)]="selectedNationality"
+                            (click)="$event.stopPropagation()"
+                            (change)="onNationalitySelect($event.target.value)"
+                            >
+
+                            <option value="" disabled selected>Select a Country</option>
+                              <ng-container *ngFor="let data of countryCodes">
+                                <option [value]="data?.alpha2 "class="text-dark">
+                                  {{ data.name }} ({{ data.alpha2 }})
+                                </option>
+                              </ng-container>
+
+                            </select>
+                          </div>
+                          <div>
+                            <label><span>City</span></label>
+                            <input type="text" formControlName="City" required [value]="travelers[currentIndex]?.personalInfo?.City || ''" />
+                          </div>
+                          <div>
+                            <label><span>Country Name</span></label>
+                            <select id="form1"
+                            class="form-control"
+                            placeholder="Search Airports"
+                            [(ngModel)]="selectedCountry"
+                            (click)="$event.stopPropagation()"
+                            (change)="onCountrySelect($event.target.value)"
+                            >
+
+                            <option value="" disabled selected>Select a Country</option>
+                              <ng-container *ngFor="let data of countryCodes">
+                                <option [value]="data.name + ',' + data.alpha2" class="text-dark">
+                                  {{ data.name }} ({{ data.alpha2 }})
+                                </option>
+                              </ng-container>
+
+                            </select>
+                          </div>
+                          <div>
+                            <label><span>Address Line 1</span></label> 
+                            <input type="text" formControlName="AddressLine1" required [value]="travelers[currentIndex]?.personalInfo?.AddressLine1 || '' " />
+                          </div>
+                          <div>
+                            <label><span>Address Line 2</span></label>
+                            <input type="text" formControlName="AddressLine2" required [value]="travelers[currentIndex]?.personalInfo?.AddressLine2 || ''" />
+                          </div>
+                          <div *ngIf="isPanRequired">
+                            <label><span>PAN</span></label>
+                            <input type="text" formControlName="PAN" required [value]="travelers[currentIndex]?.personalInfo?.PAN || ''" />
+                        </div>
+                          <div > 
+                            <label><span>Passport No.</span></label>
+                            <input type="text" formControlName="PassportNo" required [value]="travelers[currentIndex]?.personalInfo?.PassportNo || ''"/>
+                          </div>
+                          <div >
+                            <label><span>Passport Issue date</span></label>
+                            <input type="date" formControlName="PassportIssueDate" required [value]="travelers[currentIndex]?.personalInfo?.PassportIssueDate || ''" />
+                          </div>
+                          <div >
+                            <label><span>Passport Expiry date</span></label>
+                            <input type="date" formControlName="PassportExpiry" required [value]="travelers[currentIndex]?.personalInfo?.PassportExpiry || ''" />
+                          </div>
+                          
+                          
+                          
+                       
+                            <div>
+                              <label><span>Contact No</span></label>
+                              <input type="text" formControlName="ContactNo" required [value]="travelers[currentIndex]?.personalInfo?.ContactNo|| ''" />
+                            </div>
+                            <div>
+                              <label><span>Email</span></label>
+                              <input type="email" formControlName="Email" required [value]="travelers[currentIndex]?.personalInfo?.Email || ''"/>
+                            </div>
+                        
+                        </fieldset>
+
+                        <fieldset class="inputs" formGroupName="guardianDetails"  *ngIf="travelers[currentIndex]?.personalInfo?.PaxType===2">
+                          <legend>Guardian Details</legend>
+                          <div>
+                            <label><span>Title</span></label>
+                            <select  formControlName="Title" required [value]="travelers[currentIndex]?.guardianDetails?.Title || ''">
+                              <option></option>
+                              <option>Mr</option>
+                              <option>Mrs</option>
+                              <option>Miss</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label><span>First Name</span></label>
+                            <input type="text" formControlName="FirstName" required [value]="travelers[currentIndex]?.guardianDetails?.FirstName || ''" />
+                          </div>
+                          <div>
+                            <label><span>Last Name</span></label>
+                            <input type="text" formControlName="LastName" required [value]="travelers[currentIndex]?.guardianDetails?.LastName || ''" />
+                          </div>
+                          <div>
+                            <label><span>PAN</span></label>
+                            <input type="text" formControlName="PAN" required [value]="travelers[currentIndex]?.guardianDetails?.PAN || ''" />
+                          </div>
+                          <div>
+                            <label><span>Passport No</span></label>
+                            <input type="text" formControlName="LastName" required [value]="travelers[currentIndex]?.guardianDetails?.PassportNo || ''" />
+                          </div>
+                        </fieldset>
+
+                       
+                       
+                        
+                      </div>
+                   
+                </div>
+              </form>
+               <div class="traveller-info">
+                <fieldset class="inputs" *ngIf="ssr || ssr1 || ssr2">
+                  <legend>SSR</legend>
+                  <!-- <div formGroupName="ssr" *ngIf="ssr" style="display: flex; width:100%; flex-direction: row;"> -->
+
+                    <ng-container *ngIf="ssr">
+                      <div>
+                        <label><span>Extra Baggage (kgs)</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr.extraBaggage" (change)="updatePrice()" >
+                          <option *ngIf="!ssr?.ssr?.Baggage[0]" disabled>Select a Baggage</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.Baggage[0]">
+                            <option [ngValue]="item">
+                              {{ 'Weight ' + item?.Weight + ' (Rs. ' + item?.Price + ')' }}
+                              ({{item.Description === 0 ? 'Not Set' : item.Description === 1 ? 'Included' : item.Description === 2 ? 'Direct (Purchase)' : item.Description === 3 ? 'Imported' : item.Description === 4 ? 'Upgrade' : item.Description === 5 ? 'Imported Upgrade' : ''}})
+                            </option>
+                          </ng-container>
+                        </select>
+                       <p>selected baggage : {{travelerForm.value.ssr.extraBaggage | json}}</p>
+                      </div>
+
+                    
+                      
+                      
+                    
+                      <div *ngIf="ssr?.ssr?.Meal">
+                        <label><span>Meal</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr.meal" (change)="updatePrice()" >
+                          <option *ngIf="!travelers[currentIndex]?.ssr?.meal?.AirlineDescription" disabled>Select a meal</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.Meal">
+                            <option [ngValue]="item">{{ item?.Description }} ({{ item?.Code }})</option>
+                          </ng-container>
+                        </select>
+                      </div>
+                      
+                      <!-- Dynamic Meal Select Option -->
+                      <div *ngIf="ssr?.ssr?.MealDynamic">
+                        <label><span>Meal</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr.meal" (change)="updatePrice()" >
+                          <option *ngIf="!travelers[currentIndex]?.ssr?.meal?.AirlineDescription" disabled>Select a meal</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.MealDynamic[0]">
+                            <option [ngValue]="item">
+                              {{ item?.AirlineDescription }} ({{ item?.Code }}/ Rs. {{ item?.Price }})
+                              ({{ item?.Description === 1 ? 'Included' : item?.Description === 2 ? 'Direct' : item?.Description === 3 ? 'Imported' : '' }})
+                            </option>
+                                                      </ng-container>
+                        </select>
+                      </div>
+                      <ng-container *ngIf="ssr?.ssr?.SeatDynamic">
+                        <ng-container *ngFor="let seats of ssr?.ssr?.SeatDynamic[0]?.SegmentSeat; let i = index">
+                          <div>
+                            <label><span> Seat ( {{ seats?.RowSeats[0].Seats[0].Origin }} - {{ seats?.RowSeats[0].Seats[0].Destination }} )</span></label>
+                            <div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: center; gap: 5px; height: 40px;">
+                              <input disabled style="width: 160px; height: 36px;" [value]="travelers[currentIndex]?.ssr?.seat?.rowNo || ''"/>
+                              <i class="fa-solid fa-calculator" (click)="handleSeatMapClick(i, seats?.RowSeats, 0)"></i>
+                            </div>
+                          </div>
+                        </ng-container>
+                      </ng-container>
+                      <ng-container *ngIf="ssr?.ssr?.SeatPreference">
+                        <div>
+                          <label><span>Seat ( {{ ssr?.Origin }} - {{ ssr?.Destination }} )</span></label>
+                          <div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: center; gap: 5px; height: 40px;">
+                            <input disabled style="width: 160px; height: 36px;" [value]="travelers[currentIndex]?.ssr?.seat?.Description || ''"/>
+                            <i class="fa-solid fa-calculator" (click)="handleSeatMapClick(i, ssr?.ssr?.SeatPreference, 0)"></i>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                    
+
+
+                   
+
+
+
+
+                     
+                  <!-- </div> -->
+                  <div  *ngIf="ssr1" style="display: flex; width:100%; flex-direction: row;">
+
+                    <ng-container *ngIf="ssr1">
+                      <div>
+                        <label><span>Extra Baggage (kgs)</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr1.extraBaggage"  (change)="updatePrice()">
+                          <option *ngIf="!ssr?.ssr?.Baggage[0]" disabled>Select a Baggage</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.Baggage[0]">
+                            <option [ngValue]="item">
+                              {{ 'Weight ' + item?.Weight + ' (Rs. ' + item?.Price + ')' }}
+                              ({{item.Description === 0 ? 'Not Set' : item.Description === 1 ? 'Included' : item.Description === 2 ? 'Direct (Purchase)' : item.Description === 3 ? 'Imported' : item.Description === 4 ? 'Upgrade' : item.Description === 5 ? 'Imported Upgrade' : ''}})
+                            </option>
+                                                      </ng-container>
+                        </select>
+             
+                      </div>
+
+                    
+                      
+                      
+                    
+                      <div *ngIf="ssr?.ssr?.Meal">
+                        <label><span>Meal</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr1.meal" (change)="updatePrice()">
+                          <option *ngIf="!travelers[currentIndex]?.ssr?.meal?.AirlineDescription" disabled>Select a meal</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.Meal">
+                            <option [ngValue]="item">{{ item?.Description }} ({{ item?.Code }})</option>
+                          </ng-container>
+                        </select>
+                      </div>
+                      
+                      <!-- Dynamic Meal Select Option -->
+                      <div *ngIf="ssr?.ssr?.MealDynamic">
+                        <label><span>Meal</span></label>
+                        <select  [(ngModel)]="travelerForm.value.ssr1.meal" (change)="updatePrice()">
+                          <option *ngIf="!travelers[currentIndex]?.ssr?.meal?.AirlineDescription" disabled>Select a meal</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.MealDynamic[0]">
+                            <option [ngValue]="item">
+                              {{ item?.AirlineDescription }} ({{ item?.Code }}/ Rs. {{ item?.Price }})
+                              ({{ item?.Description === 1 ? 'Included' : item?.Description === 2 ? 'Direct' : item?.Description === 3 ? 'Imported' : '' }})
+                            </option>
+                                                      </ng-container>
+                        </select>
+                      </div>
+                      <ng-container *ngIf="ssr?.ssr?.SeatDynamic">
+                        <ng-container *ngFor="let seats of ssr?.ssr?.SeatDynamic[0]?.SegmentSeat; let i = index">
+                          <div>
+                            <label><span> Seat ( {{ seats?.RowSeats[0].Seats[0].Origin }} - {{ seats?.RowSeats[0].Seats[0].Destination }} )</span></label>
+                            <div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: center; gap: 5px; height: 40px;">
+                              <input disabled style="width: 160px; height: 36px;" [value]="travelers[currentIndex]?.ssr1?.seat?.rowNo || ''"/>
+                              <i class="fa-solid fa-calculator" (click)="handleSeatMapClick(i, seats?.RowSeats, 0)"></i>
+                            </div>
+                          </div>
+                        </ng-container>
+                      </ng-container>
+                      <ng-container *ngIf="ssr?.ssr?.SeatPreference">
+                        <div>
+                          <label><span>Seat ( {{ ssr?.Origin }} - {{ ssr?.Destination }} )</span></label>
+                          <div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: center; gap: 5px; height: 40px;">
+                            <input disabled style="width: 160px; height: 36px;" [value]="travelers[currentIndex]?.ssr1?.seat?.Description || ''"/>
+                            <i class="fa-solid fa-calculator" (click)="handleSeatMapClick(i, ssr?.ssr?.SeatPreference, 0)"></i>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+
+
+                   
+
+
+
+
+                     
+                  </div>
+                  <div formGroupName="ssr2" *ngIf="ssr2" style="display: flex; width:100%; flex-direction: row;">
+
+                    <ng-container *ngIf="ssr2">
+                      <div>
+                        <label><span>Extra Baggage (kgs)</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr2.extraBaggage" (change)="updatePrice()">
+                          <option *ngIf="!ssr?.ssr?.Baggage[0]" disabled>Select a Baggage</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.Baggage[0]">
+                            <option [ngValue]="item">
+                              {{ 'Weight ' + item?.Weight + ' (Rs. ' + item?.Price + ')' }}
+                              ({{item.Description === 0 ? 'Not Set' : item.Description === 1 ? 'Included' : item.Description === 2 ? 'Direct (Purchase)' : item.Description === 3 ? 'Imported' : item.Description === 4 ? 'Upgrade' : item.Description === 5 ? 'Imported Upgrade' : ''}})
+                            </option>
+                                                      </ng-container>
+                        </select>
+             
+                      </div>
+
+                    
+                      
+                      
+                    
+                      <div *ngIf="ssr?.ssr?.Meal">
+                        <label><span>Meal</span></label>
+                        <select [(ngModel)]="travelerForm.value.ssr2.meal" (change)="updatePrice()">
+                          <option *ngIf="!travelers[currentIndex]?.ssr?.meal?.AirlineDescription" disabled>Select a meal</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.Meal">
+                            <option [ngValue]="item">{{ item?.Description }} ({{ item?.Code }})</option>
+                          </ng-container>
+                        </select>
+                      </div>
+                      
+                      <!-- Dynamic Meal Select Option -->
+                      <div *ngIf="ssr?.ssr?.MealDynamic">
+                        <label><span>Meal</span></label>
+                        <select  [(ngModel)]="travelerForm.value.ssr2.meal" (change)="updatePrice()">
+                          <option *ngIf="!travelers[currentIndex]?.ssr?.meal?.AirlineDescription" disabled>Select a meal</option>
+                          <ng-container *ngFor="let item of ssr?.ssr?.MealDynamic[0]">
+                            <option [ngValue]="item">
+                              {{ item?.AirlineDescription }} ({{ item?.Code }}/ Rs. {{ item?.Price }})
+                              ({{ item?.Description === 1 ? 'Included' : item?.Description === 2 ? 'Direct' : item?.Description === 3 ? 'Imported' : '' }})
+                            </option>
+                                                      </ng-container>
+                        </select>
+                      </div>
+                      <ng-container *ngIf="ssr?.ssr?.SeatDynamic">
+                        <ng-container *ngFor="let seats of ssr?.ssr?.SeatDynamic[0]?.SegmentSeat; let i = index">
+                          <div>
+                            <label><span> Seat ( {{ seats?.RowSeats[0].Seats[0].Origin }} - {{ seats?.RowSeats[0].Seats[0].Destination }} )</span></label>
+                            <div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: center; gap: 5px; height: 40px;">
+                              <input disabled style="width: 160px; height: 36px;" [value]="travelers[currentIndex]?.ssr2?.seat?.rowNo || ''"/>
+                              <i class="fa-solid fa-calculator" (click)="handleSeatMapClick(i, seats?.RowSeats, 0)"></i>
+                            </div>
+                          </div>
+                        </ng-container>
+                      </ng-container>
+                      <ng-container *ngIf="ssr?.ssr?.SeatPreference">
+                        <div>
+                          <label><span>Seat ( {{ ssr?.Origin }} - {{ ssr?.Destination }} )</span></label>
+                          <div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: center; gap: 5px; height: 40px;">
+                            <input disabled style="width: 160px; height: 36px;" [value]="travelers[currentIndex]?.ssr2?.seat?.Description || ''"/>
+                            <i class="fa-solid fa-calculator" (click)="handleSeatMapClick(i, ssr?.ssr?.SeatPreference, 0)"></i>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+
+
+                   
+
+
+
+
+                     
+                  </div>
+
+                  
+                  
+              
+                  
+              </fieldset>
+               </div>
+
+               <!-- <ng-container *ngIf=" travelers[currentIndex]?.personalInfo?.FirstName==='' "> -->
+                <div class="btns" >
+                  <button type="submit" (click)="addTraveler()"><span>Add Traveler</span></button>
+                </div>
+              <!-- </ng-container> -->
+             
+              <ng-container *ngIf="travelers[currentIndex]?.personalInfo?.FirstName!==''">
+                <div class="btns"   >
+                 
+                  <button type="submit" (click)="updateTraveller()"><span>Update</span></button>
+                </div>
+              </ng-container>
+                  
+        </div>
+    </main>
+</body>

@@ -1,0 +1,67 @@
+
+<body>
+    <div class="container">
+        <div class="sub-container" (click)="close()"></div>
+        <main>
+            <div class="left">
+                <div class="header">
+                    <div class="head">
+                        <span>Select your seat</span>
+                        <span (click)="close()">X</span>
+                    </div>
+                </div>
+
+                <div class="main">
+
+                    <div class="content">
+
+                        <!-- your existing HTML code -->
+                        <form>
+                            <div *ngIf="!ssr[0]?.Seats" class="select-details">
+                              <label><span>Seat Type</span></label>
+                              <select   [(ngModel)]="selectedSeat" (change)="handleClick($event)">
+                                <ng-container *ngFor="let item of ssr">
+                                  <option [ngValue]="item">{{ item?.Code + item?.Description }}</option>
+                                </ng-container>
+                              </select>
+                            </div>
+                           
+                            <div *ngIf="ssr[0]?.Seats" class="select-details">
+                              <label><span>Row No</span></label>
+                              <select [(ngModel)]="row" (ngModelChange)="handleChange()">
+                                <ng-container *ngFor="let item of ssr; let i = index">
+                                  <option [value]="i">{{ i + 1 }}</option>
+                                </ng-container>
+                              </select>
+                            </div>
+                            <div *ngIf="ssr[0]?.Seats" class="select-details">
+                              <label><span>Seat No</span></label>
+                              <select [(ngModel)]="selectedSeat" (change)="handleClick($event)">
+                                <ng-container *ngFor="let item of ssr[row]?.Seats">
+                                  <ng-container *ngIf="item?.AvailablityType!==3  ">
+                                    <option [ngValue]="item">{{ item.Code + ' (Rs. ' + item.Price + ')' }} ({{item?.SeatType===1 ? 'Window' : item?.SeatType=== 2 ? 'Aisle' : 'Middle' }}) </option>
+
+                                  </ng-container>
+                                </ng-container>
+                              </select>
+                            </div>
+                            
+                            <div class="confirm">
+                              <button (click)="emitSeatMapData()"><span>Confirm</span></button>
+                            </div>
+                          </form>
+                          
+                          
+                  
+                        <!-- your existing HTML code -->
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../../../assets/img/brand/seatMap.png"/>
+            </div>
+        </main>
+
+    </div>
+    
+</body>

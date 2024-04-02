@@ -1,0 +1,266 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Style for h3 elements */
+h3 {
+  color: white;
+}
+
+/* Container styling */
+.containers {
+  top:0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  z-index: 9999;
+  position: fixed;
+}
+.sub-container{
+  top:0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); 
+  position: fixed;
+}
+
+/* Card body styling */
+.card-bodys {
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  width: 1000px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+/* Title styling */
+.title {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  z-index: 99999999;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+/* Nested h3 styling within .title */
+.title h3 {
+  color: black;
+  
+}
+
+/* Box styling */
+.boxs {
+  height: 80%;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Individual box styling */
+.box1 {
+  border: 1px solid;
+  height: 90%;
+  width: 180px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 30px;
+}
+
+.rating,.user-rating{
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.checkbox1{
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+  span{
+    font-size: 0.9rem;
+    color: black;
+  }
+}
+
+.box2 {
+  height: 90%;
+  width: 680px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+/* Styling for active box containers */
+.box-containers.active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards styling */
+.cards {
+  margin-top: 20px;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  height: 160px;
+  background-color: antiquewhite;
+  border: 1px solid;
+  display: flex;
+  border: 1px solid;
+}
+
+/* Left section of the cards */
+.left {
+  height: 100%;
+  width: 20%;
+}
+
+/* Image styling within .left */
+.left img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 0px 10px;
+}
+
+/* Middle section of the cards */
+.middle {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+}
+
+/* Price styling */
+.price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+/* Styling for buttons */
+.buttons {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Styling for tooltip */
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10000000;
+  margin-top: 5px;
+}
+
+.tooltip table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tooltip th,
+.tooltip td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Styling for the "append-rating" class */
+.append-rating {
+  background: #0b58b4;
+  border-radius: 4px;
+  padding: 3px 5px;
+  color: white;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Styling for cancellation container */
+.cancellation-container {
+  position: relative;
+}
+
+/* Styling for cancellation trigger */
+.cancellation-trigger {
+  font-size: 0.9rem;
+}
+
+/* Styling for cancellation table */
+.cancellation-table {
+  display: none;
+  position: absolute;
+  width: 300px;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  z-index: 99999999999;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+/* Hover effect for cancellation container */
+.cancellation-container:hover .cancellation-table {
+  display: block;
+}
+
+/* Styling for cancellation table content */
+.cancellation-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cancellation-table th,
+.cancellation-table td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+/* Hover effect for cancellation table rows */
+.cancellation-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Update the box shadow as needed */
+  border: 2px solid #007BFF; /* Update the border style as needed */
+}

@@ -1,0 +1,200 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-shadow: 0px 6px 10px 0 grey;
+}
+.flightCard {
+  display: flex;
+  height: 82px;
+  width: 100%;
+  padding: 4px;
+}
+.airline {
+  width: 30%;
+  display: flex;
+}
+.airline-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.airline-section1-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.airline-section1-logo img{
+  height: 50px;
+  width: 50px;
+}
+.airline-section1-logo p{
+  font-size: 10px;
+}
+.airline-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 60%;
+}
+.airline-section2 h3{
+  font-size: 17px;
+}
+.airline-section2 h4{
+  font-size: 13px;
+}
+// ===================================================
+.timings {
+  width: 60%;
+  display: flex;
+  padding: 0px 0;
+  justify-content: space-evenly;
+}
+.timings-city-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.timings-city-stats h3{
+  font-size: 16px;
+  color: #46413fb5;
+}
+.timings-city-stats h4{
+  font-size: 15px;
+  color: #000;
+  text-decoration-line: underline;
+}
+.timings-duration {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.timings-duration img{
+  height: 10px;
+  width: 75px;
+}
+.flight-stops-btn{
+  border: none;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  &:hover{
+    transition: none;
+    box-shadow: none;
+  }
+}
+.flightStopsContent{
+  background-color: #fff;
+  border: 1px soild red;
+}
+.flight-stop-tooltip {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  padding: 10px; /* Add padding for better visual appearance */
+  max-width: 200px; /* Adjust the max width as needed */
+}
+.flight-stop-tooltip h3 {
+  font-size: 14px; /* Increase the font size for better readability */
+  color: #000;
+  margin-bottom: 5px; /* Add some spacing between heading and content */
+}
+.flight-stop-tooltip-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.flight-stop-tooltip-footer h4 {
+  font-size: 12px;
+  color: #000;
+}
+/* Optional: Adjust tooltip arrow color */
+.tooltip-inner::before {
+  border-top-color: #fff;
+}
+// =========================================
+.pricing {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pricing-head-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.refundable-btn{
+  border: none;
+  background-color: #169930;
+  color: #fff;
+  border-radius: 50%;
+  height: 16px;
+  width: 17px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+}
+.edit-btn{
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  height: 18px;
+  width: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-btn img{
+  height: 12px;
+  width: 12px;
+}
+.pricing-fare-detailsBtn {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content:space-evenly ;
+  // align-items: flex-end ;
+  position: relative;
+}
+.pricing-fare-detailsBtn h3{
+  font-size: 22px;
+}
+.flightDetails-btn{
+  border: none;
+  background-color: #fff;
+  text-decoration: underline;
+  font-size: 11px;
+  width: fit-content;
+  position: absolute;
+  right: 3px;
+  bottom: -4px;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}

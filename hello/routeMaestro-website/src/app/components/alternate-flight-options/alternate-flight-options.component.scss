@@ -1,0 +1,181 @@
+/* Add your own styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal.open {
+    display: flex;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 100%;
+    height: 580px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 2px;
+    height: 6%;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+  }
+  
+  .close {
+    cursor: pointer;
+    font-size: 24px;
+    color: #999;
+  }
+  
+  .modal-body {
+    display: flex;
+    height: 85%; 
+    display: flex;
+    padding: 10px 0;
+  }
+  .modal-body-filters-sections{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 8px;
+    border-right: 1px solid;
+    padding-right: 3px;
+    overflow-y: scroll;
+  }
+
+  .refundable{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btns{
+    height: 50px;
+    width: 100px;
+    /* padding: 10px; */
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    border: 0;
+    transition: border 0.3s ease;
+  }
+  .btns span{
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 550;
+  }
+  .btns.selected {
+    border: 2px solid blue; /* Add your selected button border styles */
+  }
+
+  .stops{
+    display: flex;
+    gap: 10px;
+  }
+  .stops span{
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .airline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  .box{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .item{
+    display: flex;
+    gap: 5px
+  }
+  .item span{
+    font-size: 0.8rem;
+  }
+
+  .modal-body-flight-sets-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 80%;
+    height: auto; 
+    max-height: 435px; 
+    overflow: auto;
+  }
+  
+  .normal-flightSet{
+    width: 92%;
+    margin: 22px 0;
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+  }
+
+  .highlighted-flightSet{
+    width: 92%;
+    margin: 22px 0;
+    box-shadow: 8px 8px 10px 0 green, -8px -8px 10px 0 green;
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+
+  }
+
+  
+  
+  .modal-footer {
+    text-align: right;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 10%;
+  }
+  .modal-footer button{
+    margin: 0;
+    padding: 8px;
+  }
+  
+  /* Additional styling as needed */
+  

@@ -1,0 +1,68 @@
+<main  >
+
+  <div class="flightCard">
+
+    <div class="airline">
+      <div class="airline-section1">
+        <div class="airline-section1-logo">
+          <img
+            src={{flightLogoOnFront()}}
+            alt="aLogo"
+          />
+          <p style="font-size: 10px">{{ getAirlineCode(0) }} {{ getFlightNumber(0) }}</p>
+        </div>
+      </div>
+      <div class="airline-section2">
+        <h3>{{ getAirlineName(0) }}</h3>
+        <h4>{{ getCabinClass(0) }}</h4>
+      </div>
+    </div>
+
+    <div class="timings">
+      <div class="timings-city-stats">
+        <h3>{{ getDepartureTime(0) }}</h3>
+        <h4> {{ getFirstOriginCity(0) }} </h4>
+        <h3> {{ getDepartDate(0) }} </h3>
+      </div>
+      <div class="timings-duration">
+        <h4>{{ getFlightDuration(0) }}</h4>
+         <button type="button" class="btn flight-stops-btn "  placement="top" ngbTooltip>
+          <img src="{{ getStopsImageUrl(0) }}" alt="stops Bar" />
+          </button>
+        
+         
+          <ng-template class="flightStopsContent"  #flightStopsContent>
+
+              <div class="flight-stop-tooltip">
+                <h3>Plane change</h3>
+                <div class="flight-stop-tooltip-footer">
+                  <h4>Amritsar (ATQ)</h4>
+                  <h4>4h 20m </h4>
+                </div>
+              </div>
+
+
+             </ng-template>
+        <h4>{{ getFlightStops(0) }}</h4>
+      </div>
+      <div class="timings-city-stats">
+        <h3>{{ getArrivalTime(0) }}</h3>
+        <h4>{{ getFinalDestinationCity(0) }}  </h4>
+        <h3> {{ getArrDate(0) }}  </h3>
+      </div>
+    </div>
+
+    <div class="pricing">
+          <button style="border: none;background-color:#fff; text-decoration: none;" (click)="toTriggerAlternateFlightsetDialogBox()"> <img src="../../../assets/img/brand/pencil.png" alt="Edit" height="16px" width="15px">  </button>
+    </div>
+    
+    <div>
+
+    </div>
+  
+  </div>
+
+  <!-- <app-flight-details *ngIf="isflightDetails" (click)="toTriggerAlternateFlightsetDialogBox()"  ></app-flight-details> -->
+
+    
+</main>

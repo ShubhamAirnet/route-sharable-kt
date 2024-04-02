@@ -1,0 +1,6076 @@
+{
+    "data": [
+        {
+            "CityName": "Delhi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130443,
+            "StateProvince": "DELHI",
+            "Type": 1
+        },
+        {
+            "CityName": "Mumbai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144306,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Goa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119805,
+            "StateProvince": "GOA",
+            "Type": 1
+        },
+        {
+            "CityName": "Bengaluru",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111124,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Jaipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122175,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Chennai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 127343,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Hyderabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145710,
+            "StateProvince": "Andra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kolkata",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113128,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Gurugram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119513,
+            "StateProvince": "Haryana ",
+            "Type": 1
+        },
+        {
+            "CityName": "Pune",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133133,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Ahmedabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100263,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Chandigarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114107,
+            "StateProvince": "Chandigarh",
+            "Type": 1
+        },
+        {
+            "CityName": "Udaipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140522,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Amritsar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101129,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Agra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100589,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Lucknow",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126666,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Mussoorie",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130341,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Indore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121726,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Jodhpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145836,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Shimla",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138673,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Varanasi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141618,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Shirdi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137316,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kochi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101204,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Gangtok",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119221,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Port Blair",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133556,
+            "StateProvince": "Andaman And Nicobar",
+            "Type": 1
+        },
+        {
+            "CityName": "Coimbatore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144735,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Manali",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126388,
+            "StateProvince": "Himachal pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Jaisalmer",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122326,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Tirupati",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140311,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Mysuru",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 128698,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Guwahati",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121139,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Darjeeling",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116264,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhubaneswar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111558,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Srinagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139456,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Ooty",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130990,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Munnar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 128573,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Lonavala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126630,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Nagpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129723,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Mahabaleshwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 125684,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Noida",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130205,
+            "StateProvince": "UTTAR PRADESH",
+            "Type": 1
+        },
+        {
+            "CityName": "Dehradun",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116164,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Katra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124184,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Surat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139526,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Vadodara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141587,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Rishikesh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134932,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Calangute",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 112868,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Ludhiana",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 125928,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhopal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111932,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Coorg",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115400,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Madurai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 127067,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Haridwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121186,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Kovalam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123897,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Raipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133672,
+            "StateProvince": "Chhattisgarh",
+            "Type": 1
+        },
+        {
+            "CityName": "Havelock Island",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119978,
+            "StateProvince": "Andaman & Nicobar",
+            "Type": 1
+        },
+        {
+            "CityName": "Visakhapatnam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 142198,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Patna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132429,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Nashik",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146814,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Puri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132593,
+            "StateProvince": "Orissa",
+            "Type": 1
+        },
+        {
+            "CityName": "Nainital",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129726,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Pushkar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134001,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Dharamshala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115880,
+            "StateProvince": "HIMACHAL PRADESH",
+            "Type": 1
+        },
+        {
+            "CityName": "Aurangabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110349,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Vijayawada",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148500,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Thekkady",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139609,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Mount Abu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146752,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Siliguri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147912,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Ranchi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133760,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Alappuzha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109524,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Trivandrum",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139820,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Rameshwaram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133179,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Mahabalipuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126117,
+            "StateProvince": "TAMIL NADU",
+            "Type": 1
+        },
+        {
+            "CityName": "Cochin",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114326,
+            "StateProvince": "KERALA",
+            "Type": 1
+        },
+        {
+            "CityName": "Rajkot",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134211,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Faridabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 118129,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Greater Noida",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145430,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Mangaluru",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126805,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Gulmarg",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119924,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Navi Mumbai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 128734,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Jammu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121783,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Jalandhar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122327,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Dalhousie",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116613,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Shillong",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138670,
+            "StateProvince": "Meghalaya",
+            "Type": 1
+        },
+        {
+            "CityName": "Kodaikanal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123608,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Pondicherry",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150358,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Corbett-Nationalpark",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115501,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Allahabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100307,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kumarakom",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123344,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Puducherry",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132561,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Ghaziabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 118973,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pahalgam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131375,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Leh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 125144,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Ajmer",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100804,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Vishakapatnam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107390,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dwarka",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108863,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Somnath",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138049,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Vrindavan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141391,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Daman",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116035,
+            "StateProvince": "Daman and Diu",
+            "Type": 1
+        },
+        {
+            "CityName": "Kanyakumari",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123084,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Kalimpong",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122511,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Panaji",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131398,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Ujjain",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140701,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kozhikode",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144475,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kasauli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122950,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Neemrana",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130137,
+            "StateProvince": "RAJASTHAN",
+            "Type": 1
+        },
+        {
+            "CityName": "Bekal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110566,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Tiruchirappalli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148240,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Jabalpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121509,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Bikaner",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144247,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Ranthambore Nationalpark",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134224,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Kanpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122932,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kolhapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123875,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Gwalior",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120439,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Khajuraho",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122580,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Gorakhpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120371,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Neil Island",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129189,
+            "StateProvince": "Andaman & Nicobar",
+            "Type": 1
+        },
+        {
+            "CityName": "Mathura",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 127857,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pelling",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147140,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Salem",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 135916,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Zirakpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150248,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Candolim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105699,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Vellore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148459,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Jamshedpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123422,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Panchkula",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131002,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Wayanad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148630,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "McLeod Ganj",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104040,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhuj",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144230,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Vagator",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148407,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Imphal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122108,
+            "StateProvince": "Manipur",
+            "Type": 1
+        },
+        {
+            "CityName": "Gandhidham",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 117993,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Hampi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121175,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Sasan Gir",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136555,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Gandhinagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119071,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Kota",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124966,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Thane",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140020,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Alibaug",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101625,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Belagavi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111427,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhavnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111485,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Agartala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100667,
+            "StateProvince": "Tripura",
+            "Type": 1
+        },
+        {
+            "CityName": "Hubballi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150235,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Lachung",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146091,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Candolim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144510,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Madikeri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104313,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Jamnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122329,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Sawai Madhopur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136656,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Mamallapuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126139,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Diu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115899,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Palampur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147070,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Bilaspur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111574,
+            "StateProvince": "Chhattisgarh",
+            "Type": 1
+        },
+        {
+            "CityName": "Alwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109093,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Rudrapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150359,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Manipal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104157,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Secunderabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136748,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Parwanoo",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147106,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Thiruvananthapuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148901,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Anand",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109446,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Thrissur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140032,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Patnitop",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131028,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Meerut",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146575,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Yercaud",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 143329,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Panchgani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131394,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Udupi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148363,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Kumbhalgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123774,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhatinda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111292,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Karjat City",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 160750,
+            "StateProvince": null,
+            "Type": 1
+        },
+        {
+            "CityName": "Tirunelveli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140310,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Ramnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134214,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Bodhgaya",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 112643,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Bareilly",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111009,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Patiala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106663,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Gopalpur on Sea",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120368,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Rajahmahendravaram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134040,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kakinada",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123476,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Karnal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122275,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Deoghar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105482,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Solapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138128,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Hassan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120871,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Thanjavur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139605,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Kanha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122931,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kausani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123227,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Hubballi-Dharwad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145694,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Poovar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133497,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Matheran",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146545,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kannur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122522,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Igatpuri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121984,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kollam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123877,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Pachmarhi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132015,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Ernakulam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145110,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kaziranga",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123527,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Orchha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130252,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Mobor Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 128914,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Jhansi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122199,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Silvassa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147914,
+            "StateProvince": "Dadra and Nagar Have",
+            "Type": 1
+        },
+        {
+            "CityName": "Nellore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129289,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Cansaulim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113347,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Gaya",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119358,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Shivamogga",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147891,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Kanchipuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122824,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Nanded",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129732,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Varkala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141976,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Khimsar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123676,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhimtal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111196,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Guruvayur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119517,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Baga",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110640,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Tiruppur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141054,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Coonoor",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115864,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Digha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115894,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Mohali",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106514,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Kumbakonam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 125002,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Panipat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147088,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Auli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110248,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Kasol",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102540,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Satara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136409,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Ranakpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133676,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Chikkamagaluru",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114986,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Moradabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129615,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Bharatpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111484,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Roorkee",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150180,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Cavelossim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114566,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Durgapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115958,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Chail",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113675,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Tiruvannamalai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139315,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Bishangarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111216,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Arpora",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109872,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Ranikhet",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133838,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Guntur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106131,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Ambala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100881,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Vapi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141147,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Chittorgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108144,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Ganpatipule",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119222,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Bandipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110851,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Hosapete",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121396,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Sriperumbudur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138370,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Rourkela",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134643,
+            "StateProvince": "Orissa",
+            "Type": 1
+        },
+        {
+            "CityName": "Lansdowne",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103751,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Khandala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123259,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhiwadi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109000,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Dibrugarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115884,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Colva",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115840,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Baddi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150171,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Shamshabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107371,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Thoothukudi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141231,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhilwara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105648,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Bharuch",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111195,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Kurnool",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103728,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Mukteshwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129415,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Haldwani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120588,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Porbandar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133551,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Ankleshwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101147,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Mapusa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104323,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Jorhat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122215,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Tarapith",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150362,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Mandi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146462,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kottayam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123891,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Hisar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105850,
+            "StateProvince": "Haryana ",
+            "Type": 1
+        },
+        {
+            "CityName": "Pathankot",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132705,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Pench",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132089,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Namchi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130358,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Raigad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147442,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Bardez",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110512,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Binsar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111212,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Dimapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115896,
+            "StateProvince": "Nagaland",
+            "Type": 1
+        },
+        {
+            "CityName": "Velangani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148450,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Amravati",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101128,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Mandawa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126802,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Solan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138127,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Jalgaon",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122177,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Mandarmoni",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104156,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Ahmednagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100363,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhilai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105400,
+            "StateProvince": "Chhattisgarh",
+            "Type": 1
+        },
+        {
+            "CityName": "Cuttack",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116021,
+            "StateProvince": "Orissa",
+            "Type": 1
+        },
+        {
+            "CityName": "Dhanbad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150731,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Mashobra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146533,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Nedumbassery",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150203,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Yelagiri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148767,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Asansol",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110211,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Palakkad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132025,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Almora",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100203,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Covelong",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115526,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Utorda Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141578,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Badami",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111073,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Benaulim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111655,
+            "StateProvince": "Benaulim",
+            "Type": 1
+        },
+        {
+            "CityName": "Benaulim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150242,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Dhule",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116087,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kumbalgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150174,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Dhikuli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116338,
+            "StateProvince": "Uttarakhand ",
+            "Type": 1
+        },
+        {
+            "CityName": "Gokarna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 118733,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Nadiad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104506,
+            "StateProvince": "Gujarat ",
+            "Type": 1
+        },
+        {
+            "CityName": "Sonamarg",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138484,
+            "StateProvince": "Jammu And Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Sariska National Park",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 135586,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Tezpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139069,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Dapoli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115634,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kullu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146047,
+            "StateProvince": "HIMACHAL PRADESH",
+            "Type": 1
+        },
+        {
+            "CityName": "Morjim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129044,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Baramati",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110855,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Karur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123217,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Mararikulam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126817,
+            "StateProvince": "KERALA",
+            "Type": 1
+        },
+        {
+            "CityName": "Hosur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121290,
+            "StateProvince": "KARNATAKA",
+            "Type": 1
+        },
+        {
+            "CityName": "Karwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123098,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Whitefield",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 143727,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Angul",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102166,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Bandhavgarh-Nationalpark",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111121,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kanniyakumari",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122256,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Chidambaram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114793,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Pimpri-Chinchwad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133418,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kashipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123519,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Shantiniketan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137568,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Dooars",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144950,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Bagdogra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150697,
+            "StateProvince": "WEST BENGAL",
+            "Type": 1
+        },
+        {
+            "CityName": "Trimbak",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106849,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Hinjawadi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121355,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Howrah",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145687,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Phagwara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132753,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Barmer",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111142,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Anjuna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101146,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Vainguinim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140575,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Kandla",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151469,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Bokaro",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 112228,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Warangal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151614,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Aligarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100420,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kasargod",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122848,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Aizawl",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100273,
+            "StateProvince": "Mizoram",
+            "Type": 1
+        },
+        {
+            "CityName": "Kerala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122978,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Athirapally",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150412,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Itanagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122732,
+            "StateProvince": "Arunachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kishangarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148902,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Kutch",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122798,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Vythiri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151612,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Canacona",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113160,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Ratnagiri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133687,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Ayodhya",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110358,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Muzaffarpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151536,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Pantnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150800,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Sambalpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103345,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Palani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130749,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Khajjiar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123258,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pali",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147075,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Rudraprayag",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 135778,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Dahej",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115176,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Kandaghat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122253,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Badrinath",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109814,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Ladakh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150363,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Jhunjhunu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148844,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Malvan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126958,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Panvel",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131544,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Sikar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136312,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Satna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147780,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dhanaulti",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106006,
+            "StateProvince": "Uttarakhand ",
+            "Type": 1
+        },
+        {
+            "CityName": "Hoshiarpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121557,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Bheeramballi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144227,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Akola",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100689,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Rohtak",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134058,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Kargil",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122938,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Pollachi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132282,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Mohan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102819,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Sri Ganganagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107250,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Vagamon",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148406,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Vasco da Gama",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107855,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Tinsukia",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107782,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Mirik",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106510,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Dwarka",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145006,
+            "StateProvince": "New Delhi",
+            "Type": 1
+        },
+        {
+            "CityName": "Chandrapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105246,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Chitrakoot",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114803,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Periyar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132133,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Latur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 125485,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Bundi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113081,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Ahmedpur Mandvi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100797,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhiwandi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144229,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Ratlam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102675,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhandardara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111694,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Margao",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106481,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Karaikudi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123204,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Morbi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102834,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Sangli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136501,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Dausa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144874,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Karad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123503,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhagalpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108056,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Rewa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150930,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dhela",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105779,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Puttaparthi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134178,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dindigul",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106010,
+            "StateProvince": "tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Malda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150632,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Vasai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141980,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Sirsa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103180,
+            "StateProvince": "Haryana ",
+            "Type": 1
+        },
+        {
+            "CityName": "Darbhanga",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105998,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Kundapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103888,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Betalbatim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110618,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Ballari",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110483,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Junagarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122370,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Pokhran",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133214,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Ramgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132621,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Panna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131437,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Konark",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123879,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Varca Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141450,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Tawang",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139699,
+            "StateProvince": "Arunachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Mayiladuthurai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126911,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Khilchipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122998,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Singrauli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106649,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Karimnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103950,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Veraval",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 142563,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Maheshwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126265,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Goa Velha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108256,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Rajgir",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133175,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Omkareshwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131276,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Jagdalpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150469,
+            "StateProvince": "Chhattisgarh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kalyan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145872,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Rewari",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147501,
+            "StateProvince": "Delhi National Territory",
+            "Type": 1
+        },
+        {
+            "CityName": "Vayalar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148446,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Nerul",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129827,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Deogarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116074,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Betul",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111749,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Chiplun",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114272,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Namakkal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104509,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Phaltan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106676,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Kedarnath",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123231,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Durg",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 117048,
+            "StateProvince": "Chhattisgarh",
+            "Type": 1
+        },
+        {
+            "CityName": "Srikakulam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137118,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pangong Tso Lake",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106580,
+            "StateProvince": "Jammu And Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Kangra Valley",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122826,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dharampur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102310,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Saharanpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103325,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Majorda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104318,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Dandeli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116039,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Chakan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114601,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Shivpuri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137750,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Vaikom",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107944,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kalpetta",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121837,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Chamba",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114703,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Katihar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108361,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Jalna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103931,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Neeleshwar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129816,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Chhindwara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108141,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Chittaurgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114804,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Sultan Bathery",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107078,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Murud",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129434,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Narlai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129163,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Ichalkaranji",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102531,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Theni",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139744,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Jwalamukhi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123469,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pathanamthitta",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131027,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Seoni",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136766,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Khandwa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106186,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Jalpaiguri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122328,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Bogmallo",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 112649,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Kondotty",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103877,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Ramathra Fort",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134213,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Luni",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 125651,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Behror",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110564,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Uttarkashi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140143,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Dungarpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144996,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Majorda Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 127352,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Abu Road",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105141,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Burhanpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148834,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Nawalgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146825,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Shekhawati",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136801,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Vizianagaram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107391,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Rameswaram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151860,
+            "StateProvince": "TAMIL NADU",
+            "Type": 1
+        },
+        {
+            "CityName": "Salasar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103491,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Adoor",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102138,
+            "StateProvince": "kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Tura",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106856,
+            "StateProvince": "Meghalaya",
+            "Type": 1
+        },
+        {
+            "CityName": "Perambalur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102750,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Pernem",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131597,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Vijapura",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111949,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Baiguney",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151842,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Cherai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114523,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kotagiri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123312,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Kantal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151841,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Umaria",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141832,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Ravangla",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133295,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Mettupalayam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 128829,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Thodupuzha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106955,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Narkanda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102033,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Renigunta",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102683,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Hanumangarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120206,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Tiruttani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106394,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Tadoba",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151850,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Palolem Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131392,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Muradabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129232,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Cherai Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106208,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Silchar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150361,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Rajapalayam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102942,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Dabolim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116604,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Churu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114554,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Alipurduar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148835,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Nagarhole National Park",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129777,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Nagapattinam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129447,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Palanpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130316,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Samode",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103346,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Arambol",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104724,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Surajgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151866,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Orissa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130799,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Arrosim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101068,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Uchiyarda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140098,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Nimaj",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129477,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Chowara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114817,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Alto Porvorim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101349,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Amer",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105159,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Manmad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 126810,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Sunderban",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140235,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Lataguri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148903,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Kumily",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146051,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kushalnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124044,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Parbhani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151861,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kathgodam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123108,
+            "StateProvince": "Uttarakhand ",
+            "Type": 1
+        },
+        {
+            "CityName": "Karauli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148869,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Jalore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123420,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Rohet",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147554,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Devprayag",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106255,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Giridih",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106106,
+            "StateProvince": "Jharkhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Junagadh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105627,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Wakad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107703,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Arcot",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109167,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Govardhan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108265,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Ramakkalmedu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 133177,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Sahibzada Ajit Singh Nagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147607,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Gangotri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119613,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Turia",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141528,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Bali",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148983,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Chundale",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114823,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Jispa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123445,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Sungal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107275,
+            "StateProvince": "Jammu Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Shamirpet",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136285,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Purakkad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147410,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Hansi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 119961,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Vandanmedu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141615,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "North Lakhimpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150162,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Chaukori",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114960,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Krishnagiri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123334,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhuntar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108057,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Siolim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138010,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Velsao Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 142295,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Dundlod",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116460,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Vazhoor",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141630,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Neyveli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150649,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Chhota Udaipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114977,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Kanadukathan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122406,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Wandoor",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107887,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Thalassery",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139071,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Yavatmal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 143798,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Fatehgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 118805,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Wankaner",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141960,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Balurghat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150951,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Chorao Island",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114811,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Kappad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122525,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Verem",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107957,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Thanneermukkom",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138628,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Wuste Thar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 143481,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Glenburn",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 118719,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Vallikunnam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140593,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Car Nicobar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150965,
+            "StateProvince": "Andaman & Nicobar",
+            "Type": 1
+        },
+        {
+            "CityName": "Murinjapuzha",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129104,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Jeypore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122763,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Kalpatta",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105633,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Sinquerim Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138706,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Yamunotri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 143639,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Dankuni",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 116624,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Una",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141097,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kailashahar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151112,
+            "StateProvince": "Tripura",
+            "Type": 1
+        },
+        {
+            "CityName": "Nalagarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129257,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kamba",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121841,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Mohania",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103825,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Tarangambadi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139974,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Pandikkad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 147083,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Edava",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 117110,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Vizhinjam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 141371,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kamalpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151198,
+            "StateProvince": "Tripura",
+            "Type": 1
+        },
+        {
+            "CityName": "Phalodi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131523,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Kushinagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124045,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "North Paravur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106556,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Sardargarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 136093,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Mukundgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146768,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Devikulam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 117352,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Thiksey",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 140415,
+            "StateProvince": "Jammu And Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Dirang",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151439,
+            "StateProvince": "Arunachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pinjore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132183,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Kudasan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124997,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Sholayur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106639,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Sanchi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 135522,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Munsiyari",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146776,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Fatehpur Sikri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 117771,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Tala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 139669,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Ramagundam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151654,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Chintpuri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114801,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Murbad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 128030,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Sirkazhi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106650,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Saligao",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 135694,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Kadmat Island",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145856,
+            "StateProvince": "Lakshadweep",
+            "Type": 1
+        },
+        {
+            "CityName": "Gorai Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 120370,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Sravasti",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 138523,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Adyar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101615,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Chinnakanal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114660,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Malpura",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 127105,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Skara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106651,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Pulamanthole",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134170,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Hooghly",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 145660,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Kaliel",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 122388,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Nagoa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129778,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Mollem",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101894,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Changanassery",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113683,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Mandu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 127113,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pudukkotai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106703,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Shahpura",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137380,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Lahaul and Spiti",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146104,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Hudikeri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 121570,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Nalkeri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130105,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Agatti",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100578,
+            "StateProvince": "Lakshadweep",
+            "Type": 1
+        },
+        {
+            "CityName": "Belur & Halebid",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111440,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Lakkidi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124514,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Sitlakhet",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106898,
+            "StateProvince": "Uttarakhand ",
+            "Type": 1
+        },
+        {
+            "CityName": "Siana",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137404,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Lava",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146184,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kotputli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123314,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Mukkam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129690,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Perinthalmanna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103270,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Bijaipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111499,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Mughalsarai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151863,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Unchagaon",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148374,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Sindhudi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 137470,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Malappuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146447,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kasarde",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123218,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Mullor",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 129695,
+            "StateProvince": "",
+            "Type": 1
+        },
+        {
+            "CityName": "Khandela",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102545,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Bomdila",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111264,
+            "StateProvince": "Arunachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dindi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 160727,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Balaghat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148857,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Chandipur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102259,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Bokkapuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111364,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Dholpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 115881,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Nadukani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130352,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Coochbehar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102287,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Basara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111028,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Kashid",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123518,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "CHILLING",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148870,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Fatehabad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102458,
+            "StateProvince": "Haryana ",
+            "Type": 1
+        },
+        {
+            "CityName": "Balasinore",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111097,
+            "StateProvince": "Gujrat",
+            "Type": 1
+        },
+        {
+            "CityName": "Kuchaman",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 123914,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Nahar Magra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130354,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Mahad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103781,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Thakurdwara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106383,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Kothamangalam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 124008,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Khawasa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 160988,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Samayapuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103344,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Pateri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106662,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Hemis Skupachan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148892,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Nakinda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130357,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "LINGSHED",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148896,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Sanand",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106770,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Satpura",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148897,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Dharmapuri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 144913,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "SHINGRAK",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148898,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Thumkunta",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106958,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "DEEPYOKMA",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 148900,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Padappai",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 130852,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhalukpong",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151811,
+            "StateProvince": "Arunachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Titwala",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 106963,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Mehsana",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151812,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Nattika",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146820,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Guna",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150594,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Vajrahalli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107210,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Keshod",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150615,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Pench Nationalpark",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132724,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Sultanpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151849,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Sitalakhet",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107226,
+            "StateProvince": "Uttarakhand ",
+            "Type": 1
+        },
+        {
+            "CityName": "Sattal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151847,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Maradu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146481,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "NEIL ISLAND",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151851,
+            "StateProvince": "Andaman Islands",
+            "Type": 1
+        },
+        {
+            "CityName": "Suratgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107754,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Kurukshetra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151844,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Paragpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131406,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Sonipat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151848,
+            "StateProvince": "Haryana",
+            "Type": 1
+        },
+        {
+            "CityName": "Dadahu",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104936,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Nawanshahar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151846,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Marari Beach",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 146484,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Nathdwara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151845,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Dhanachuli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104946,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Bongaigaon",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151843,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Paravur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131552,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "KATPADI",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151859,
+            "StateProvince": "TAMIL NADU",
+            "Type": 1
+        },
+        {
+            "CityName": "Barauni",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105028,
+            "StateProvince": "Bihar",
+            "Type": 1
+        },
+        {
+            "CityName": "Shahpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150360,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Anandpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105160,
+            "StateProvince": "Punjab",
+            "Type": 1
+        },
+        {
+            "CityName": "Chalakudy",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150284,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Bharmour",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105046,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "TIB BAGO",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150287,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Pakhal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 131721,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Midnapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150356,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Mandrem",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104482,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "NYERAK",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150357,
+            "StateProvince": "Jammu Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Athirapilly",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105178,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Rupsi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150936,
+            "StateProvince": "Assam",
+            "Type": 1
+        },
+        {
+            "CityName": "Mahansar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104316,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Along",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151339,
+            "StateProvince": "Arunachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Parra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132055,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "ZARIBAGO",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150387,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Baratang Island",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110425,
+            "StateProvince": "Andaman & Nicobar",
+            "Type": 1
+        },
+        {
+            "CityName": "Muzaffarnagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150392,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Balangir",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105188,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Yuksom",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150396,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Bakkhali",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110659,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Kadapa",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 150397,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Rajgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 134041,
+            "StateProvince": "Madhya Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Ajabgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 100686,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Balrampur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110977,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhayandar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101318,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Changodar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105247,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "Baindur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101485,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Kihim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108369,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Gangavathi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101509,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Kuruppanthara",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105541,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Khas Nagrota",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101671,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Stok",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 108572,
+            "StateProvince": "Jammu And Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Koti",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101696,
+            "StateProvince": "Telangana",
+            "Type": 1
+        },
+        {
+            "CityName": "Jambulne",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105614,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Daund",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101849,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Auroville",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109665,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Kottivakkam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 101967,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhowali",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105649,
+            "StateProvince": "Uttarakhand ",
+            "Type": 1
+        },
+        {
+            "CityName": "Uruli Kanchan",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 107938,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Champakulam",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105721,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Aronda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 109973,
+            "StateProvince": "Maharashtra ",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhat",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105734,
+            "StateProvince": "Gujarat",
+            "Type": 1
+        },
+        {
+            "CityName": "B. R. Hills",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110041,
+            "StateProvince": "Mizoram",
+            "Type": 1
+        },
+        {
+            "CityName": "Bijainagar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105736,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Barbil",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110789,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Guirim",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105832,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Bangaram Island",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 110853,
+            "StateProvince": "Lakshadweep",
+            "Type": 1
+        },
+        {
+            "CityName": "Jhadol",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105885,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Bhogapuram",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 111486,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Tiracol",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 105896,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "NAIMISHARANYA",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 160877,
+            "StateProvince": "UTTAR PRADESH",
+            "Type": 1
+        },
+        {
+            "CityName": "Rinchenpong",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102954,
+            "StateProvince": "Sikkim",
+            "Type": 1
+        },
+        {
+            "CityName": "Ponmudi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 132292,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Srinagar, Uttarakhand",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103198,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Naldehra",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151833,
+            "StateProvince": "Himachal",
+            "Type": 1
+        },
+        {
+            "CityName": "Rohetgarh",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103217,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Taboda",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151834,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Kudal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 103727,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Sonmarg",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151835,
+            "StateProvince": "Jammu and Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Rajakkad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102941,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Ashtamudi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151836,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kalady",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104092,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Kidanganad",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151837,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Naggar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104260,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Pragpur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151840,
+            "StateProvince": "Himachal Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Meppadi",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104345,
+            "StateProvince": "Kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Nilgiri",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 104531,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Gosaba",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102486,
+            "StateProvince": "West Bengal",
+            "Type": 1
+        },
+        {
+            "CityName": "Gudalur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102499,
+            "StateProvince": "Tamil Nadu",
+            "Type": 1
+        },
+        {
+            "CityName": "Hebbal",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102512,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Malayattoor",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102599,
+            "StateProvince": "kerala",
+            "Type": 1
+        },
+        {
+            "CityName": "Beawar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 102213,
+            "StateProvince": "Rajasthan",
+            "Type": 1
+        },
+        {
+            "CityName": "Mirzapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 151864,
+            "StateProvince": "Uttar Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Brahmapur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 112272,
+            "StateProvince": "Odisha",
+            "Type": 1
+        },
+        {
+            "CityName": "Caranzalem",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 112913,
+            "StateProvince": "Goa",
+            "Type": 1
+        },
+        {
+            "CityName": "Cauvery",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 113566,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        },
+        {
+            "CityName": "Charholi Budruk",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114117,
+            "StateProvince": "Maharashtra",
+            "Type": 1
+        },
+        {
+            "CityName": "Chinakakani",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114357,
+            "StateProvince": "Andhra Pradesh",
+            "Type": 1
+        },
+        {
+            "CityName": "Choglamsar",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114758,
+            "StateProvince": "Jammu And Kashmir",
+            "Type": 1
+        },
+        {
+            "CityName": "Chamoli",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114936,
+            "StateProvince": "Uttarakhand",
+            "Type": 1
+        },
+        {
+            "CityName": "Chikmaglur",
+            "CountryCode": "IN",
+            "CountryName": "India",
+            "DestinationId": 114987,
+            "StateProvince": "Karnataka",
+            "Type": 1
+        }
+    ]
+}

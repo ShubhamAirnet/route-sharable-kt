@@ -1,0 +1,459 @@
+<div class="main-content">
+    <div class="content">
+
+    <div class="px-2" style="width: 100%;">
+        <ul class="nav-tabs" role="tablist" style="display: flex; list-style: none;">
+            <li class="nav-item" style="width: fit-content;">
+                <a (click)="toggle('flights')"  [class.active]="isFlight" class="nav-link " aria-disabled="false" aria-disabled="false" aria-controls="ngb-nav-0-panel" id="ngb-nav-0" role="tab" > Flights</a>
+            </li>
+            <li class="nav-item" style="width: fit-content;">
+                <a (click)="toggle('hotels')"   [class.active]="isHotel" class="nav-link" aria-disabled="false" aria-disabled="false" aria-controls="ngb-nav-1-panel" id="ngb-nav-1" role="tab" > Hotels</a>
+            </li>
+            <li class="nav-item" style="width: fit-content;">
+                <a (click)="toggle('packages')"  [class.active]="isPackage" class="nav-link " aria-disabled="false" aria-disabled="false" aria-controls="ngb-nav-2-panel" id="ngb-nav-2" role="tab" > Packages</a>
+            </li>
+        </ul>
+    </div>
+      
+        <div *ngIf="isFlight">
+            <div class="head">
+                <span>All Flight Details</span>
+            </div>
+            <div class="card">
+                <div class="first" style="background-color: #03254A;">
+                    <div class="items">
+                        <span>Flight Trip</span>
+                    </div>
+                    <div class="items">
+                        <span>Primary Contact</span>
+                    </div>
+                    <div class="items" style="width: 140px;">
+                        <span style="width: 110px;">Contact No</span>
+                    </div>
+                    <div class="items"  style="width: 175px;">
+                        <span>No Of Pax</span>
+                    </div>
+                    <div class="items"  style="width: 175px;">
+                        <span>Status</span>
+                    </div>
+                    <div class="items" style="width: 200px;">
+                        <span>Price</span>
+                    </div>
+                    <div class="items">
+                        <span>View Details</span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="toggle" style="display: flex; justify-content: flex-end; width: 1000px;margin-top: 22px; margin-bottom: 25px; padding-right: 10px;">
+                <div class="btn-group" role="group" style="border: 1px solid #ccc; border-radius: 5px;" aria-label="Basic example">
+                    <button type="button" class="btn "  (click)="highlightButton('All')" [ngClass]="{ 'highlighted': activeButton === 'All' }" style="    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    align-items: center;">All</button>
+                    <button type="button" class="btn " (click)="highlightButton('Booked')" [ngClass]="{ 'highlighted': activeButton === 'Booked' }" style="    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    color: green;
+                    align-items: center;">Booked</button>
+                    <button type="button" class="btn" (click)="highlightButton('Failed')" [ngClass]="{ 'highlighted': activeButton === 'Failed' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color: red;
+                    align-items: center;">Failed </button>
+                    <button type="button" class="btn " (click)="highlightButton('BookedOther')" [ngClass]="{ 'highlighted': activeButton === 'BookedOther' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color:#e24729;
+                    align-items: center;">BookedOther </button>
+                   
+                    <button type="button" class="btn " (click)="highlightButton('NotConfirmed')" [ngClass]="{ 'highlighted': activeButton === 'NotConfirmed' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color: #5a6268;
+                    align-items: center;">NotConfirmed </button>
+                  </div>
+            </div>
+    
+           <ng-container *ngFor="let flight of flightData">
+            <ng-container *ngIf="flight?.id==='9JNidXfvGZqCkCf8llmz'">
+                <div class="card">
+                    <div class="second">
+                        <div class="items-second">
+                            <span>{{getFlightName(flight)}}</span>
+                        </div>
+                        <div class="items-second">
+                            <span>{{getFlightPrimaryName(flight)}}</span>
+                        </div>
+                        <div class="items-second" style="width: 140px;">
+                            <span>{{getFlightPrimaryContact(flight)}}</span>
+                        </div>
+                        <div class="items-second"  style="width: 175px;">
+                            <span>{{getFlightPaxLength(flight)}}</span>
+                        </div>
+                        <div class="items-second"  style="width: 175px;">
+                            <span style="color: rgb(73, 202, 73); text-transform: capitalize;" >{{getFlightStatus(flight)}}</span>
+                        </div>
+                        <div class="items-second" style="width: 200px;">
+                            <span >₹{{getTotalAmount(flight) | json}}</span>
+                        </div>
+                        <div class="items-second">
+                            <button class="btns" (click)="handleNavigation(flight.id,1)"><span>See Details</span></button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </ng-container>
+           </ng-container>
+            <div class="card">
+                <div class="second">
+                    <div class="items-second">
+                        <span>Singapore-Oman 6N/5D Trip</span>
+                    </div>
+                    <div class="items-second">
+                        <span>Rahul Verma</span>
+                    </div>
+                    <div class="items-second" style="width: 140px;">
+                        <span>9877665544</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span>8</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span style="color: rgb(73, 202, 73);">Booked</span>
+                    </div>
+                    <div class="items-second" style="width: 200px;">
+                        <span>₹81230000</span>
+                    </div>
+                    <div class="items-second">
+                        <button class="btns"><span>See Details</span></button>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="card">
+                <div class="second">
+                    <div class="items-second">
+                        <span>Dubai-Oman 6N/5D Trip</span>
+                    </div>
+                    <div class="items-second">
+                        <span>Rahul Verma</span>
+                    </div>
+                    <div class="items-second" style="width: 140px;">
+                        <span>9877665544</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span>8</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span style="color: rgb(73, 202, 73);">Booked</span>
+                    </div>
+                    <div class="items-second" style="width: 200px;">
+                        <span>₹80000</span>
+                    </div>
+                    <div class="items-second">
+                        <button class="btns"><span>See Details</span></button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div *ngIf="isHotel">
+            <div class="head">
+                <span>All Hotel Details</span>
+            </div>
+            <div class="card">
+                <div class="first" style="background-color: #03254A;">
+                    <div class="items">
+                        <span>Hotel Name</span>
+                    </div>
+                    <div class="items">
+                        <span>Primary Contact</span>
+                    </div>
+                    <div class="items" style="width: 140px;">
+                        <span style="width: 110px;">Contact No</span>
+                    </div>
+                    <div class="items"  style="width: 175px;">
+                        <span>No Of Pax</span>
+                    </div>
+                    <div class="items"  style="width: 175px;">
+                        <span>Status</span>
+                    </div>
+                    <div class="items" style="width: 200px;">
+                        <span>Price</span>
+                    </div>
+                    <div class="items">
+                        <span>View Details</span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="toggle" style="display: flex; justify-content: flex-end; width: 1000px;margin-top: 22px; margin-bottom: 25px; padding-right: 10px;">
+                <div class="btn-group" role="group" style="border: 1px solid #ccc; border-radius: 5px;" aria-label="Basic example">
+                    <button type="button" class="btn "  (click)="highlightButton('All')" [ngClass]="{ 'highlighted': activeButton === 'All' }" style="    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    align-items: center;">All</button>
+                    <button type="button" class="btn " (click)="highlightButton('Booked')" [ngClass]="{ 'highlighted': activeButton === 'Booked' }" style="    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    color: green;
+                    align-items: center;">Booked</button>
+                    <button type="button" class="btn" (click)="highlightButton('Failed')" [ngClass]="{ 'highlighted': activeButton === 'Failed' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color: red;
+                    align-items: center;">Failed </button>
+                    <button type="button" class="btn " (click)="highlightButton('Cancelled')" [ngClass]="{ 'highlighted': activeButton === 'Cancelled' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color:#e24729;
+                    align-items: center;">Cancelled</button>
+                   
+                    
+                  </div>
+            </div>
+           <ng-container *ngFor="let hotel of hotelData">
+            <ng-container *ngIf="hotel?.id==='NDsu9mjTVvQxq0pOr1o1'">
+                <div class="card">
+                    <div class="second">
+                        <div class="items-second">
+                            <span>{{getHotelName(hotel)}}</span>
+                        </div>
+                        <div class="items-second">
+                            <span>{{getHotelPrimaryName(hotel)}}</span>
+                        </div>
+                        <div class="items-second" style="width: 140px;">
+                            <span>{{getHotelPrimaryContact(hotel)}}</span>
+                        </div>
+                        <div class="items-second"  style="width: 175px;">
+                            <span>{{getHotelPaxLength(hotel)}}</span>
+                        </div>
+                        <div class="items-second"  style="width: 175px;">
+                            <span style="color: rgb(73, 202, 73); text-transform: capitalize;" >{{getHotelStatus(hotel)}}</span>
+                        </div>
+                        <div class="items-second" style="width: 200px;">
+                            <span >₹{{getTotalAmount(hotel) | json}}</span>
+                        </div>
+                        <div class="items-second">
+                            <button class="btns" (click)="handleNavigation(hotel.id,0)"><span>See Details</span></button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </ng-container>
+           </ng-container>
+            <div class="card">
+                <div class="second">
+                    <div class="items-second">
+                        <span>Singapore-Oman 6N/5D Trip</span>
+                    </div>
+                    <div class="items-second">
+                        <span>Rahul Verma</span>
+                    </div>
+                    <div class="items-second" style="width: 140px;">
+                        <span>9877665544</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span>8</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span style="color: rgb(73, 202, 73);">Booked</span>
+                    </div>
+                    <div class="items-second" style="width: 200px;">
+                        <span>₹81230000</span>
+                    </div>
+                    <div class="items-second">
+                        <button class="btn"><span>See Details</span></button>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="card">
+                <div class="second">
+                    <div class="items-second">
+                        <span>Dubai-Oman 6N/5D Trip</span>
+                    </div>
+                    <div class="items-second">
+                        <span>Rahul Verma</span>
+                    </div>
+                    <div class="items-second" style="width: 140px;">
+                        <span>9877665544</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span>8</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span style="color: rgb(73, 202, 73);">Booked</span>
+                    </div>
+                    <div class="items-second" style="width: 200px;">
+                        <span>₹80000</span>
+                    </div>
+                    <div class="items-second">
+                        <button class="btn"><span>See Details</span></button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div *ngIf="isPackage">
+            <div class="head">
+                <span>All Package Details</span>
+            </div>
+            <div class="card">
+                <div class="first" style="background-color: #03254A;">
+                    <div class="items">
+                        <span>Package 's Name</span>
+                    </div>
+                    <div class="items">
+                        <span>Primary Contact</span>
+                    </div>
+                    <div class="items" style="width: 140px;">
+                        <span style="width: 110px;">Contact No</span>
+                    </div>
+                    <div class="items"  style="width: 175px;">
+                        <span>No Of Pax</span>
+                    </div>
+                    <div class="items"  style="width: 175px;">
+                        <span>Status</span>
+                    </div>
+                    <div class="items" style="width: 200px;">
+                        <span>Price</span>
+                    </div>
+                    <div class="items">
+                        <span>View Details</span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="toggle" style="display: flex; justify-content: flex-end; width: 1000px;margin-top: 22px; margin-bottom: 25px; padding-right: 10px;">
+                <div class="btn-group" role="group" style="border: 1px solid #ccc; border-radius: 5px;" aria-label="Basic example">
+                    <button type="button" class="btn "  (click)="highlightButton('All')" [ngClass]="{ 'highlighted': activeButton === 'All' }" style="    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    align-items: center;">All</button>
+                    <button type="button" class="btn " (click)="highlightButton('Booked')" [ngClass]="{ 'highlighted': activeButton === 'Booked' }" style="    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    color: green;
+                    align-items: center;">Booked</button>
+                    <button type="button" class="btn" (click)="highlightButton('Failed')" [ngClass]="{ 'highlighted': activeButton === 'Failed' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color: red;
+                    align-items: center;">Failed </button>
+                    <button type="button" class="btn " (click)="highlightButton('Hold')" [ngClass]="{ 'highlighted': activeButton === 'Hold' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color:#e24729;
+                    align-items: center;">Hold</button>
+                   
+                    <button type="button" class="btn " (click)="highlightButton('NotConfirmed')" [ngClass]="{ 'highlighted': activeButton === 'NotConfirmed' }" style="    height: 25px;
+                    display: flex;
+                    border-right: 1px solid black;
+                    justify-content: center;
+                    color: #5a6268;
+                    align-items: center;">NotConfirmed </button>
+                  </div>
+            </div>
+    
+           <ng-container *ngFor="let flight of flightData">
+            <ng-container *ngIf="flight?.id==='9JNidXfvGZqCkCf8llmz'">
+                <div class="card">
+                    <div class="second">
+                        <div class="items-second">
+                            <span>{{getPackageName(flight)}}</span>
+                        </div>
+                        <div class="items-second">
+                            <span>{{getPrimaryName(flight)}}</span>
+                        </div>
+                        <div class="items-second" style="width: 140px;">
+                            <span>{{getPrimaryContact(flight)}}</span>
+                        </div>
+                        <div class="items-second"  style="width: 175px;">
+                            <span>{{getPaxLength(flight)}}</span>
+                        </div>
+                        <div class="items-second"  style="width: 175px;">
+                            <span style="color: rgb(73, 202, 73); text-transform: capitalize;" >{{getStatus(flight)}}</span>
+                        </div>
+                        <div class="items-second" style="width: 200px;">
+                            <span >₹{{getTotalAmount(flight) | json}}</span>
+                        </div>
+                        <div class="items-second">
+                            <button class="btns" (click)="handleNavigation(flight.id,1)"><span>See Details</span></button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </ng-container>
+           </ng-container>
+            <div class="card">
+                <div class="second">
+                    <div class="items-second">
+                        <span>Singapore-Oman 6N/5D Trip</span>
+                    </div>
+                    <div class="items-second">
+                        <span>Rahul Verma</span>
+                    </div>
+                    <div class="items-second" style="width: 140px;">
+                        <span>9877665544</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span>8</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span style="color: rgb(73, 202, 73);">Booked</span>
+                    </div>
+                    <div class="items-second" style="width: 200px;">
+                        <span>₹81230000</span>
+                    </div>
+                    <div class="items-second">
+                        <button class="btn"><span>See Details</span></button>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="card">
+                <div class="second">
+                    <div class="items-second">
+                        <span>Dubai-Oman 6N/5D Trip</span>
+                    </div>
+                    <div class="items-second">
+                        <span>Rahul Verma</span>
+                    </div>
+                    <div class="items-second" style="width: 140px;">
+                        <span>9877665544</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span>8</span>
+                    </div>
+                    <div class="items-second"  style="width: 175px;">
+                        <span style="color: rgb(73, 202, 73);">Booked</span>
+                    </div>
+                    <div class="items-second" style="width: 200px;">
+                        <span>₹80000</span>
+                    </div>
+                    <div class="items-second">
+                        <button class="btn"><span>See Details</span></button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+       
+       
+    </div>
+</div>

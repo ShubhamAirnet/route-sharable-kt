@@ -1,0 +1,396 @@
+
+h1, h2, h3, h4 ,h5, h6 {
+  margin: 0 !important;
+  padding: 0 !important ;
+}
+
+main {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.main-body {
+  width: 100%;
+  background-color: #fff;
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.flightDetails-navbar {
+  height: 13%;
+  background-color: #37395f;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+
+.navbar-items h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.flight-details {
+  border: 3px solid #37395f;
+  border-radius: 9px;
+  width: 100%;
+}
+
+.flight-details-cities-strip {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  background-color: lightblue;
+  border-radius: 35px 0 0 0;
+  padding: 6px 25px;
+  border-bottom: 2px solid #37395f;
+  margin-left: 00000000000;
+}
+
+.flight-details-airline-strip {
+  margin-left: 20px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+}
+.flight-details-airline-strip span {
+  border: 2px solid grey;
+  border-radius: 50px;
+  padding: 3px 6px;
+  margin-left: 14px;
+}
+
+.flight-details-all-stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flight-details-all-stats-section1 {
+  display: flex;
+  padding: 14px 0px;
+}
+
+.flight-details-all-stats-section1-timings-flexbox {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.all-stats-section1-date-time {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+.all-stats-section1-date-time h4 {
+  font-size: 25px;
+}
+.all-stats-section1-date-time h5 {
+  font-size: 15px;
+}
+.all-stats-section1-terminal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+.all-stats-section1-terminal-info h4 {
+  font-size: 13px;
+}
+.all-stats-section1-terminal-info h5 {
+  font-size: 11px;
+}
+.flight-details-all-stats-section1-duration {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flight-details-all-stats-section2 {
+  display: flex;
+  gap: 14px;
+}
+
+.flight-details-all-stats-section2-baggage-flexbox {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
+}
+.flight-details-all-stats-section2-checkIn-flexbox {
+  width: 34%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.flight-details-all-stats-section2-cabin-flexbox {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+// ======================================================================================================================
+
+* {
+  box-sizing: border-box;
+}
+.fare-summary {
+  background-color: beige;
+  height: 260px;
+  width: 80%;
+  border: 2px solid grey;
+}
+.flight-summary-header {
+  border-bottom: 2px solid grey;
+  height: 40px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.flight-summary-header h2 {
+  margin: 0;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.flight-summary-stats {
+  height: 220px;
+}
+.flight-summary-stats-inner {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 15px 5px;
+  height: 100%;
+  justify-content: space-evenly;
+}
+.flight-summary-stats-inner-flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 35px;
+}
+.total h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+.total h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+}
+.published h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: darkslategrey;
+  padding-left: 8px;
+}
+.published h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: darkslategrey;
+}
+.Offered h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: darkslategrey;
+  padding-left: 8px;
+}
+.Offered h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: darkslategrey;
+}
+
+// ==========================================================================
+.cancellation {
+  height: 270px;
+  width: 80%;
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+  border: 1px solid darkslategrey;
+  border-radius: 5px;
+}
+.cancellation {
+  height: 270px;
+  width: 80%;
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+  border: 1px solid darkslategrey;
+  border-radius: 5px;
+}
+.cancellation-header {
+  background-color: darkblue;
+  color: #fff;
+  border-bottom: 1px solid #000;
+  height: 13%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 15px;
+}
+.cancellation-header h2 {
+  margin: 0;
+  color: #fff;
+}
+.cancellation-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 87%;
+}
+.cancellation-table {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.cancellation-table-row {
+  background-color: #fff;
+  display: flex;
+  height: 33.3%;
+  justify-content: space-between;
+  display: flex;
+}
+.cancellation-table-row-section {
+  border: 1px solid darkgray;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// =========================================================================================
+
+.dateChange {
+  height: 270px;
+  width: 80%;
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+  border: 1px solid darkslategrey;
+  border-radius: 5px;
+}
+.dateChange-header {
+  background-color: darkblue;
+  color: #fff;
+  border-bottom: 1px solid #000;
+  height: 13%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 15px;
+}
+.dateChange-header h2 {
+  margin: 0;
+  color: #fff;
+}
+.dateChange-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 87%;
+  flex-direction: column;
+  padding: 8px 0;
+}
+.dateChange-table {
+  width: 90%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.dateChange-table-row {
+  background-color: #fff;
+  display: flex;
+  height: 33.3%;
+  justify-content: space-between;
+  display: flex;
+}
+.dateChange-table-row-section {
+  border: 1px solid darkgray;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateChange-body-warning{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dateChange-body-warning-message {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 300;
+  word-spacing: 1px;
+}
+.dateChange-body-warning-message span{
+  color: red;
+}
+
+::ng-deep .tooltip-inner{
+  max-width: 310px !important;
+}
+.terms-condition-btn{
+  border: none;
+  background-color: #fff;
+  text-decoration: underline;
+  font-size: 12px;
+  color: rgb(55, 68, 128);
+}
+
+.terms-condition-list-div ul{
+  margin: 0;
+  padding: 5px 10px 5px 32px;
+}
+
+.terms-condition-list-div ul li{
+  line-height: 25px;
+  font-size: 10px;
+  text-align: start;
+}

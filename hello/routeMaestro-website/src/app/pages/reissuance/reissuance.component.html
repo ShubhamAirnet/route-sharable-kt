@@ -1,0 +1,193 @@
+<ngx-spinner></ngx-spinner>
+<main>
+   
+    <div class="searchs"> 
+    
+      
+        <div class="col">
+          
+          <ng-container *ngIf="filteredFlights">
+            <app-flight-header   (responseData)="handleResponseData($event)" (calendarData)="handleCalendarData($event)" [calendarFare]="calendarFare"  ></app-flight-header>
+
+          </ng-container>
+        <div class="containers" *ngIf="response">
+            <ng-container *ngIf="response && response?.flightsData">
+                <ng-container *ngFor="let flight of filteredFlights; let i=index">
+                    
+                    <ng-container *ngFor="let item of flight?.segments; let j =index;">
+                        <div class="cards"  (click)="handleClick(flight?.resultIndex,i+j,flight?.isLCC,flight?.airlineLogos,flight?.segments)"
+                        [class.selected]="selectedFlightIndex === i+j">
+                        <app-flight-card-package [currentFlightSetLogosArray]="flight?.airlineLogos" [completeFlight]="item" [fare]="flight?.fare" ></app-flight-card-package>
+
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+
+            <!-- <div class="sub-containers">
+                <div style="display: flex; flex-direction: column; justify-content: flex-start; gap: 16px; height: 100%;" *ngIf="response && response?.flightsData1 && JourneyType===2">
+                    <div class="box">
+                        <span>{{source}} - {{destination}}</span>
+                       </div>
+                    <ng-container *ngFor="let flight of filteredFlights1;let i=index">
+                        
+                       
+                        <ng-container *ngFor="let item of flight?.segments; let j =index;">
+                            <div class="cards" (click)="handleRoundTripClick1(flight?.resultIndex,i+j,flight?.isLCC,flight?.airlineLogos,flight?.segments)" [class.selected]="selectedFlightIndex1 === i+j">
+                                <app-flight-card-round-trip  [currentFlightSetLogosArray]="flight?.airlineLogos" [completeFlight]="item" [fare]="flight?.fare" ></app-flight-card-round-trip>
+
+                            </div>
+                        </ng-container>
+                     
+                    </ng-container>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: flex-start; gap:16px; height: 100%;" *ngIf="response && response?.flightsData2 && JourneyType===2">
+                    <div class="box">
+                        <span>{{destination}} - {{source}}</span>
+                       </div>
+                    <ng-container *ngFor="let flight of filteredFlights2;let i=index">
+                        
+                       
+                        <ng-container *ngFor="let item of flight?.segments; let j =index;">
+                            <div  (click)="handleRoundTripClick2(flight?.resultIndex,i+j,flight?.isLCC,flight?.airlineLogos,flight?.segments)" [class.selected]="selectedFlightIndex2 === i+j" class="cards">
+                                <app-flight-card-round-trip [currentFlightSetLogosArray]="flight?.airlineLogos" [completeFlight]="item" [fare]="flight?.fare" ></app-flight-card-round-trip>
+
+                            </div>
+                        </ng-container>
+                     
+                    </ng-container>
+                </div>
+            </div> -->
+        </div>
+        </div>
+        
+        <!-- <app-flight-filters *ngIf="response" [response]="response" [journey]="JourneyType" (responseChanges)="responseChanges" (closeDialog)="flightDialog()"></app-flight-filters> -->
+
+        <div *ngIf="filteredFlights "  class="main">
+            
+                <div class="containerss">
+                   
+                    
+                        <div class="contentss">
+                            <div class="airline">
+                                <span style="font-weight: 600;">Refundibility</span>
+                                <div class="boxs">
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleRefundable($event.target.checked)" >
+                                    <span>Refundable</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleNonRefundable($event.target.checked)" >
+                                    <span>Non Refundable</span>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="airline">
+                                <span style="font-weight: 600;">Cost Carriers</span>
+                                <div class="boxs">
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleLCC($event.target.checked)" >
+                                    <span>LCC</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleNonLCC($event.target.checked)" >
+                                    <span>Non LCC</span>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              
+                              <div class="airline">
+                                <span style="font-weight: 600;">No Of Stops</span>
+                                <div class="boxs">
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleStops(0,$event.target.checked)" >
+                                    <span>0</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleStops(1,$event.target.checked)" >
+                                    <span>1</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleStops(2,$event.target.checked)" >
+                                    <span>2</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleStops(3,$event.target.checked)" >
+                                    <span>3</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="checkbox" (change)="toggleStops(null,$event.target.checked)">
+                                    <span>3 or more</span>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                              <div class="airline">
+                                <span style="font-weight: 600;">Cabin Class</span>
+                                <div class="boxs">
+                                  <div class="items">
+                                    <input type="radio" name="cabinClass" (change)="toggleCabin(1,$event.target.checked)" >
+                                    <span>All</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="radio" name="cabinClass" (change)="toggleCabin(2,$event.target.checked)" >
+                                    <span>Economy</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="radio" name="cabinClass" (change)="toggleCabin(3,$event.target.checked)" >
+                                    <span>Premium Economy</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="radio" name="cabinClass" (change)="toggleCabin(4,$event.target.checked)" >
+                                    <span>Business</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="radio" name="cabinClass" (change)="toggleCabin(5,$event.target.checked)" >
+                                    <span>Premium Business</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="radio" name="cabinClass" (change)="toggleCabin(6,$event.target.checked)">
+                                    <span>First</span>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                              <div class="airline">
+                                <span style="font-weight: 600;">Airlines</span>
+                                <div class="boxs">
+                                 <ng-container *ngFor="let item of airlineNames">
+                                  <div class="items">
+                                    <input type="checkbox" (change)="updateNamesArray(item, $event.target.checked)">
+                                    <span>{{item}}</span>
+                                  </div>
+                                 </ng-container>
+                                </div>
+                              </div>
+                              <div class="airline">
+                                <span style="font-weight: 600;">Layovers</span>
+                                <div class="boxs">
+                                 <ng-container *ngFor="let item of layoffNames">
+                                  <div class="items">
+                                    <input type="checkbox" (change)="updateLayoffArray(item, $event.target.checked)">
+                                    <span>{{item}}</span>
+                                  </div>
+                                 </ng-container>
+                                </div>
+                              </div>
+                        </div>
+            
+                   
+                </div>
+            
+        </div>
+        
+
+        <div class="book" *ngIf="isSelected ">
+            <span>By Clicking this button you will be redirected to new page</span>
+            <button class="button" (click)="handleBook()"><span>Book now</span></button>
+        </div>
+        
+    </div>
+</main>

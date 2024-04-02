@@ -1,0 +1,52 @@
+<div *ngIf="form" class="payment-details-container">
+  
+
+    <h2>Payment Breakdowns</h2>
+  <div class="user-details">
+    <h3>User Details</h3>
+    <div class="user-item">
+      <span class="label">Name:</span>
+      <span class="value">{{ form.name }}</span>
+    </div>
+    <div class="user-item">
+      <span class="label">Phone:</span>
+      <span class="value">{{ form.phone }}</span>
+    </div>
+    <div class="user-item">
+      <span class="label">Email:</span>
+      <span class="value">{{ form.email }}</span>
+    </div>
+  </div>
+
+  <h3>Payment Breakdowns</h3>
+    <div class="payment-item">
+      <span class="label">Flight Cost:</span>
+      <span class="value">{{ form.flightCost }}</span>
+    </div>
+    <div class="payment-item">
+      <span class="label">Hotel Cost:</span>
+      <span class="value">{{ form.hotelCost }}</span>
+    </div>
+    <div class="payment-item">
+      <span class="label">Taxes:</span>
+      <span class="value">{{ form.taxes }}</span>
+    </div>
+    <div class="payment-item">
+      <span class="label">Merchant Share:</span>
+      <span class="value">{{ form.merchantShare }}</span>
+    </div>
+    <div class="payment-item">
+      <span class="label">Transaction Fee:</span>
+      <span class="value">{{ form.transactionFee }}</span>
+    </div>
+    <div class="payment-item">
+      <span class="label">Total Cost:</span>
+      <span class="value">{{ form.transactionFee }}</span>
+    </div>
+    <button class="pay-button" (click)="navigationToCashfree()">Pay Now</button>
+  </div>
+  
+  <div *ngIf="!form" class="loading-container">
+    <p>Loading...</p>
+  </div>
+  

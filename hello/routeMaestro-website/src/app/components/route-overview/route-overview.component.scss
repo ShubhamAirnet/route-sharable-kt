@@ -1,0 +1,60 @@
+
+.route{
+    height: fit-content;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.path{
+    display: flex;
+    padding-top: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    height: 420px;
+    span{
+        padding-bottom:10px ;
+        font-weight: 600;
+    }
+}
+
+.big-dot {
+    
+    width: 4px;
+    height: 4px;
+    background-color: black; /* You can change the color */
+    border-radius: 50%; /* This creates a circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+     /* You can adjust the font size */
+}
+
+.vertical-line {
+    height: 50px; /* Adjust the height as needed */
+    border-left: 2px solid black; /* Adjust the color as needed */
+     /* Adjust the margin as needed */
+}
+
+.plane-icon{
+    transform: rotate(90deg);
+    font-size: 14px;
+    
+}
+.car-icon{
+    
+    font-size: 14px;
+}
+
+.sub-details{
+    small,p{
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}

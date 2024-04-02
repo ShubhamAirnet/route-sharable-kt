@@ -1,0 +1,159 @@
+<main >
+    <!-- Image and text -->
+    <nav class="navbar" style="width: 100vw; padding: 0; height: 84px; background-color: white; display: flex; justify-content: center; align-items: center;">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/img/logos/Gold_Luxury_Initial_Circle_Logo-removebg-preview.png" width="100px" height="100px" class="d-inline-block align-top" alt="">
+       
+      </a>
+    </nav>
+    
+
+  <div class="main-container">
+    <div class="overview">
+      <div class="head"><span>Journey Overview</span></div>
+      <div class="content">
+        <div class="sub-content">
+          <div class="items"><span class="first">Adult Count:</span></div>
+          <div class="items"><span>{{travelData?.trip?.travellers?.adultCount}}</span></div>
+        </div>
+        <div class="sub-content">
+          <div class="items"><span class="first">Child Count:</span></div>
+          <div class="items"><span>{{travelData?.trip?.travellers?.childCount}}</span></div>
+        </div>
+        <div class="sub-content">
+          <div class="items"><span class="first">Infant Count:</span></div>
+          <div class="items"><span>{{travelData?.trip?.travellers?.infantCount}}</span></div>
+        </div>
+        <div class="sub-content">
+          <div class="items"><span class="first">Start Date:</span></div>
+          <div class="items"><span>{{travelData?.trip?.start_date}} </span></div>
+        </div>
+        <div class="sub-content">
+          <div class="items"><span class="first">End Date:</span></div>
+          <div class="items"><span>{{travelData?.trip?.end_date}}</span></div>
+        </div>
+        <div class="sub-content">
+          <div class="items"><span class="first">City :</span></div>
+          <div class="items"><span>
+            <ng-container *ngFor="let item of travelData?.trip?.cities">
+              {{item}} 
+            </ng-container>
+          </span></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="headers" style="background: #323268;">
+        <div style="display: flex; gap: 10px; ">
+     
+          <h1>{{travelData?.itineraryName}}</h1>
+        </div>
+  </div>
+  
+    <div class="route">
+      <h3 style="padding-bottom:10px ;">Route Overview</h3>
+      <div class="path">
+          <!-- <div class="city">
+          </div> -->
+          <div class="city">
+            <div class="dot">
+              <div class="big-dot">•</div>
+              <span style="font-size: 0.9rem;">{{ travelData?.trip?.connections[0]?.from_city }}</span>
+            </div>
+            <ng-container *ngFor="let city of travelData?.trip?.connections; let i=index">
+              <ng-container >
+                
+                <div class="vertical-line"></div>
+                <ng-container *ngIf="city?.mode_of_transport === 'Flight'">
+                  <span style="margin-top: 10px;"><i class="fa-solid fa-plane" style="font-size: 1.2rem;"></i></span>
+                </ng-container>
+                <ng-container *ngIf="city?.mode_of_transport === 'Train'">
+                  <span style="margin-top: 10px;"><i class="fa-solid fa-train" style="font-size: 1.2rem;"></i></span>
+                </ng-container>
+                <ng-container *ngIf="city?.mode_of_transport === 'Car'">
+                  <span style="margin-top: 10px;"><i class="fa-solid fa-car" style="font-size: 1.2rem;"></i></span>
+                </ng-container>
+                <div class="vertical-line"></div>
+                <div class="dot">
+                  <div class="big-dot">•</div>
+                  <span style="font-size: 0.9rem;">{{ city?.to_city }}</span>
+                </div>
+              </ng-container>
+            </ng-container>
+
+           
+             
+           
+             
+  
+          </div>
+         
+        
+      </div>
+  
+  </div>
+      <ng-container *ngFor="let city of travelData?.trip?.connections;let i=index ">
+        <form>
+           
+                <p style="text-align: center;">
+                    <span><i class="fa-solid fa-location-dot fa-xl me-3" style="color: #323268"></i></span>
+                    {{city?.mode_of_transport}} from {{city?.from_city}}
+                   <ng-container *ngIf="city?.mode_of_transport==='Flight'">
+                    <span><i class="fa-solid fa-plane-departure fa-xl mx-3"></i></span>
+                   </ng-container>
+                   <ng-container *ngIf="city?.mode_of_transport==='Train'">
+                    <span><i class="fa-solid fa-train fa-xl mx-3"></i></span>
+                   </ng-container>
+                   <ng-container *ngIf="city?.mode_of_transport==='Car'">
+                    <span><i class="fa-solid fa-car fa-xl mx-3"></i></span>
+                   </ng-container>
+                    to {{city?.to_city}}
+                  </p>
+            
+            <ng-container *ngIf="i < travelData.cities.length">
+              <app-city-package [city]="travelData.cities[i]" [arrivalDate]="travelData.trip.citiesArrivalDates[i]"></app-city-package>
+            </ng-container>
+            
+           
+
+          </form>
+      </ng-container>
+      
+      
+    </div>
+
+  </div>
+    
+    
+
+    <div class="note">
+      <span style="font-weight: 600;font-size: 0.9rem;">Note:</span>
+      <span>By Clicking the below button I approve this itienary</span>
+    </div>
+
+    <div class="btn" style="box-shadow: none;">
+      <button type="button" class="btn btn-warning" (click)="acceptBtn()">I accept</button>
+      <button type="button" class="btn btn-warning" (click)="changeBtn()">Want to Change</button>
+    </div>
+
+    <footer>
+      <div class="contact">
+        <span>Address:</span>
+        <span>SCO-56/57, 200 Feet Rd, opp. Keys Hotel H Block, Shaheed Bhagat Singh Nagar, Duggri, Urban Estate Dugri, Ludhiana, Punjab 141013</span>
+      </div>
+      <div class="contact">
+        <span>Email:</span>
+        <span>rahul@gmail.com</span>
+      </div>
+      <div class="contact">
+        <span>Phone No:</span>
+        <span>987766666</span>
+      </div>
+      <div class="contact">
+        <span>Website:</span>
+        <span>https://airnettech.dev/</span>
+      </div>
+    </footer>
+  </main>

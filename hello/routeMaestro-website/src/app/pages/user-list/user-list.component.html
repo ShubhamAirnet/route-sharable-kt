@@ -1,0 +1,38 @@
+<!-- Sidenav -->
+<app-navbar></app-navbar>
+<div class="d-flex w-100">
+  <app-sidebar ></app-sidebar>
+  <div class="main-content w-100 p-5 ml-250"> <!-- Add ml-250 for left margin -->
+
+    <div class="search">
+      <div>
+        <input type="text" placeholder="Search" [(ngModel)]="search" (input)="onSearchChange($event)" name="" id="" />
+      </div>
+      <div class="search-icon">
+        <img src="../../../assets/img/brand/search-icon.svg" alt="" />
+      </div>
+    </div>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of users;let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ element.userDetails.name }}</td>
+          <td>{{ element.userDetails.phone }}</td>
+          <td>{{ element.userDetails.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

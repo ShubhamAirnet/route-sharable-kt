@@ -1,0 +1,2349 @@
+<main>
+  <nav
+    class="navbar navbar-expand-lg p-2 mb-2"
+    style="background-color: #323268"
+  >
+    <div class="container-fluid my-2 p-2">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        style="
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+      >
+      <div style="display: flex;gap: 80px;color: #fff;margin: 0;align-items: center; ">
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep1.png" alt="" height="49px" width="70px" ></span>  Fill the fields </h3>
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep2.png" alt="" height="53px" width="70px" ></span>  Click on build Itinerary </h3>
+        <!-- <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep3.png" alt="" height="53px" width="70px" ></span>   Final result  </h3> -->
+      </div>
+       
+        <!-- <div
+          class="d-flex align-items-center"
+          style="font-family: 'Nunito', sans-serif"
+        >
+          <button
+            type="button"
+            class="btn custom-rounded fw-bold p-2 px-3 me-3"
+            style="background-color: white; border: 1px solid #323268"
+            (click)="generatePdf('download')"
+          >
+            <span><i class="fa fa-download me-2"></i></span> Download
+          </button>
+          <button
+            type="button"
+            class="btn custom-rounded fw-bold p-2 px-3"
+            style="background-color: white; border: 1px solid #323268"
+          >
+            <span><i class="fa fa-share-alt me-2" aria-hidden="true"></i></span>
+            Share
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper mt-3">
+    <nav id="sidebar">
+      <h1
+        style="
+          font-size: 20px;
+          text-align: center;
+          text-decoration: underline;
+          margin-bottom: 13px;
+        "
+      >
+        Generate Your Itinerary
+      </h1>
+      <div class="container p-0">
+        <div id="accordion">
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <div
+              class="card-header p-2"
+              id="headingOne"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Select Continent
+              </a>
+              <ng-container *ngIf="selectedCountry">
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ selectedCountry }}
+                </p>
+              </ng-container>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="container-fluid mt-2">
+                <div
+                  class="row input shadow-sm"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 10px;
+                  "
+                >
+                  <input
+                    type="search"
+                    id="form1"
+                    class="form-control"
+                    placeholder="Search your destination"
+                    [(ngModel)]="searchText"
+                    (click)="$event.stopPropagation()"
+                    (input)="onSearchChange()"
+                    aria-label="Search"
+                    list="destinations"
+                  />
+                  <datalist id="destinations">
+                    <ng-container *ngFor="let data of filteredData">
+                      <option
+                        [value]="data"
+                        class="text-dark"
+                        style="color: black"
+                      >
+                        {{ data }}
+                      </option>
+                    </ng-container>
+                  </datalist>
+                </div>
+                <div class="container">
+                  <!-- <div class="row" *ngFor="let data of filteredData | slice:0:6">
+                  <a class="btn btn-link " (click)="onCountrySelect(data)">{{ data }}</a>
+              </div> -->
+                  <div
+                    class="row search"
+                    style="
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: start;
+                    "
+                  >
+                    <ul
+                      class="scrollable-column text-dark mt-2 p-0"
+                      style="list-style: none"
+                      *ngIf="filteredData.length > 0"
+                    >
+                      <li
+                        class="list text-dark fw-bold fs-5"
+                        style="
+                          list-style: none;
+                          margin: 19px;
+                          font-family: 'Nunito', sans-serif;
+                          cursor: pointer;
+                        "
+                        *ngFor="let data of filteredData | slice : 0 : 6"
+                        (click)="onCountrySelect(data)"
+                      >
+                        {{ data }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <div
+              class="card-header p-2"
+              id="headingTwo"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                Date Range
+              </a>
+              <ng-container *ngIf="selectedStartDate">
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ selectedStartDate }} - {{ selectedEndDate }}
+                </p>
+              </ng-container>
+            </div>
+
+            <div
+              id="collapseTwo"
+              class="collapse"
+              #collapseTwoElement
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <form class="row row-cols-sm-auto">
+                  <div class="col-12">
+                    <form class="row row-cols-sm-auto">
+                      <div class="col-12">
+                        <div class="dp-hidden position-absolute">
+                          <div
+                            class="input-group"
+                            (click)="$event.stopPropagation()"
+                          >
+                            <input
+                              name="datepicker"
+                              class="form-control"
+                              ngbDatepicker
+                              #datepicker="ngbDatepicker"
+                              [autoClose]="'outside'"
+                              (dateSelect)="onDateSelection($event)"
+                              [displayMonths]="1"
+                              [dayTemplate]="t"
+                              outsideDays="hidden"
+                              [startDate]="fromDate!"
+                              tabindex="-1"
+                            />
+                            <ng-template
+                              #t
+                              let-date
+                              let-focused="focused"
+                              (click)="$event.stopPropagation()"
+                            >
+                              <span
+                                class="custom-day"
+                                [class.focused]="focused"
+                                [class.range]="isRange(date)"
+                                [class.faded]="
+                                  isHovered(date) || isInside(date)
+                                "
+                                (mouseenter)="hoveredDate = date"
+                                (mouseleave)="hoveredDate = null"
+                              >
+                                {{ date.day }}
+                              </span>
+                            </ng-template>
+                          </div>
+                        </div>
+                        <div
+                          class="input-group"
+                          (click)="$event.stopPropagation()"
+                        >
+                          <input
+                            #dpFromDate
+                            class="form-control"
+                            placeholder="yyyy-mm-dd"
+                            name="dpFromDate"
+                            [value]="formatter.format(fromDate)"
+                            (input)="
+                              fromDate = validateInput(
+                                fromDate,
+                                dpFromDate.value
+                              )
+                            "
+                          />
+                          <button
+                            class="btn btn-outline-dark bi bi-calendar3"
+                            (click)="datepicker.toggle()"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                      <ng-template #t let-date let-focused="focused">
+                        <span
+                          class="custom-day"
+                          [class.focused]="focused"
+                          [class.range]="isRange(date)"
+                          [class.faded]="isHovered(date) || isInside(date)"
+                          (mouseenter)="hoveredDate = date"
+                          (mouseleave)="hoveredDate = null"
+                          >{{ date.day }}
+                        </span>
+                      </ng-template>
+                    </form>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse4"
+            aria-expanded="false"
+            aria-controls="collapse4"
+          >
+            <div
+              class="card-header p-2"
+              id="heading4"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse3"
+                aria-expanded="true"
+                aria-controls="collapse3"
+              >
+                Departure Airport
+              </a>
+              <ng-container *ngIf="selectedAirport">
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ selectedAirport }}
+                </p>
+              </ng-container>
+            </div>
+            <div
+              id="collapse4"
+              class="collapse"
+              aria-labelledby="heading4"
+              data-parent="#accordion"
+            >
+              <div class="container-fluid mt-2">
+                <div
+                  class="row input shadow-sm"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 10px;
+                  "
+                >
+                  <input
+                    type="search"
+                    id="form1"
+                    class="form-control"
+                    placeholder="Search Airports"
+                    [(ngModel)]="searchText1"
+                    (click)="$event.stopPropagation()"
+                    (input)="onSearchChange1()"
+                    aria-label="Search"
+                  />
+                  <datalist id="airport">
+                    <ng-container *ngFor="let data of filteredData">
+                      <option
+                        [value]="data"
+                        class="text-dark"
+                        style="color: black"
+                      >
+                        {{ data }}
+                      </option>
+                    </ng-container>
+                  </datalist>
+                </div>
+                <div class="container">
+                  <div
+                    class="row search"
+                    style="
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: start;
+                    "
+                  >
+                    <ul
+                      class="scrollable-column text-dark mt-2 p-0"
+                      style="list-style: none"
+                      *ngIf="filteredAirports.length > 0"
+                    >
+                      <li
+                        class="list text-dark fw-bold fs-5"
+                        style="
+                          list-style: none;
+                          margin: 19px;
+                          font-family: 'Nunito', sans-serif;
+                          cursor: pointer;
+                        "
+                        *ngFor="let airport of filteredAirports | slice : 0 : 6"
+                        (click)="onAirportSelect(airport)"
+                      >
+                        {{ airport }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse7"
+            aria-expanded="false"
+            aria-controls="collapse7"
+          >
+            <div
+              class="card-header p-2"
+              id="heading7"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse3"
+                aria-expanded="true"
+                aria-controls="collapse3"
+              >
+                Nature Of Trip
+              </a>
+              <ng-container *ngIf="selectedNature">
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ selectedNature }}
+                </p>
+              </ng-container>
+            </div>
+            <div
+              id="collapse7"
+              class="collapse"
+              aria-labelledby="heading7"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <form action="/action_page.php">
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Couple"
+                        (click)="selectNature('Couple')"
+                      />
+                      Couple
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Family"
+                        (click)="selectNature('Family')"
+                      />
+                      Family
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Friends"
+                        (click)="selectNature('Friends')"
+                      />
+                      Friends
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Solo"
+                        (click)="selectNature('Solo')"
+                      />
+                      Solo
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse5"
+            aria-expanded="false"
+            aria-controls="collapse5"
+          >
+            <div
+              class="card-header p-2"
+              id="heading5"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse5"
+                aria-expanded="true"
+                aria-controls="collapse5"
+              >
+                No of Travelers
+              </a>
+              <ng-container
+                *ngIf="
+                  adultsValue !== undefined &&
+                  adultsValue !== null &&
+                  adultsValue !== 0
+                "
+              >
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ adultsValue }} Adult & {{ childrenValue }} Children
+                </p>
+              </ng-container>
+            </div>
+            <div
+              id="collapse5"
+              class="collapse"
+              aria-labelledby="heading5"
+              data-parent="#accordion"
+            >
+              <div class="card-body p-0">
+                <div
+                  class="container-fluid my-3"
+                  (click)="$event.stopPropagation()"
+                >
+                  <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                      <label
+                        style="font-family: 'Lato', sans-serif"
+                        class="text-dark"
+                        >Adults</label
+                      >
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-btn">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="decAdultCount()"
+                          >
+                            -
+                          </button>
+                        </span>
+                        <input
+                          id="typeNumber"
+                          class="form-control py-0 px-4"
+                          style="border: none"
+                          [formControl]="numberFormControl"
+                          #typeNumber
+                        />
+                        <span class="input-group-btn ms-2">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="incAdultCount()"
+                          >
+                            +
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container-fluid my-3"
+                  (click)="$event.stopPropagation()"
+                >
+                  <div class="row">
+                    <div class="col-4">
+                      <label
+                        style="font-family: 'Lato', sans-serif"
+                        class="text-dark"
+                        >Infant</label
+                      >
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-btn">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="decInfantCount()"
+                          >
+                            -
+                          </button>
+                        </span>
+                        <input
+                          id="typeNumber"
+                          class="form-control py-0 px-4"
+                          style="border: none"
+                          [formControl]="numberFormControl1"
+                          #typeNumber
+                        />
+                        <span class="input-group-btn ms-2">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="incInfantCount()"
+                          >
+                            +
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container-fluid my-1"
+                  (click)="$event.stopPropagation()"
+                >
+                  <div class="row">
+                    <div class="col-4">
+                      <label
+                        style="font-family: 'Lato', sans-serif"
+                        class="text-dark mt-1"
+                        >Children</label
+                      >
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col-9">
+                          <div class="input-group">
+                            <input
+                              id="ageInput"
+                              class="form-control px-2 py-1"
+                              [(ngModel)]="ageInputValue"
+                              placeholder="Enter age"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-3 p-0">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="incChildCount()"
+                            [disabled]="!ageInputValue"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <!-- <div class="m-2" style="text-align: end;">
+          <button type="button" class="btn text-white fw-bold p-2 " style="background-color: #323268" data-bs-dismiss="modal" (click)="noOfTraveler(typeNumber.value)" > Save </button>
+        </div> -->
+                <h4 class="text-muted mx-3 lowercase">
+                  * No of Children: {{ noOfChildren }}
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse8"
+            aria-expanded="false"
+            aria-controls="collapse8"
+          >
+            <div
+              class="card-header p-2"
+              id="heading8"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse8"
+                aria-expanded="true"
+                aria-controls="collapse8"
+              >
+                Select Hotel
+              </a>
+              <ng-container
+                *ngIf="selectedStar || selectedProperty || selectedPrice"
+              >
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ selectedPrice }}
+                </p>
+                <p class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ selectedStar }} {{ selectedProperty }}
+                </p>
+                <!-- <p class="fw-bold py-2 px-2 m-0 text-dark"> {{ selectedProperty }} </p> -->
+              </ng-container>
+            </div>
+            <div
+              id="collapse8"
+              class="collapse"
+              aria-labelledby="heading8"
+              data-parent="#accordion"
+            >
+              <div class="card-body" (click)="$event.stopPropagation()">
+                <div class="container">
+                  <p
+                    class="fs-3 text-center text-dark"
+                    style="font-family: 'Lato', sans-serif"
+                  >
+                    Price per night
+                  </p>
+                </div>
+                <form action="/action_page.php">
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 0 - ₹ 3000"
+                        (click)="selectPrice('₹ 0 - ₹ 3000')"
+                      />
+                      ₹ 0 - ₹ 3000
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 3000 - ₹ 6000"
+                        (click)="selectPrice('₹ 3000 - ₹ 6000')"
+                      />
+                      ₹ 3000 - ₹ 6000
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 6000 - ₹ 8500"
+                        (click)="selectPrice('₹ 6000 - ₹ 8500')"
+                      />
+                      ₹ 6000 - ₹ 8500
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 8500 - ₹ 10500"
+                        (click)="selectPrice('₹ 8500 - ₹ 10500')"
+                      />
+                      ₹ 8500 - ₹ 10500
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 10500 - ₹ 14500"
+                        (click)="selectPrice('₹ 10500 - ₹ 14500')"
+                      />
+                      ₹ 10500 - ₹ 14500
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 14500 - ₹ 15000"
+                        (click)="selectPrice('₹ 14500 - ₹ 15000')"
+                      />
+                      ₹ 14500 - ₹ 15000
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 15000 - ₹ 30000"
+                        (click)="selectPrice('₹ 15000 - ₹ 30000')"
+                      />
+                      ₹ 15000 - ₹ 30000
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="₹ 30000 +"
+                        (click)="selectPrice('₹ 30000 +')"
+                      />
+                      ₹ 30000 +
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <hr class="m-0" />
+              <div class="card-body" (click)="$event.stopPropagation()">
+                <div class="container">
+                  <p
+                    class="fs-3 text-center text-dark"
+                    style="font-family: 'Lato', sans-serif"
+                  >
+                    Star Category
+                  </p>
+                </div>
+                <form action="/action_page.php">
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="3 Star"
+                        (click)="selectStar('3 Star')"
+                      />
+                      3 Star
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="4 Star"
+                        (click)="selectStar('4 Star')"
+                      />
+                      4 Star
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="5 Star"
+                        (click)="selectStar('5 Star')"
+                      />
+                      5 Star
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <hr class="m-0" />
+              <div class="card-body">
+                <div class="container">
+                  <p
+                    class="fs-3 text-center text-dark"
+                    style="font-family: 'Lato', sans-serif"
+                  >
+                    Property Type
+                  </p>
+                </div>
+                <form action="/action_page.php">
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Guest House"
+                        (click)="selectProperty('Guest House')"
+                      />
+                      Guest House
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Hotel"
+                        (click)="selectProperty('Hotel')"
+                      />
+                      Hotel
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Homestay"
+                        (click)="selectProperty('Homestay')"
+                      />
+                      Homestay
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Resort"
+                        (click)="selectProperty('Resort')"
+                      />
+                      Resort
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Apartment"
+                        (click)="selectProperty('Apartment')"
+                      />
+                      Apartment
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <label class="form-check-label text-dark">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        value="Villa"
+                        (click)="selectProperty('Villa')"
+                      />
+                      Villa
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse6"
+            aria-expanded="false"
+            aria-controls="collapse6"
+          >
+            <div
+              class="card-header p-2"
+              id="heading6"
+              style="text-align: center"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse6"
+                aria-expanded="true"
+                aria-controls="collapse6"
+              >
+                Select Destination
+              </a>
+              <ng-container *ngFor="let cityName of selectedCities">
+                <p class="fw-bold py-2 px-2 m-0 text-dark">{{ cityName }}</p>
+              </ng-container>
+            </div>
+            <div
+              id="collapse6"
+              class="collapse"
+              aria-labelledby="heading6"
+              data-parent="#accordion"
+            >
+              <div class="card-body" (click)="$event.stopPropagation()">
+                <div
+                  class="container pt-3"
+                  style="font-family: 'Lato', sans-serif"
+                >
+                  <div
+                    class="row input shadow-sm"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      text-align: center;
+                      border-radius: 10px;
+                    "
+                  >
+                    <input
+                      type="search"
+                      id="form1"
+                      class="form-control"
+                      placeholder="Find any city"
+                      [(ngModel)]="searchText2"
+                      (click)="$event.stopPropagation()"
+                      (input)="onSearchCity()"
+                      aria-label="Search"
+                      list="cityOptions"
+                    />
+                    <datalist id="cityOptions">
+                      <ng-container *ngFor="let city of filteredCities">
+                        <option
+                          [value]="city"
+                          class="text-dark"
+                          style="color: black"
+                        >
+                          {{ city }}
+                        </option>
+                      </ng-container>
+                    </datalist>
+                  </div>
+                </div>
+
+                <div class="container mt-3">
+                  <p
+                    class="fs-4 text-center text-dark mb-0"
+                    style="font-family: 'Lato', sans-serif"
+                  >
+                    Cities best connected to
+                    <span *ngIf="selectedCountry"> {{ selectedCountry }}</span
+                    >...
+                  </p>
+                </div>
+
+                <!-- <div class="container" >
+            <div class="row search" style=" list-style: none; display: flex; flex-direction: column; justify-content: start;" >
+              <ul class="scrollable-column text-dark mt-2 p-0" style="list-style: none" *ngIf="filteredCities.length > 0" >
+                <li class="list text-dark fw-bold fs-5" style="list-style: none; margin: 19px; font-family: 'Nunito', sans-serif; cursor: pointer;" *ngFor="let city of filteredCities | slice:0:6" (click)="onCitySelect(city)"> {{ city }} </li>
+              </ul>
+              </div>
+          </div> -->
+
+                <div class="container">
+                  <div class="scrollable-list">
+                    <ul
+                      class="scrollable-column text-dark mt-2 p-0"
+                      style="list-style: none"
+                    >
+                      <li
+                        class="list text-dark fw-bold fs-5"
+                        style="
+                          list-style: none;
+                          margin: 19px;
+                          font-family: 'Nunito', sans-serif;
+                          cursor: pointer;
+                        "
+                        *ngFor="let city of filteredCities | slice : 0 : 6"
+                        (click)="onCitySelect(city)"
+                      >
+                        {{ city }}
+                      </li>
+                      <li
+                        class="list text-dark fw-bold fs-5"
+                        style="
+                          list-style: none;
+                          margin: 19px;
+                          font-family: 'Nunito', sans-serif;
+                          cursor: pointer;
+                        "
+                        *ngFor="let city of citiesWithDetails"
+                        (click)="onCitySelect(city.cityName)"
+                      >
+                        {{ city.cityName }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <hr class="p-0 m-0" />
+
+                <!-- <div class="container" >
+            <p class="fs-4 text-center text-dark my-3" style="font-family: 'Lato', sans-serif">
+              Selected Cities
+            </p>
+            <div class="row search" style=" list-style: none; display: flex; flex-direction: column; justify-content: start;" >
+              <ul class="scrollable-column text-dark mt-0 p-0" style="list-style: none" *ngIf="selectedCities.length > 0"  >
+                <li class="list text-dark fw-bold fs-5" style="list-style: none; margin: 19px; font-family: 'Nunito', sans-serif; " *ngFor="let cityName of selectedCities"> {{ cityName }} </li>
+              </ul>
+              </div>
+          </div> -->
+
+                <!-- <button type="button" class="btn text-white" style="background-color: #323268; text-align: center;" (click)="buildItinerary()" > Build itinerary </button> -->
+                <!-- <div class="m-2" style="text-align: end;">
+            <button type="button" class="btn text-white fw-bold p-2 " style="background-color: #323268" data-bs-dismiss="modal" (click)="noOfTraveler(typeNumber.value)" > Save </button>
+          </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="py-4" style="text-align: center">
+            <button
+              type="button"
+              class="btn text-white"
+              style="background-color: #323268; text-align: center"
+              (click)="buildItinerary()"
+            >
+              Build itinerary
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content">
+
+      <div *ngIf="loading">
+        <div
+          class="container d-flex justify-content-center align-items-center vh-100"
+        >
+          <div class="row">
+            <div class="col-12" style="font-family: 'Nunito', sans-serif">
+              <h1 class="text-center">
+                Please wait while we prepare a personalized itinerary for your
+                trip!
+              </h1>
+            </div>
+            <div class="col-12 mt-4 text-center">
+              <div class="spinner-grow text-primary" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <!-- <div class="spinner-grow text-secondary ms-3" role="status">
+        <span class="visually-hidden"></span>
+        </div> -->
+              <div class="spinner-grow text-success ms-3" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <div class="spinner-grow text-danger ms-3" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <div class="spinner-grow text-warning ms-3" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <div class="spinner-grow text-info ms-3" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!loading && !responseData"  >
+        <form>
+          <p style="text-align: center;">
+            <span><i class="fa-solid fa-location-dot fa-xl me-3" style="color: #323268"></i></span>
+            Car from City A
+            <span><i class="fa-solid fa-plane-departure fa-xl mx-3"></i></span>
+            to City B
+          </p>
+        
+          <div class="container mb-3 mt-2" style="font-family: 'Nunito', sans-serif">
+            <div class="row">
+              <div class="col-12 ps-md-5" style="padding: 5px 60px;">
+                <div class="card p-0" style="border-color: rgb(211, 209, 209); border-radius: 10px; overflow: hidden;">
+                  <h2 class="fw-bold p-3 m-0 text-white" style="background-color: #323268">
+                    City A
+                    <span class="text-white fw-normal"> - 3 days stay</span>
+                  </h2>
+                  <h2 class="p-3 text-muted mb-0">
+                    <span><i class="fas fa-car-side me-2"></i></span>
+                    Pickup self-drive car at City A Airport
+                  </h2>
+        
+                  <div>
+                    <div class="table-responsive" style="overflow-x: auto;">
+                      <table class="table align-middle mb-0 bg-white table-bordered">
+                        <tbody>
+                          <tr>
+                            <td class="text-center text-muted p-2 pt-4" style="font-size: 15px">
+                              Mon, 1 Jan
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Morning
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Visit Monument A
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Afternoon
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Explore Museum B
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Evening
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Dinner at Restaurant C
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+        
+                          <!-- Second Row -->
+                          <tr>
+                            <td class="text-center text-muted p-2 pt-4" style="font-size: 15px">
+                              Tue, 2 Jan
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Morning
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Visit Monument D
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Afternoon
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Explore Museum E
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Evening
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Dinner at Restaurant F
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        
+        <form>
+          <p style="text-align: center;">
+            <span><i class="fa-solid fa-location-dot fa-xl me-3" style="color: #323268"></i></span>
+            Car from City A
+            <span><i class="fa-solid fa-plane-departure fa-xl mx-3"></i></span>
+            to City B
+          </p>
+        
+          <div class="container mb-3 mt-2" style="font-family: 'Nunito', sans-serif">
+            <div class="row">
+              <div class="col-12 ps-md-5" style="padding: 5px 60px;">
+                <div class="card p-0" style="border-color: rgb(211, 209, 209); border-radius: 10px; overflow: hidden;">
+                  <h2 class="fw-bold p-3 m-0 text-white" style="background-color: #323268">
+                    City B
+                    <span class="text-white fw-normal"> - 3 days stay</span>
+                  </h2>
+                  <h2 class="p-3 text-muted mb-0">
+                    <span><i class="fas fa-car-side me-2"></i></span>
+                    Pickup self-drive car at City A Airport
+                  </h2>
+        
+                  <div>
+                    <div class="table-responsive" style="overflow-x: auto;">
+                      <table class="table align-middle mb-0 bg-white table-bordered">
+                        <tbody>
+                          <tr>
+                            <td class="text-center text-muted p-2 pt-4" style="font-size: 15px">
+                              Mon, 1 Jan
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Morning
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Visit Monument A
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Afternoon
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Explore Museum B
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Evening
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Dinner at Restaurant C
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+        
+                          <!-- Second Row -->
+                          <tr>
+                            <td class="text-center text-muted p-2 pt-4" style="font-size: 15px">
+                              Tue, 2 Jan
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Morning
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Visit Monument D
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Afternoon
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Explore Museum E
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+        
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                  <p class="h4 fw-bold mb-1">
+                                    Evening
+                                  </p>
+                                  <p class="text-muted mb-0">
+                                    Dinner at Restaurant F
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        
+        
+      </div>
+
+      <div *ngIf="!loading && responseData">
+
+        <!-- itinerary table ka uper vala section -->
+        <div class="container-fluid " style=" padding: 1px 40px !important;
+        margin-top: 0 !important;">
+
+          <!-- contains itinerary table ka upar vala sections which contains name ofteh itinerary and save and edit btns -->
+          <div
+            class="row ps-md-5 ps-sm-2 mb-3"
+            style="font-family: 'Nunito', sans-serif"
+          >
+          <div style="display: flex;" >
+           
+            <div class="col-12 mt-3" style="display: flex;flex-direction: column ; align-items: flex-start;width: 400px;">
+
+              <form [formGroup]="responseFormGroup">
+                <div formArrayName="cities">
+                  <h2 class="display-5 fw-bold" style="font-size: 26px !important;">
+                    {{ responseData.trip.trip_duration }} Nights to
+                    <span
+                      *ngFor="
+                        let cityGroup of responseFormGroup.get('cities')
+                          .controls;
+                        let i = index
+                      "
+                      [formGroupName]="i"
+                    >
+                      {{ cityGroup.get("cityName").value }}, </span
+                    >...
+                  </h2>
+                </div>
+              </form>
+
+              <div
+                class="d-flex align-items-center"
+                style="font-family: 'Nunito', sans-serif"
+              >
+                <button
+                  type="button"
+                  class="btn custom-rounded fw-bold p-2 px-3 me-3"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  style="    background-color: white;
+                  border: 1px solid #323268;
+                  /* padding: 5px !important; */
+                  height: 25px;
+                  padding: 1px 4px !important;"
+                >
+                  <span><i class="fa fa-download me-2"></i></span> Save
+                </button>
+
+                <button
+                  type="button"
+                  class="btn custom-rounded fw-bold p-2 px-3"
+                  style="    background-color: white;
+                  border: 1px solid #323268;
+                  /* padding: 5px !important; */
+                  height: 25px;
+                  padding: 1px 4px !important;"
+                  *ngIf="!isEditMode"
+                  (click)="toggleEditMode()"
+                >
+                  <span
+                    ><i class="fa fa-share-alt me-2" aria-hidden="true"></i
+                  ></span>
+                  Edit
+                </button>
+
+                <button
+                  type="button"
+                  class="btn custom-rounded fw-bold p-2 px-3 me-3"
+                  style="    background-color: white;
+                  border: 1px solid #323268;
+                  /* padding: 5px !important; */
+                  height: 25px;
+                  padding: 1px 4px !important;"
+                  (click)="generatePdf('download')"
+                >
+                  <span><i class="fa fa-download me-2"></i></span> Download
+                </button>
+
+                <button
+                  type="button"
+                  class="btn custom-rounded fw-bold p-2 px-3"
+                  style="    background-color: white;
+                  border: 1px solid #323268;
+                  /* padding: 5px !important; */
+                  height: 25px;
+                  padding: 1px 4px !important;"
+                  (click)="shareOnWhatsApp()"
+                >
+                  <span><i class="fa fa-share-alt me-2" aria-hidden="true"></i></span>
+                  Share
+                </button>
+             
+              </div>
+
+            </div>
+            <div class="col" style="display: flex; align-items: center;justify-content: center;">
+              <button class="btn btn-success mb-3" *ngIf="isPreviewMode" (click)="handleCreatePackageBtn()" style="    padding: 5px;
+              margin: 0;
+              width: 120px;
+              height: 50px;">
+                Create Package
+              </button>
+            </div>
+          </div>
+        </div>
+
+          <!-- <div class="companyName p-0">
+            <div *ngIf="responseData">
+              <form
+                [formGroup]="responseFormGroup"
+                (ngSubmit)="saveResponseDataToFirestore()"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div class="form-group">
+                      <label for="companyName">Company Name</label>
+                      <input
+                        type="text"
+                        id="companyName"
+                        formControlName="companyName"
+                        class="form-control"
+                        required
+                      />
+                      <div
+                        class="text-danger m-0 mt-1"
+                        *ngIf="
+                          responseFormGroup.get('companyName')?.invalid &&
+                          (responseFormGroup.get('companyName')?.dirty ||
+                            responseFormGroup.get('companyName')?.touched)
+                        "
+                      >
+                        <div
+                          *ngIf="
+                            responseFormGroup
+                              .get('companyName')
+                              ?.hasError('required')
+                          "
+                        >
+                          Company Name is Required
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div> -->
+
+        </div>
+
+        <hr class="mt-0" style="width: 100%" />
+
+        <!-- <pre>{{ responseData | json }}</pre> -->
+        <!-- <pre>{{ visaTypeData }}</pre> -->
+
+        <div class="container-fluid" style="    width: 81%;
+        margin: 0;">
+
+          <div class="row">
+
+            <!-- while edit mode is ON -->
+            <div class="col-12" *ngIf="isEditMode">
+             
+              <div class="row">
+                <div class="col d-flex justify-content-left">
+                  <button
+                    class="btn btn-success mb-3"
+                    *ngIf="isPreviewBtn"
+                    (click)="togglePreviewMode()"
+                  >
+                    Preview
+                  </button>
+                  <!-- <button class="btn btn-secondary mb-3" (click)="addTable()">Add City</button> -->
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <button class="btn btn-success mb-3" (click)="update()">
+                    Update
+                  </button>
+                  <button class="btn btn-secondary mb-3" (click)="addTable()">
+                    Add City
+                  </button>
+                </div>
+              </div>
+
+              <form [formGroup]="responseFormGroup">
+                <div formArrayName="cities">
+                  <div
+                    *ngFor="
+                      let cityGroup of responseFormGroup.get('cities').controls;
+                      let i = index
+                    "
+                    [formGroupName]="i"
+                  >
+                    <div formArrayName="days">
+                      <div
+                        *ngFor="
+                          let dayGroup of cityGroup.get('days').controls;
+                          let j = index
+                        "
+                        [formGroupName]="j"
+                      >
+                        <div formArrayName="connections">
+                          <div
+                            *ngFor="
+                              let activityGroup of dayGroup.get('connections')
+                                .controls;
+                              let k = index
+                            "
+                            [formGroupName]="k"
+                          >
+                            <div
+                              class="row my-5"
+                              style="
+                                font-family: 'Nunito', sans-serif;
+                                font-size: 18px;
+                              "
+                            >
+                              <div
+                                class="col-4 d-flex flex-column justify-content-end"
+                              >
+                                <div class="mt-auto">
+                                  <div class="row">
+                                    <span
+                                      ><i
+                                        class="fa-solid fa-location-dot fa-xl me-3"
+                                        style="color: #323268"
+                                      ></i
+                                    ></span>
+                                  </div>
+                                  <div class="row">
+                                    <!-- <input type="text" id="mode_of_transport" formControlName="mode_of_transport" class="form-control mt-1" placeholder="Activity Time"> -->
+                                    <select
+                                      id="mode_of_transport"
+                                      formControlName="mode_of_transport"
+                                      class="form-select mt-1 py-2"
+                                      value="Flying"
+                                    >
+                                      <option value="">
+                                        Select Mode of Transport
+                                      </option>
+                                      <option value="Flying">Flying</option>
+                                      <option value="Car">Car</option>
+                                      <option value="Train">Train</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <span
+                                  ><i
+                                    class="fa-solid fa-plane-departure fa-xl mx-3"
+                                  ></i
+                                ></span>
+                                <input
+                                  type="text"
+                                  id="from_city"
+                                  formControlName="from_city"
+                                  class="form-control mt-1"
+                                  placeholder="From City"
+                                />
+                              </div>
+                              <div class="col-4">
+                                <span
+                                  ><i
+                                    class="fa-solid fa-plane-arrival fa-xl mx-3"
+                                  ></i
+                                ></span>
+                                <input
+                                  type="text"
+                                  id="to_city"
+                                  formControlName="to_city"
+                                  class="form-control mt-1"
+                                  placeholder="To City"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="container mb-3 mt-2"
+                      style="font-family: 'Nunito', sans-serif"
+                    >
+                      <div class="row">
+                        <div class="col-12 ps-md-5">
+                          <div
+                            class="card p-0"
+                            style="
+                              border-color: rgb(211, 209, 209);
+                              border-radius: 10px;
+                              overflow: hidden;
+                            "
+                          >
+                            <h3
+                              class="card-title fw-bold p-3 m-0 text-dark"
+                              style="background-color: #323268"
+                            >
+                              <div class="row">
+                                <div class="col-4">
+                                  <input
+                                    type="text"
+                                    id="cityName"
+                                    formControlName="cityName"
+                                    class="form-control"
+                                    placeholder="Enter City Name here"
+                                  />
+                                </div>
+                                <div class="div">
+                                  <button
+                                    class="btn btn-secondary"
+                                    (click)="deleteCity(i)"
+                                  >
+                                    <i
+                                      class="fa fa-trash text-dark"
+                                      aria-hidden="true"
+                                    ></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </h3>
+
+                            <h2 class="card-title p-3 text-muted mb-0">
+                              <span><i class="fas fa-car-side me-2"></i></span>
+                              Pickup self-drive car at
+                              {{
+                                responseFormGroup
+                                  .get("cities")
+                                  .at(i)
+                                  .get("cityName").value
+                              }}
+                              Airport
+                            </h2>
+                            <hr class="m-0 p-0" />
+
+                            <div class="row">
+                              <div class="col-4">
+                                <h2 class="card-title p-3 text-muted mb-0">
+                                  <span
+                                    ><i class="fas fa-car-side me-2"></i
+                                  ></span>
+                                  No of Properties
+                                </h2>
+                              </div>
+                              <div class="col-2 p-0">
+                                <div class="input-group pt-3">
+                                  <span class="input-group-btn">
+                                    <button
+                                      class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                                      style="border-radius: 5px"
+                                      type="button"
+                                      (click)="decrementProp()"
+                                    >
+                                      -
+                                    </button>
+                                  </span>
+                                  <input
+                                    id="typeNumber1"
+                                    class="form-control py-0 px-4"
+                                    style="border: none"
+                                    [formControl]="numberFormControl1"
+                                  />
+                                  <span class="input-group-btn">
+                                    <button
+                                      class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                                      style="border-radius: 5px"
+                                      type="button"
+                                      (click)="incrementProp()"
+                                    >
+                                      +
+                                    </button>
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="col-6"></div>
+                            </div>
+
+                            <div formArrayName="days">
+                              <div
+                                class="table-responsive"
+                                style="overflow-x: auto"
+                              >
+                                <table
+                                  class="table align-middle mb-0 bg-white table-bordered"
+                                >
+                                  <tbody>
+                                    <tr
+                                      *ngFor="
+                                        let dayGroup of cityGroup.get('days')
+                                          .controls;
+                                        let j = index
+                                      "
+                                      [formGroupName]="j"
+                                    >
+                                      <td
+                                        class="text-center text-muted p-2 pt-4"
+                                        style="font-size: 15px"
+                                      >
+                                        <input
+                                          type="text"
+                                          id="date"
+                                          formControlName="date"
+                                          class="form-control"
+                                          placeholder="YYYY-MM-DD"
+                                        />
+                                      </td>
+                                      <td>
+                                        <div formArrayName="activities">
+                                          <div
+                                            *ngFor="
+                                              let activityGroup of dayGroup.get(
+                                                'activities'
+                                              ).controls;
+                                              let k = index
+                                            "
+                                            [formGroupName]="k"
+                                          >
+                                            <div
+                                              class="d-flex align-items-center"
+                                            >
+                                              <p class="h4 fw-bold mb-1 p-2">
+                                                <input
+                                                  type="text"
+                                                  id="activity_timeperiod"
+                                                  formControlName="activity_timeperiod"
+                                                  class="form-control"
+                                                  placeholder="Activity Time"
+                                                />
+                                              </p>
+                                              <p class="h4 fw-bold mb-1 p-2">
+                                                <input
+                                                  type="text"
+                                                  id="activity_name"
+                                                  formControlName="activity_name"
+                                                  class="form-control"
+                                                  placeholder="Activity Name"
+                                                />
+                                              </p>
+                                              <a
+                                                href="#"
+                                                class="icon-button"
+                                                (click)="
+                                                  deleteActivity(dayGroup, k)
+                                                "
+                                              >
+                                                <i
+                                                  class="fa fa-trash text-danger"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td colspan="2">
+                                        <button
+                                          class="btn btn-secondary mt-2"
+                                          (click)="addCol(dayGroup)"
+                                        >
+                                          <i
+                                            class="fa fa-plus"
+                                            aria-hidden="true"
+                                          ></i>
+                                        </button>
+                                        <button
+                                          class="btn btn-secondary mt-2"
+                                          (click)="deleteRow(i, j)"
+                                        >
+                                          <i
+                                            class="fa fa-trash text-dark"
+                                            aria-hidden="true"
+                                          ></i>
+                                        </button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <div class="div">
+                                        <button
+                                          class="btn btn-secondary m-3"
+                                          (click)="addRow(i)"
+                                        >
+                                          Add Day
+                                        </button>
+                                      </div>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+
+            <!-- In Initial Mode -->
+            <div class="col-12" *ngIf="isInitialMode">
+              
+              <div *ngFor="let cityKey of sortedCities">
+                <div
+                  class="py-4"
+                  *ngFor="
+                    let connection of activitiesByCity[cityKey][0].connections
+                  "
+                >
+                  <div class="text-center">
+                    <p
+                      class="mb-0"
+                      style="font-family: 'Nunito', sans-serif; font-size: 18px"
+                    >
+                      <span
+                        ><i
+                          class="fa-solid fa-location-dot fa-xl me-3"
+                          style="color: #323268"
+                        ></i
+                      ></span>
+                      {{ connection.mode_of_transport }} from
+                      {{ connection.from_city }}
+                      <span
+                        ><i class="fa-solid fa-plane-departure fa-xl mx-3"></i
+                      ></span>
+                      to {{ connection.to_city }}
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="container mb-3 mt-2"
+                  style="font-family: 'Nunito', sans-serif"
+                >
+                  <div class="row">
+                    <div class="col-12 ps-md-5">
+                      <div
+                        class="card p-0"
+                        style="
+                          border-color: rgb(211, 209, 209);
+                          border-radius: 10px;
+                          overflow: hidden;
+                        "
+                      >
+                        <div class="card-body p-0">
+                          <h2
+                            class="card-title fw-bold p-3 m-0 text-white"
+                            style="background-color: #323268"
+                          >
+                            {{ cityKey }}
+                            <span class="text-white fw-normal">
+                              - {{ activitiesByCity[cityKey].length }} days stay
+                              @
+                              {{
+                                activitiesByCity[cityKey][0]
+                                  ?.suggested_hotelname
+                              }}</span
+                            >
+                          </h2>
+                          <h2 class="card-title p-3 text-muted mb-0">
+                            <span><i class="fas fa-car-side me-2"></i></span>
+                            Pickup self-drive car at {{ cityKey }} Airport
+                          </h2>
+                          <div class="table-responsive">
+                            <table
+                              class="table align-middle mb-0 bg-white table-bordered"
+                            >
+                              <tbody>
+                                <tr
+                                  *ngFor="
+                                    let dateGroup of activitiesByCity[cityKey]
+                                  "
+                                >
+                                  <td
+                                    class="text-center text-muted p-2 pt-4"
+                                    style="font-size: 15px"
+                                  >
+                                    {{
+                                      dateGroup.date
+                                        ? (dateGroup.date | date : "EEE, d MMM")
+                                        : "No Date"
+                                    }}
+                                  </td>
+                                  <td
+                                    *ngFor="
+                                      let activity of dateGroup.activities
+                                    "
+                                  >
+                                    <div class="d-flex align-items-center">
+                                      <div class="ms-3">
+                                        <p class="h4 fw-bold mb-1">
+                                          {{
+                                            activity.activity_timeperiod
+                                              | uppercase
+                                          }}
+                                        </p>
+                                        <p class="text-muted mb-0">
+                                          {{ activity.activity_name }}
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- In preview mode -->
+            <div class="col-12" *ngIf="isPreviewMode">
+             
+              <!-- <div class="row">
+                <div class="col d-flex justify-content-end">
+                  <button class="btn btn-success mb-3" *ngIf="isPreviewMode" (click)="handleCreatePackageBtn()">
+                    Create Package
+                  </button>
+                </div>
+              </div> -->
+
+              <form [formGroup]="responseFormGroup">
+                <div formArrayName="cities">
+                  <div
+                    *ngFor="
+                      let cityGroup of responseFormGroup.get('cities').controls;
+                      let i = index
+                    "
+                    [formGroupName]="i"
+                  >
+                    <div formArrayName="days">
+                      <div
+                        *ngFor="
+                          let dayGroup of cityGroup.get('days').controls;
+                          let j = index
+                        "
+                        [formGroupName]="j"
+                      >
+                        <div formArrayName="connections">
+                          <div
+                            *ngFor="
+                              let activityGroup of dayGroup.get('connections')
+                                .controls;
+                              let k = index
+                            "
+                            [formGroupName]="k"
+                          >
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <p
+                                class="my-4"
+                                style="
+                                  font-family: 'Nunito', sans-serif;
+                                  font-size: 18px;
+                                "
+                              >
+                                <span
+                                  ><i
+                                    class="fa-solid fa-location-dot fa-xl me-3"
+                                    style="color: #323268"
+                                  ></i
+                                ></span>
+                                {{
+                                  activityGroup.get("mode_of_transport")?.value
+                                }}
+                                from
+                                {{ activityGroup.get("from_city")?.value }}
+                                <span
+                                  ><i
+                                    class="fa-solid fa-plane-departure fa-xl mx-3"
+                                  ></i
+                                ></span>
+                                to {{ activityGroup.get("to_city")?.value }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="container mb-3 mt-2"
+                      style="font-family: 'Nunito', sans-serif"
+                    >
+                      <div class="row">
+                        <div class="col-12 ps-md-5">
+                          <div
+                            class="card p-0"
+                            style="
+                              border-color: rgb(211, 209, 209);
+                              border-radius: 10px;
+                              overflow: hidden;
+                            "
+                          >
+                            <h2
+                              class="fw-bold p-3 m-0 text-white"
+                              style="background-color: #323268"
+                            >
+                              {{
+                                responseFormGroup
+                                  .get("cities")
+                                  .at(i)
+                                  .get("cityName").value
+                              }}
+                              <span class="text-white fw-normal">
+                                -
+                                {{ cityGroup.get("days").controls.length }} days
+                                stay
+                              </span>
+                            </h2>
+                            <h2 class="p-3 text-muted mb-0">
+                              <span><i class="fas fa-car-side me-2"></i></span>
+                              Pickup self-drive car at
+                              {{
+                                responseFormGroup
+                                  .get("cities")
+                                  .at(i)
+                                  .get("cityName").value
+                              }}
+                              Airport
+                            </h2>
+                            <div formArrayName="days">
+                              <div
+                                class="table-responsive"
+                                style="overflow-x: auto"
+                              >
+                                <table
+                                  class="table align-middle mb-0 bg-white table-bordered"
+                                >
+                                  <tbody>
+                                    <tr
+                                      *ngFor="
+                                        let dayGroup of cityGroup.get('days')
+                                          .controls;
+                                        let j = index
+                                      "
+                                      [formGroupName]="j"
+                                    >
+                                      <td
+                                        class="text-center text-muted p-2 pt-4"
+                                        style="font-size: 15px"
+                                      >
+                                        {{
+                                          dayGroup.get("date")?.value
+                                            | date : "EEE, d MMM"
+                                        }}
+                                      </td>
+
+                                      <div formArrayName="activities">
+                                        <td
+                                          *ngFor="
+                                            let activityGroup of dayGroup.get(
+                                              'activities'
+                                            ).controls;
+                                            let k = index
+                                          "
+                                          [formGroupName]="k"
+                                        >
+                                          <div
+                                            class="d-flex align-items-center"
+                                          >
+                                            <div class="ms-3">
+                                              <p class="h4 fw-bold mb-1">
+                                                {{
+                                                  activityGroup.get(
+                                                    "activity_timeperiod"
+                                                  )?.value | uppercase
+                                                }}
+                                              </p>
+                                              <p class="text-muted mb-0">
+                                                {{
+                                                  activityGroup.get(
+                                                    "activity_name"
+                                                  )?.value
+                                                }}
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </div>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+
+            <div class="col-12 col-md-4"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4
+            class=""
+            id="exampleModalLabel"
+            style="font-family: 'Nunito', sans-serif; font-size: 18px"
+          >
+            Set an Itinerary Name
+          </h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="responseData">
+
+            <form
+              [formGroup]="responseFormGroup"
+              (ngSubmit)="saveResponseDataToFirestore()"
+              #responseForm="ngForm"
+            >
+              <div class="container">
+                <div class="row">
+                  <div class="form-group">
+                    <label for="itineraryName" class="h3">Itinerary Name</label>
+                    <!-- <div formArrayName="cities">
+                  <div *ngFor="let cityGroup of responseFormGroup.get('cities').controls; let i = index" [formGroupName]="i">
+                    <input type="text" id="cityName" formControlName="cityName" class="form-control" placeholder="Enter City Name here">
+                  </div>
+                </div> -->
+                    <!-- <span *ngFor="let city of activitiesByCity | keyvalue"> - {{ city.key }}, </span> -->
+                    <input
+                      type="text"
+                      id="itineraryName"
+                      formControlName="itineraryName"
+                      class="form-control"
+                      required
+                      placeholder=""
+                      style="width: 400px"
+                    />
+                    <div
+                      class="text-danger m-0 mt-1"
+                      *ngIf="
+                        responseFormGroup.get('itineraryName')?.invalid &&
+                        (responseFormGroup.get('itineraryName')?.dirty ||
+                          responseFormGroup.get('itineraryName')?.touched)
+                      "
+                    >
+                      <div
+                        *ngIf="
+                          responseFormGroup
+                            .get('itineraryName')
+                            ?.hasError('required')
+                        "
+                      >
+                        Itinerary Name is Required
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-md-12">
+                    <div class="d-flex justify-content-end">
+                      <button
+                        class="btn btn-primary"
+                        type="submit"
+                        (click)="submitAndCloseModal(responseForm)"
+                      >
+                        Submit
+                      </button>
+                      <button (click)="demoFun()">
+                        Demo
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</main>

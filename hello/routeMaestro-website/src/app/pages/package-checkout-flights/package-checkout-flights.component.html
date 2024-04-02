@@ -1,0 +1,455 @@
+<app-travel-data-flights 
+*ngIf="dialog"
+(closeDialog)="dialogBox()" 
+[ssr]="ssr" 
+[ssr1]="ssr1"
+[ssr2]="ssr2"
+[isPanRequired]="isPanRequired"
+
+
+ [dialog]="dialog" 
+ [editIndex]="editIndex" 
+  
+ (travelerArrayChange)="handleTravelerArrayChange($event)"
+ (priceChange)="handlePriceChange($event)"
+
+ [travelers]="travelers"
+ style="width: 100%;"></app-travel-data-flights>
+
+ <app-privacy-policy *ngIf="privacyDialog" (closeDialog)="privacyDialogBox()" style="width: 100%;"></app-privacy-policy>
+ <app-terms-conditions *ngIf="termsDialog" (closeDialog)="termsDialogBox()" style="width: 100%;"></app-terms-conditions>
+ <app-refundible-policy *ngIf="refundibleDialog" (closeDialog)="refundibleDialogBox()" style="width: 100%;"></app-refundible-policy>
+ <app-combined-policy *ngIf="packageDialog" (closeDialog)="packageDialogBox()" [fareRule]="fareRuleResponse" [fareRule1]="fareRuleResponse1" [fareRule2]="fareRuleResponse2" style="width: 100%;"></app-combined-policy>
+<body style="background-color: white;">
+  <ngx-spinner></ngx-spinner>
+    
+    <div class="headers" style="background: #03254A;">
+        <div style="display: flex; gap: 20px; ">
+        <h1>Complete Your Booking</h1>
+        
+        </div>
+        <div>
+         <!-- FARE RULE -->
+      <div style="position: relative">
+        <img
+          src="../../../assets/img/brand/fareRule.png"
+          alt="Fare Rule"
+          height="29px"
+          width="29px"
+          (mouseenter)="mouseEntered(1)"
+          (mouseleave)="mouseLeft(1)"
+          style="cursor: grab"
+        />
+        <div
+          *ngIf="tooltipStates[1]"
+          [ngClass]="{ tooltipContainer: true, fareRuleTooltip: true }"
+          (mouseenter)="mouseOnTooltip(0)"
+        >
+          <div class="tooltipContent" style="background-color: #fff">
+            <div
+              style="
+                height: 100%;
+                width: 100%;
+                border: 2px solid #000;
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                border-radius: 10px;
+                /* padding: 0px 15px 5px 15px; */
+              "
+            >
+              <!-- Header -->
+              <div
+                style="
+                  background-color: #000046;
+                  height: 10%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: relative;
+                "
+              >
+                <h1 style="margin: 0; font-size: 18px; color: #fff">
+                  Fare Rule
+                </h1>
+                <button
+                  style="
+                    position: absolute;
+                    right: 10px;
+                    background-color: #000000;
+                    color: #fff;
+                    text-decoration: none;
+                    margin: 0;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    height: 20px;
+                    width: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 4px;
+                    padding: 0;
+                  "
+                  (click)="closeFareRuleOnX(1)"
+                >
+                  x
+                </button>
+              </div>
+              <!-- Route Overview -->
+              <div
+                style="
+                  background-color: rgb(255, 255, 255);
+                  height: 24%;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 12px 11px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-evenly;
+                    /* height: 50px; */
+                    gap: 4px;
+                  "
+                >
+                  <h2
+                    style="
+                      font-size: 17px;
+                      color: #000;
+                      margin: 0;
+                      text-decoration: underline;
+                      padding: 0;
+                    "
+                  >
+                    Route Overview
+                  </h2>
+                  <h3
+                    style="
+                      color: #000;
+                      display: flex;
+                      gap: 5px;
+                      max-width: 464px;
+                      overflow-x: auto;
+                    "
+                  >
+                    <span
+                      style="display: flex; align-items: center"
+                      *ngFor="let city of routeOverviewArr; let i = index"
+                      >{{ city }}
+                      <img
+                        src="../../../assets/img/brand/rightArrowCommon.png"
+                        alt="->"
+                        height="20px"
+                        width="17px"
+                        *ngIf="i !== routeOverviewArr.length - 1"
+                      />
+                    </span>
+                  </h3>
+                </div>
+              </div>
+              <!-- Cancellation and Reissue -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                  height: 16%;
+                  padding: 0px 15px;
+                  background-color: #fff;
+                "
+              >
+                <!-- Cancellation -->
+                <!-- <div style="display: flex; flex-direction: column">
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: 14px;
+                      text-transform: capitalize;
+                    "
+                  >
+                    Cancellation
+                  </h3>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 13px;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Refer to detailed fare rules
+                  </h4>
+                </div> -->
+                <!-- Reissue -->
+                <!-- <div style="display: flex; flex-direction: column">
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: 14px;
+                      text-transform: capitalize;
+                    "
+                  >
+                    Reissue
+                  </h3>
+                  <h4
+                    style="
+                      margin: 0;
+                      font-size: 13px;
+                      text-transform: uppercase;
+                    "
+                  >
+                    INR 13,390*
+                  </h4>
+                </div> -->
+              </div>
+              <!-- Important Section -->
+              <div
+                style="
+                  background-color: white;
+                  height: 50%;
+                  width: 100%;
+                  padding: 10px 15px;
+                  overflow-x: hidden;
+                  overflow-y: auto;
+                  color: #000;
+                  text-align: left;
+                  border-radius: 0 0 10px 10px;
+                "
+              >
+              <ng-container *ngFor="let item of fareRuleResponse?.fareRule?.Response?.FareRules">
+                <span>{{item?.Origin}} - {{item?.Destination}}</span>
+               
+                    <div [innerHTML]="item?.FareRuleDetail" style="margin-top: 10px; margin-bottom: 10px;"></div>
+               
+               </ng-container>
+                <!-- <h3
+                  style="margin: 0; font-size: 15px; text-transform: capitalize"
+                >
+                  Important:
+                </h3>
+                <ul
+                  style="
+                    list-style: circle;
+                    padding: 0;
+                    margin: 10px 0;
+                    width: 448px;
+                    overflow-x: scroll;
+                  "
+                >
+                  <li
+                    style="
+                      font-size: 14px;
+                      line-height: 1.5;
+                      word-break: break-word;
+                    "
+                  >
+                    Mentioned fee is indicative per pax and per sector.
+                  </li>
+                  <li
+                    style="
+                      font-size: 14px;
+                      line-height: 1.5;
+                      word-break: break-word;
+                    "
+                  >
+                    Apart from airline charges, GST + RAF + applicable charges,
+                    if any, will be charged.
+                  </li>
+                  <li
+                    style="
+                      font-size: 14px;
+                      line-height: 1.5;
+                      word-break: break-word;
+                    "
+                  >
+                    For domestic bookings, passengers are required to submit the
+                    cancellation or reissue request at least 2 hours before the
+                    airline's cancellation and reissue policy.
+                  </li>
+                  <li
+                    style="
+                      font-size: 14px;
+                      line-height: 1.5;
+                      word-break: break-word;
+                    "
+                  >
+                    <p style="font-size: 12px">
+                      For international bookings, passengers are required to
+                      submit the cancellation or reissue request at least 4
+                      hours before the airline's cancellation and reissue
+                      policy.
+                    </p>
+                  </li>
+                </ul> -->
+                <p
+                  style="
+                    margin: 0;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    color: #0066CC;
+                  "
+                  onclick="alert('Clicked!')"
+                >
+                  Click here for more details
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+    </div>
+
+    <div class="main-containers">
+        <div style="width: 100%; margin-top: 28px;">
+        
+        <div class="containers" id="dynamicContainer">
+            <div class="titles" style="background-color: #03254A; height: 40px; ">
+                Traveller Details
+            </div>
+    
+            <div class="boxes">
+                <div style="width: 100%; display: flex; justify-content: flex-start; align-items: center; border-bottom: 1px solid black;  gap: 5px;">
+                    <h2 style="color: black; padding-left: 10px; margin-top: 5px;">{{adults+child+infants}} Traveller - </h2>
+                    <span style="color: black; padding-left: 10px;">  {{adults}} Adult {{child}} Child  {{infants}} Infants</span>
+                </div>
+                <ng-container *ngIf="!Travellers ">
+                    <ng-container *ngFor="let star of getArray(adults+child+infants); let i=index;">
+                        <div class="box1">
+                            <div style="width: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <small>Traveller {{i+1}}</small>
+                              
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <i style="font-size: 18px;" class="fa-regular fa-user"></i>
+                                    <a class="p" (click)="dialogBox(i)"><span>{{travelers[i]?.personalInfo?.FirstName || 'Add Traveller'}}</span></a>
+                                </div>
+                                  
+                                  </div>
+                            <!-- <small style="font-size: 0.7rem;">* Adult age should be more than 18 </small> -->
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <ng-container *ngIf="Travellers && adults+child+infants >2 ">
+                    <ng-container *ngFor="let star of getArray(2); let i=index;">
+                        <div class="box1">
+                            <div style="width: 200px; display: flex; flex-direction: column;  justify-content: center; align-items: center;">
+                                <small>Traveller {{i+1}}</small>
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <i style="font-size: 18px;" class="fa-regular fa-user"></i>
+                             
+                                <a class="p" (click)="dialogBox(i)"><span>{{'Add Traveller' || travelers[i]?.personalInfo?.FirstName}}</span></a>
+                                </div>
+                                  </div>
+                            <!-- <small style="font-size: 0.7rem;">* Adult age should be more than 18 </small> -->
+                        </div>
+                    </ng-container>
+                </ng-container>
+                
+                
+                
+            </div>
+    
+            <ng-container *ngIf="Travellers">
+                <div class="btn-containers">
+                    <button class="btns" style="width:113px;display: flex; justify-content: center; align-items: center; height:32px ;  margin-left: 10px;" (click)="addBox()"><span style="color: white; font-weight: 600; width: 100%;">See more</span></button>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="!Travellers">
+                <div class="btn-containers">
+                    <button class="btns" style=" width:113px; display: flex; justify-content: center; align-items: center; height:32px ;  margin-left: 10px;" (click)="addBox()"><span style="color: white; font-weight: 600;">See less</span></button>
+                </div>
+            </ng-container>
+        </div>
+
+        <form [formGroup]="contactForm" (ngSubmit)="submit()">
+            <div class="primary-details">
+              <h2 style="width: 100%; display: flex; justify-content: center; align-items: center; padding-bottom: 10px; background-color: #03254A; color: white; padding: 10px;    border-radius: 10px 10px 0 0;">
+                Primary Contact Details
+              </h2>
+              <div class="details">
+                <div>
+                  <label>Name</label>
+                  <input type="text" formControlName="name" placeholder="eg. JohnDoe" required/>
+                </div>
+                <div>
+                  <label>Phone</label>
+                  <input type="text" formControlName="phone" placeholder="eg. 8766876878" required/>
+                </div>
+                <div>
+                  <label>Email</label>
+                  <input type="email" formControlName="email" placeholder="eg. JohnDoe@gmail.com" required/>
+                </div>
+                <div>
+                  <label>Address</label>
+                  <input type="text" formControlName="address" placeholder="eg. Ludhiana" required/>
+                </div>
+              </div>
+            </div>
+            <!-- Add your form submission button or any other controls here -->
+           
+          </form>
+          
+
+    
+
+          
+            
+            <div class="terms" >
+
+                <h2 id="termsHeader" style="background-color: #03254A; color: white; padding: 10px;" >
+                  <span style="color: white; width: 250px;">Terms & Conditions</span>
+                  <!-- <div [ngClass]="{'v-arrow': arrowTermDirection === 'down', 'v-arrow-up': arrowTermDirection === 'up'}" style="color: white;"></div> -->
+    
+                </h2>
+            
+                <div class="terms-details" >
+                  <div style="display: flex; gap:5px;">
+                    <input type="checkbox" [(ngModel)]="checkBox1" style="width: fit-content; height: 20px;"/>
+                    <span style="font-size: 0.8rem;">By Clicking the above checkbox, I accept the <span style="color: blue;" (click)="packageDialogBox()">T&C</span></span>
+                  </div>
+                  <div style="display: flex; gap:5px;">
+                    <input type="checkbox" [(ngModel)]="checkBox2" style="width: fit-content; height: 20px;"/>
+                    <span style="font-size: 0.8rem;"> I confirm that I have read and I accept <span style="color: blue;" (click)="privacyDialogBox()">Privacy Policy</span>, <span style="color: blue;" (click)="termsDialogBox()">Terms & Conditions</span>  and <span style="color: blue;" (click)="refundibleDialogBox()">Refundible Policy</span> of RouteMaestro</span>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="btnss" style="justify-content: center; margin: 0; margin-top: 10px;">
+                <button type="submit"
+                        style="height: 40px; width: 100px; display: flex; justify-content: center;"
+                        [ngStyle]="{'background-color': areAllCheckboxesChecked() && contactForm.valid ? '#E2472B' : '#ccc', 'color': 'white'}"
+                        [disabled]="!areAllCheckboxesChecked() || !contactForm.valid"
+                        (click)="submit()">
+                  <span>Submit</span>
+                </button>
+              </div>
+              
+
+        <div class="btnss"  style="margin: 0; margin-top: 20px;" *ngIf="pay" >
+            <button (click)="generatePaymentLink()"><span>Get Payment Link</span></button>
+            <button (click)="getPaymentLink()"><span>Pay Now</span></button>
+            <ng-container *ngIf="isLCC || (isLCC1 && isLCC2) ">
+              <button (click)="handleHoldBook()"><span>Hold Booking</span></button>
+
+            </ng-container>
+        </div>
+        </div>
+
+        <div class="sidebars">
+           
+
+            <app-payment-breakdown [flightCost]="flightCost" [taxes]="taxes" [incentiveEarned]="incentiveEarned" [netPayable]="netPayable" [transactionFee]="transactionFee" [initialCost]="initialCost" [ssrCost]="ssrCost" [travelData]="travelData" (privacyDialogbox)="privacyDialogBox()" (termsDialogBox)="termsDialogBox()" (refundDialogBox)="refundibleDialogBox()" (packageDailogBox)="packageDialogBox()" (costData)="handleCostChanges($event)"></app-payment-breakdown>
+            
+           
+        </div>
+
+    </div>
+    
+    
+</body>

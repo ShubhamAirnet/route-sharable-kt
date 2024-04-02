@@ -1,0 +1,30 @@
+<main >
+    <div class="container" style="padding: 0;margin-top: 32px;">
+        <ng-container *ngIf="!calendarFare">
+            <ng-container *ngFor="let item of trips;let i=index">
+                <div class="box" style="background-color: white;">
+                    <div class="item">
+                        <span style="font-weight: 600;">City {{i+1}}</span>
+                        <span>{{item.Origin}} - {{item.Destination}}</span>
+                        <span>{{formatSingleDate(item.PreferredDepartureTime)}}</span>
+                    </div>
+                 
+                </div>
+            </ng-container>
+        </ng-container>
+    
+        <div class="containers">
+            <ng-container *ngFor="let item of calendarFare?.SearchResults">
+                <div class="cardss" (click)="handleClick(item,calendarFare?.Origin,calendarFare?.Destination)"  >
+                
+                    <div class="info" >
+                        <span>{{item?.IsLowestFareOfMonth ? 'Cheapest' : null}}</span>
+                        <span>{{formatDateString(item?.DepartureDate)}}</span>
+                        <span>₹{{item?.Fare}}</span>
+                    </div>
+                </div>
+            </ng-container>
+          
+        </div>
+    </div>
+</main>

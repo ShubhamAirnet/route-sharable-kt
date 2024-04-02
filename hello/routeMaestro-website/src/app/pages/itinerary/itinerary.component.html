@@ -1,0 +1,51 @@
+<main >
+
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: #000" > Loading... </p></ngx-spinner>
+
+  <div style="display: flex" *ngIf="gotAllFlights && gotAllHotels">
+    <!-- <div style="display: flex" *ngIf="gotAllFlights "> -->
+    <div class="content">
+      <!-- main itinerary is here -->
+      <section style="width: 100%">
+        <div style="display: flex; position: relative; width: 100%">
+          <!-- itinerary body (calling customized itinerary component after we got all the flights and hotels) -->
+          <div
+            style="
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <app-combined-itinerary
+              [allFlights]="allFlights"
+              [currentFlightSetIndex]="currentFlightSetIndex"
+              [allHotels]="allHotels"
+              [docUid]="docUid"
+              (allSelectedHotels)="gotAllSelectedHotels($event)"
+
+              style="width: 100%;"
+            ></app-combined-itinerary>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- fare summary -->
+    <div style="width: 35%; height: 100%">
+      <app-payment-breakdown-package [publishedFareFlight]=" getFlightPublishedFare()"  [publishedFareHotel]="getHotelPublishedFare()" ></app-payment-breakdown-package>
+    </div>
+  </div>
+
+  <!-- <div *ngIf="!gotAllFlights && !gotAllHotels">
+    <button class="btn btn-dark" (click)="getFlightsHotels()">
+      Get Flights & Hotels
+    </button>
+
+    <button class="'btn btn-warning" (click)="authenticateFlightApi()">
+      Authenticate
+    </button>
+  </div> -->
+</main>

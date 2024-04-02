@@ -1,0 +1,310 @@
+main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.searchs{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.containers{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    width: fit-content;
+    max-height: 800px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+
+.sub-containers{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    /* margin-left: 250px; */
+    max-height: 800px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+
+}
+
+.box{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.book{
+    width: 700px;
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 30px;
+    align-items: center;
+    background-color: #32325d;
+    bottom: 0;
+    position: fixed;
+    z-index: 99;
+    button{
+        background: #e2472b;
+        border: 0;
+        padding: 6px 12px;
+        border-radius: 15px;
+    }
+    span{
+        color: white;
+        font-weight: 600;
+    }
+}
+/* Add this to your component's styles or your global styles */
+.your-selected-box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Your selected box shadow style */
+  }
+  
+  .default-box-shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Your default box shadow style */
+  }
+  
+
+  .cards{
+    width: fit-content;
+    box-shadow: 0px 6px 10px 0 grey;
+  }
+  .cards.selected {
+    box-shadow: #0012ffb5 0px 2px 4px 0px, #0012ffb5 0px 2px 16px 0px;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.containerss{
+    height: 100vh;
+    width: 160px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   
+ 
+    background-color: white;
+    border-radius: 5px;
+    right: 0;
+    top: 100px;
+    margin-right: 15px;
+}
+
+.head{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    border-bottom: 1px solid;
+    border-radius: 5px;
+    span{
+        color: black;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+.contentss{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 8px;
+    border-right: 1px solid;
+    padding-right: 3px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.airline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.boxs{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .items{
+    display: flex;
+    gap: 5px
+  }
+  .items span{
+    font-size: 0.8rem;
+  }
+
+  .btns{
+    display: flex;
+    
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  .button{
+    padding: 6px 12px;
+    background-color: white;
+    border: 0;
+    span{
+        color: black;
+      
+        font-size: 0.9rem;
+    }
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;    border-radius: 5px;
+  }
+
+  
+  .wrapper {
+      display: flex;
+      height: 94vh; // Adjust to your needs
+    }
+    
+    #sidebar {
+      background-color: #fffefe;
+      color: white;
+      width: 100%;
+    // Set the width to 50%
+    //   max-width: 250px; // Add a max-width to prevent the sidebar from becoming too wide
+      overflow-y: auto; // Add scrollbar when content overflows
+      padding: 20px;
+    }
+    
+    #content {
+      flex: 1;
+      // padding: 20px;
+      overflow: auto; // Add scrollbar when content overflows
+    }
+    
+    // Additional styles for the table if needed
+    .table {
+      width: 100%;
+    }
+    
+    .dp-hidden {
+      width: 0;
+      margin: 0;
+      border: none;
+      padding: 0;
+    }
+    
+    .custom-day {
+      text-align: center;
+      padding: 0.185rem 0.25rem;
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+    
+      &.focused {
+        background-color: #e6e6e6;
+      }
+    
+      &.range,
+      &:hover {
+        background-color: rgb(2, 117, 216);
+        color: white;
+      }
+    
+      &.faded {
+        background-color: rgba(2, 117, 216, 0.5);
+      }
+    }
+    
+    // Custom color definition
+    $custom-color: #339199; 
+    
+    // Custom toggle button class
+    .custom-toggle-button {
+      color: $custom-color;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    
+      .scrollable-list {
+        overflow-y: auto; // Enable vertical scrolling
+        flex-grow: 1; // Allow the scrolling list to expand and take available space
+        background-color: white; // Optional: Set a background color
+        border-top: 1px solid #ccc; // Optional: Add a border between the sections
+        max-height: 300px; // Set a maximum height for the list to trigger scrolling
+        margin-top: 10px;
+      }
+    }
+    
+    .icon-button {
+      display: inline-block;
+      padding: 5px; /* Adjust padding as needed */
+      background-color: #f7f8f9; /* Button background color */
+      color: #fff; /* Button text color */
+      border: none;
+      border-radius: 5px; /* Adjust border radius as needed */
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .icon-button:hover {
+      background-color: #adadae; /* Change color on hover if desired */
+    }
+    
+    .div button {
+      display: inline-block;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span{
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.8rem;
+            color: black;
+        }
+        input{
+            height: 10px;
+            width: 10px;
+        }
+    }
+//   .spinner {
+//     border: 4px solid rgba(0, 0, 0, 0.1); /* border color */
+//     border-left-color: #36d7b7; /* spinner color */
+//     border-radius: 50%;
+//     width: 40px; /* spinner size */
+//     height: 40px; /* spinner size */
+//     animation: spin 1s linear infinite;
+//   }
+  
+//   @keyframes spin {
+//     to { transform: rotate(360deg); }
+//   }

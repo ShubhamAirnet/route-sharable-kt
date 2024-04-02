@@ -1,0 +1,194 @@
+
+ <app-privacy-policy *ngIf="privacyDialog" (closeDialog)="privacyDialogBox()" style="width: 100%;"></app-privacy-policy>
+ <app-terms-conditions *ngIf="termsDialog" (closeDialog)="termsDialogBox()" style="width: 100%;"></app-terms-conditions>
+ <app-refundible-policy *ngIf="refundibleDialog" (closeDialog)="refundibleDialogBox()" style="width: 100%;"></app-refundible-policy>
+ <app-combined-policy *ngIf="packageDialog" (closeDialog)="packageDialogBox()" style="width: 100%;"></app-combined-policy>
+<body style="background-color: white;">
+  <ngx-spinner></ngx-spinner>
+    
+    <div class="headers" style="background: #03254A;">
+        <div style="display: flex; gap: 20px; ">
+        <h1>4Days/5Nights</h1>
+        <h1>Dubai,</h1>
+        <h1>Abu Dhabhi</h1>
+        <h1>Package</h1>
+        </div>
+        <button class="btns" style="width:129px; height: 39px; background-color: #E2472B;"><span class="span" style="font-size: 0.9rem;">See Package</span></button>
+       
+
+    </div>
+
+    <div class="main-containers">
+        <div style="width: 100%;">
+        <div class="sub-headers">
+            <p>Day Wise Iternary</p>
+            <p style="text-decoration: none;">-</p>
+            <p>Flights</p>
+            <p style="text-decoration: none;">-</p>
+            <p >Accomodations</p>
+            <p style="text-decoration: none;">-</p>
+            <p >Get-payment</p>
+        </div>
+    
+        <div class="containers" id="dynamicContainer">
+            <div class="titles" style="background-color: #03254A; height: 40px; ">
+                Traveller Details
+            </div>
+    
+            <div class="boxes">
+                <div style="width: 100%; display: flex; justify-content: flex-start; align-items: center; border-bottom: 1px solid black;  gap: 5px;">
+                    <h2 style="color: black; padding-left: 10px; margin-top: 5px;">{{this.flightData?.passengers?.length}} Traveller - </h2>
+                    <span style="color: black; padding-left: 10px;">  {{this.flightData?.trip?.tripData?.AdultCount}} Adult {{this.flightData?.trip?.tripData?.ChildCount}} Child  {{this.flightData?.trip?.tripData?.InfantCount}} Infants</span>
+                </div>
+                <ng-container *ngIf="!Travellers ">
+                    <ng-container *ngFor="let star of getArray(this.flightData?.passengers); let i=index;">
+                        <div class="box1">
+                            <div style="width: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <small>Traveller {{i+1}}</small>
+                              
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <i style="font-size: 18px;" class="fa-regular fa-user"></i>
+                                    <a class="p" (click)="dialogBox(i)"><span>{{travelers[i]?.personalInfo?.FirstName || 'Add Traveller'}}</span></a>
+                                </div>
+                                  
+                                  </div>
+                            <!-- <small style="font-size: 0.7rem;">* Adult age should be more than 18 </small> -->
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <ng-container *ngIf="Travellers && this.flightData?.passengers?.length>2 ">
+                    <ng-container *ngFor="let star of getArray(2); let i=index;">
+                        <div class="box1">
+                            <div style="width: 200px; display: flex; flex-direction: column;  justify-content: center; align-items: center;">
+                                <small>Traveller {{i+1}}</small>
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <i style="font-size: 18px;" class="fa-regular fa-user"></i>
+                             
+                                <a class="p" (click)="dialogBox(i)"><span>{{'Add Traveller' || travelers[i]?.personalInfo?.FirstName}}</span></a>
+                                </div>
+                                  </div>
+                            <!-- <small style="font-size: 0.7rem;">* Adult age should be more than 18 </small> -->
+                        </div>
+                    </ng-container>
+                </ng-container>
+                
+                
+                
+            </div>
+    
+            <ng-container *ngIf="Travellers">
+                <div class="btn-containers">
+                    <button class="btns" style="width:113px;display: flex; justify-content: center; align-items: center; height:32px ;  margin-left: 10px;" (click)="addBox()"><span style="color: white; font-weight: 600; width: 100%;">See more</span></button>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="!Travellers">
+                <div class="btn-containers">
+                    <button class="btns" style=" width:113px; display: flex; justify-content: center; align-items: center; height:32px ;  margin-left: 10px;" (click)="addBox()"><span style="color: white; font-weight: 600;">See less</span></button>
+                </div>
+            </ng-container>
+        </div>
+
+        <form >
+            <div class="primary-details">
+              <h2 style="width: 100%; display: flex; justify-content: center; align-items: center; padding-bottom: 10px; background-color: #03254A; color: white; padding: 10px; border-radius: 20px 20px 0 0 ;">
+                Primary Contact Details
+              </h2>
+              <div class="details">
+                <div>
+                  <label>Name</label>
+                 <span> {{primaryInfo?.name}}</span>
+                </div>
+                <div>
+                  <label>Phone</label>
+                    <span>{{primaryInfo?.phone}}</span>
+                </div>
+                <div>
+                  <label>Email</label>
+                  <span>{{primaryInfo?.email}}</span>
+                </div>
+                <div>
+                  <label>Address</label>
+                  <span>{{primaryInfo?.address}}</span>
+                </div>
+              </div>
+            </div>
+            <!-- Add your form submission button or any other controls here -->
+           
+          </form>
+           <div class="terms" style="background-color: #fef2f0; text-align: center;">
+                <h2 style=" background-color: #03254A ; color: white; padding-top: 10px; font-size: 1rem; ">TCS (Tax Collected at Source) is mandatory for International Holiday Packages</h2>
+                <p style="color: black; font-size: 0.9rem; padding-top: 10px;">As per Govt rules, 5% TCS will be applicable on spends towards International Holiday packages for cumulative spends (within or outside RouteMaestro) up to Rs 7 Lakhs in a financial year and @20% for incremental spends beyond Rs 7 Lakhs in the same financial year. TCS is neither a cost nor additional tax, it can be fully adjusted against income tax liability and excess, if any, can be claimed as refund</p>
+
+                <!-- <a href="#" class="know-more-button">KNOW MORE</a> -->
+            </div>
+
+    
+
+          
+            <div class="terms" style="margin-top: 20px;" (click)="toggleExclusionCollapse()">
+                <h2 style="background-color: #03254A; padding-top: 10px; color: white;">
+                    <span style="color: white; width: 250px;">Package Exclusions</span>
+                    <div [ngClass]="{'v-arrow': arrowExclusionDirection === 'down', 'v-arrow-up': arrowExclusionDirection === 'up'}" style="color: white;"></div>
+
+                </h2>
+                <div class="exclusion" style="background-color: white;" [hidden]="isExclusionCollapsed">
+                  <p>• Cost of extension of the validity of your holiday.</p>
+                  <p>• Cost of any Suggested or Optional Excursions/Tours/Activities</p>
+                  <p>• Expenses of personal nature such as laundry, wines, telephone charges, mineral water and other things not mentioned in the itinerary/inclusions</p>
+                  <p>• Food and drinks not part of the included meals</p>
+                  <p>• Anything not specifically mentioned in Inclusions list</p>
+                  <p>• Departure/Arrival transfer to airport/hotel for land only customers</p>
+                </div>
+            </div>
+            <div class="terms" >
+
+                <h2 id="termsHeader" style="background-color: #03254A; color: white; padding: 10px;" >
+                  <span style="color: white; width: 250px;">Terms & Conditions</span>
+                  <!-- <div [ngClass]="{'v-arrow': arrowTermDirection === 'down', 'v-arrow-up': arrowTermDirection === 'up'}" style="color: white;"></div> -->
+    
+                </h2>
+            
+                <div class="terms-details" >
+                  <div style="display: flex; gap:5px;">
+                    <input type="checkbox" [(ngModel)]="checkBox1" style="width: fit-content; height: 20px;"/>
+                    <span style="font-size: 0.8rem;">By Clicking the above checkbox, I accept the <span style="color: blue;" (click)="packageDialogBox()">T&C</span></span>
+                  </div>
+                  <div style="display: flex; gap:5px;">
+                    <input type="checkbox" [(ngModel)]="checkBox2" style="width: fit-content; height: 20px;"/>
+                    <span style="font-size: 0.8rem;"> I confirm that I have read and I accept <span style="color: blue;" (click)="privacyDialogBox()">Privacy Policy</span>, <span style="color: blue;" (click)="termsDialogBox()">Terms & Conditions</span>  and <span style="color: blue;" (click)="refundibleDialogBox()">Refundible Policy</span> of RouteMaestro</span>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="btnss" style="justify-content: center; margin: 0; margin-top: 10px;">
+                <button type="submit"
+                        style="height: 40px; width: 100px; display: flex; justify-content: center;"
+                        [ngStyle]="{'background-color': areAllCheckboxesChecked() ? '#E2472B' : '#ccc', 'color': 'white'}"
+                        [disabled]="!areAllCheckboxesChecked() "
+                        (click)="submit()">
+                  <span>Submit</span>
+                </button>
+              </div>
+              
+
+        <div class="btnss"  style="margin: 0; margin-top: 20px;" *ngIf="pay" >
+            <button (click)="generatePaymentLink()"><span>Get Payment Link</span></button>
+            <button (click)="getPaymentLink()"><span>Pay Now</span></button>
+        </div>
+        </div>
+
+        <div class="sidebars">
+           
+
+            <app-payment-breakdown ></app-payment-breakdown>
+            
+           
+        </div>
+
+    </div>
+    
+    
+</body>
+<app-reissue-travel-data></app-reissue-travel-data>

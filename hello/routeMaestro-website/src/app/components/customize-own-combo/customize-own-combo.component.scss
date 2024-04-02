@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+  }
+
+  .room-list {
+    width: 80vw;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .selected {
+    background-color: lightblue;
+  }
+
+  .your-rooms {
+    width: 20vw;
+    padding: 0 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-content {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px; /* Reduce padding */
+  z-index: 1;
+  font-size: 0.8rem; /* Reduce font size */
+}
+
+.tooltip:hover .tooltip-content {
+  display: block;
+}
+
+.tooltip-content table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+.tooltip-content th,
+.tooltip-content td {
+  border: 1px solid #ccc; /* Add thin borders */
+  padding: 5px; /* Reduce padding */
+}
+
+.tooltip-content th {
+  background-color: #f2f2f2;
+}
+
+.tooltip-content tr:hover {
+  background-color: #f5f5f5;
+}

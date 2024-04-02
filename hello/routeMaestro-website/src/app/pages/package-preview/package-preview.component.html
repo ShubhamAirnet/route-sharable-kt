@@ -1,0 +1,247 @@
+
+<app-privacy-policy *ngIf="privacyDialog" (closeDialog)="privacyDialogBox()" style="width: 100%;"></app-privacy-policy>
+<app-terms-conditions *ngIf="termsDialog" (closeDialog)="termsDialogBox()" style="width: 100%;"></app-terms-conditions>
+<app-refundible-policy *ngIf="refundibleDialog" (closeDialog)="refundibleDialogBox()" style="width: 100%;"></app-refundible-policy>
+<app-combined-policy *ngIf="packageDialog" (closeDialog)="packageDialogBox()" style="width: 100%;"></app-combined-policy>
+
+<main >
+
+    <nav class="navbar navbar-light bg-light" style="width: 100vw;">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Merchant Logo
+        </a>
+      </nav>
+     
+
+
+    <div style="display: flex; padding-bottom: 40px; margin-top: 30px; margin-top: 30px; width: 100%; justify-content: space-around;" >
+      <div class="content">
+         <section >
+          <div style="display: flex; position: relative; width: 100%">
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+              "
+            >
+            <div class="headers" style="background: #03254A;">
+                <div style="display: flex; gap: 10px; ">
+                  
+                <h1>4Days/5Nights</h1>
+                <h1>Dubai,</h1>
+                <h1>Abu Dhabhi</h1>
+                <h1>Package</h1>
+                </div>
+          </div>
+          
+            
+        <div class="route">
+            <h3 style="padding-bottom:10px ;">Route Overview</h3>
+            <div class="path">
+                <!-- <div class="city">
+                </div> -->
+                <div class="city">
+                <div class="dot">
+                    <div class="big-dot">•</div>
+                    <span style="font-size: 0.9rem;">{{ travelData?.trip?.connections[0]?.from_city }}</span>
+                </div>
+                <ng-container *ngFor="let city of travelData?.trip?.connections; let i=index">
+                    <ng-container >
+                    
+                    <div class="vertical-line"></div>
+                    <ng-container *ngIf="city?.mode_of_transport === 'Flight'">
+                        <span style="margin-top: 10px;"><i class="fa-solid fa-plane" style="font-size: 1.2rem;"></i></span>
+                    </ng-container>
+                    <ng-container *ngIf="city?.mode_of_transport === 'Train'">
+                        <span style="margin-top: 10px;"><i class="fa-solid fa-train" style="font-size: 1.2rem;"></i></span>
+                    </ng-container>
+                    <ng-container *ngIf="city?.mode_of_transport === 'Car'">
+                        <span style="margin-top: 10px;"><i class="fa-solid fa-car" style="font-size: 1.2rem;"></i></span>
+                    </ng-container>
+                    <div class="vertical-line"></div>
+                    <div class="dot">
+                        <div class="big-dot">•</div>
+                        <span style="font-size: 0.9rem;">{{ city?.to_city }}</span>
+                    </div>
+                    </ng-container>
+                </ng-container>
+    
+                
+                
+                
+                
+        
+                </div>
+            
+            
+            </div>
+        
+        </div>
+              
+            <ng-container *ngFor="let items of flightData?.segments;let i =index ">
+                <app-flight-card-package [completeFlight]="items"></app-flight-card-package>
+                <ng-container *ngIf="i<travelData?.cities?.length">
+                    <app-city-package [city]="travelData.cities[i]" [arrivalDate]="travelData.trip.citiesArrivalDates[i]"  [hotelData]="getHotelData(i + 1)"></app-city-package>
+
+                </ng-container>
+            </ng-container>
+            </div>
+  
+          </div>
+        </section>
+
+        <div class="containers">
+            <div class="heads">
+                <span>Traveller Information</span>
+            </div>
+            <div *ngFor="let traveller of travellers; let i = index" class="collapsible-container">
+                <button class="collapsible" (click)="toggleDetails(i)"><i style="font-size: 0.9rem;" class="fa-regular fa-user"></i>Traveller {{ i + 1 }}</button>
+                <div class="content-details" [ngStyle]="{'display': openIndex === i ? 'block' : 'none'}">
+                <div class="details">
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">First Name:</span>
+                    </div>
+                    <div class="items">
+                        <span>Rahul</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Last Name:</span>
+                    </div>
+                    <div class="items">
+                        <span>Verma</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Date of Birth:</span>
+                    </div>
+                    <div class="items">
+                        <span>23-09-1998</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Phone No:</span>
+                    </div>
+                    <div class="items">
+                        <span>98777443333</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">PAN:</span>
+                    </div>
+                    <div class="items">
+                        <span>CJHPC3465K</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Passport No:</span>
+                    </div>
+                    <div class="items">
+                        <span>H9137927</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Passport Expiry:</span>
+                    </div>
+                    <div class="items">
+                        <span>22-09-2029</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Address Line1:</span>
+                    </div>
+                    <div class="items">
+                        <span>Sahnewal</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Address Line2:</span>
+                    </div>
+                    <div class="items">
+                        <span>Ludhiana</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">City:</span>
+                    </div>
+                    <div class="items">
+                        <span>Ludhiana</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="items">
+                        <span class="first">Country:</span>
+                    </div>
+                    <div class="items">
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+       
+        </div>
+            
+        </div>
+        <div class="containers" >
+
+            <h2 id="termsHeader" style="background-color: #2f3268;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            justify-content: flex-start;
+            padding-left: 30px;
+            border-radius: 10px 10px 0 0;" >
+              <span style="color: white; width: 250px;">Terms & Conditions</span>
+              <!-- <div [ngClass]="{'v-arrow': arrowTermDirection === 'down', 'v-arrow-up': arrowTermDirection === 'up'}" style="color: white;"></div> -->
+
+            </h2>
+        
+            <div class="terms-details" >
+              <div style="display: flex; gap:5px;">
+                <input type="checkbox" [(ngModel)]="checkBox1" style="width: fit-content; height: 20px;"/>
+                <span style="font-size: 0.8rem; color: black;">By Clicking the above checkbox, I accept the <span style="color: blue;" (click)="packageDialogBox()">T&C</span></span>
+              </div>
+              <div style="display: flex; gap:5px;">
+                <input type="checkbox" [(ngModel)]="checkBox2" style="width: fit-content; height: 20px;"/>
+                <span style="font-size: 0.8rem; color: black;"> I confirm that I have read and I accept <span style="color: blue;" (click)="privacyDialogBox()">Privacy Policy</span>, <span style="color: blue;" (click)="termsDialogBox()">Terms & Conditions</span>  and <span style="color: blue;" (click)="refundibleDialogBox()">Refundible Policy</span> of RouteMaestro</span>
+              </div>
+              
+              
+            </div>
+          </div>
+      </div>
+  
+
+      <div style=" height: 100% ; margin-top: 30px;">
+        <app-payment-breakdown-package></app-payment-breakdown-package>
+      </div>
+    </div>
+  
+    <div class="btn">
+        <button type="button" class="btn btn-warning"  [ngStyle]="{'background-color': areAllCheckboxesChecked() ? '#E2472B' : '#ccc', 'color': 'white'}"
+        [disabled]="!areAllCheckboxesChecked() "
+        >Pay Now</button>
+      </div>
+      <nav class="navbar navbar-light bg-light" style="width: 100vw;">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Bootstrap
+        </a>
+      </nav>
+  </main>
+  

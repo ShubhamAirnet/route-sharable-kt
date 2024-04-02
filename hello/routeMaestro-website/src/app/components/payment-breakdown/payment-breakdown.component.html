@@ -1,0 +1,160 @@
+<div style="width: 300px; height: fit-content; border: 1px solid white; border-radius: 20px; background-color: #03254A;">
+    <div class="first">
+        <div class="person">
+            <small style="font-size: 1.3rem; font-weight: 600;">Payment Breakdown</small>
+            
+        </div>
+        <!-- <button style="background-color: #e24729;"><span style="color: white; font-weight: 600;">Book Now</span></button> -->
+    </div>
+
+    <div class="second">
+        <div class="price-details" *ngIf="hotelCost">
+            <div class="sub-details" style="width: 120px;">
+                <small>Hotel Cost</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{hotelCost}}</small>
+            </div>
+        </div>
+        <div class="price-details" *ngIf="flightCost">
+            <div class="sub-details" style="width: 120px;">
+                <small>Flight Cost</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{flightCost}}</small>
+            </div>
+        </div>
+        <div class="price-details" *ngIf="ssrCost">
+            <div class="sub-details" style="width: 120px;">
+                <small>SSR Cost</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ {{ssrCost}}</small>
+            </div>
+        </div>
+        <div class="price-details">
+            <div class="sub-details" style="width: 120px;">
+                <small>Platform Cost <span style="color: white; font-size: 0.5rem;">(*inclusive of taxes)</span></small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <small>₹ 0</small>
+            </div>
+        </div>
+    
+      
+
+        <div class="price-details">
+            <div class="sub-details" style="width: 100%; padding-left: 40px;" (click)="toggleTaxesSection()">
+                <div class="taxes-header" (click)="toggleTaxesSection()">
+                    <small>Taxes</small>
+                    <div id="arrowDown"  style="color: white;"  (click)="toggleTaxesSection()" [class.arrow-hidden]="taxesSectionExpanded" class="v-arrow"></div>
+                <div id="arrowUp" style="color: white;"  (click)="toggleTaxesSection()" [class.arrow-hidden]="!taxesSectionExpanded" class="v-arrow-up arrow-hidden"></div>
+                </div>
+                <div *ngIf="taxesSectionExpanded">
+                    <div style="display: flex; width: 100%; gap: 100px; padding-left: 10px;">
+                        <small>Package GST</small>
+                        <small>₹ {{gst}}</small>
+                    </div>
+                    <div style="display: flex; width: 100%; gap: 100px; padding-left: 10px;">
+                        <small>Package TDS</small>
+                        <small>₹ {{ taxes}}</small>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+
+        
+        <div class="price-details">
+            <div class="sub-details" >
+                <small>Incentive Earned</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content">
+                <small>₹ {{incentiveEarned}}</small>
+            </div>
+        </div>
+
+        <div class="price-details">
+            <div class="sub-details" style="width: 120px;">
+                <small>Net Payable</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content">
+                <small>₹ {{ netPayableFixed }}</small>
+            </div>
+        </div>
+        
+        
+       
+        <div class="price-details" style="background-color: #e24729; padding-bottom: 5px; margin-top: 10px;">
+            <div class="sub-details" style="width: 120px;">
+                <small>Merchant Share</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <input type="number" [(ngModel)]="merchantShare"  (ngModelChange)="onMerchantShareChange()" style="width: 80px; height: 15px; font-size: 0.8rem;" />
+            </div>
+        </div>
+        <div class="price-details" style=" padding-bottom: 5px; margin-top: 10px;">
+            <div class="sub-details" style="width: 120px;">
+                <small>Merchant GST</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content;">
+                <!-- <input type="number" [(ngModel)]="merchantShare"  (ngModelChange)="onMerchantShareChange()" style="width: 80px; height: 15px; font-size: 0.8rem;" /> -->
+                <small>₹ {{(0.18 * merchantShare).toFixed(2)}}</small>
+            </div>
+        </div>
+        <div class="price-details">
+            <div class="sub-details" style="width: 120px;">
+                <small>Transaction Fee</small>
+            </div>
+            
+            <div class="sub-details" style="width: fit-content">
+                <small>₹ {{transactionFee}}</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="third">
+        <div class="total">
+            <div class="sub-details" style="width: 140px;">
+                <p>Total Amount</p>
+            </div>
+            <div class="sub-details" style="width: fit-content;">
+                <p>₹ {{totalCost}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth">
+        <div style="width: 33.33%; display: flex; justify-content: center; align-items: center;" class="options">
+            <small style="width: 100%; display: flex; color: white; justify-content: center; align-items: center; padding-left: 15px;">
+                Request Call Back</small>
+        </div>
+        <div style="width: 33.33%;" class="options">
+            <small style="width: 100%; color: white; display: flex; justify-content: center; align-items: center; padding-left: 15px;">Cancellation</small>
+        </div>
+        <div style="width: 33.33%;" class="options">
+            <small style="width: 100%; color: white; display: flex; justify-content: center; align-items: center; padding-left: 15px;">Mail this Bill</small>
+        </div>
+    </div>
+
+    <div class="fifth">
+        <div style="padding-left: 10px;">
+            <span >Important Information</span>
+        </div>
+        <div style="display: flex; padding-left: 10px; flex-direction: column;">
+            <span style="color: #e24729; font-size: 0.7rem; text-decoration: underline; cursor: pointer;" (click)="package()">Package Cancellation Policies</span>
+            <span style="font-size: 0.7rem;">By clicking on the checkbox below to proceed with the booking, I confirm that I have read and I accept <span style="color: #e24729; cursor: pointer;" (click)="privacy()">Privacy Policy</span>, <span style="color: #e24729; cursor: pointer;" (click)="terms()">Terms & Conditions</span> and <span style="color: #e24729; cursor: pointer;" (click)="refundible()">Refundible Policy</span> of RouteMaestro</span>
+
+        </div>
+    </div>
+
+</div>

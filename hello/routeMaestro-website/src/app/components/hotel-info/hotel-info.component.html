@@ -1,0 +1,722 @@
+<div class="modal" [ngClass]="{ open: isOpen }">
+  <div class="modal-overlay" (click)="closeModal()"></div>
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Hotel Info</h2>
+      <span class="close" (click)="closeModal()">&times;</span>
+    </div>
+
+    <div class="modal-body" style="display: flex">
+      <main style="margin: 10px 15px; box-sizing: border-box; overflow-y: auto ; width: 100%;">
+        <!-- navbar DONE -->
+        <section style="z-index: 999; margin-bottom: 5px; position: fixed; width: 1125px">
+          <div
+            style="
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              height: 35px;
+              background-color: #37395f;
+              border-radius: 4px 4px 4px 4px;
+              box-shadow: 4px 4px 10px 0 grey;
+              color: #fff;
+            "
+          >
+            <h2 style="color: #fff">
+              <a (click)="scrollToSection('overview')"  [ngStyle]="{ color: activeSection === 'overview' ? 'red' : '#fff' }" style="cursor: pointer"
+                >Overview</a
+              >
+            </h2>
+            <h2 style="color: #fff">
+              <a (click)="scrollToSection('rooms')"  [ngStyle]="{ color: activeSection === 'rooms' ? 'red' : '#fff' }" style="cursor: pointer"
+                >Rooms</a
+              >
+            </h2>
+            <h2 style="color: #fff">
+              <a
+                (click)="scrollToSection('description')"  [ngStyle]="{ color: activeSection === 'description' ? 'red' : '#fff' }"
+                style="cursor: pointer"
+                >Description</a
+              >
+            </h2>
+            <h2 style="color: #fff">
+              <a (click)="scrollToSection('location')"  [ngStyle]="{ color: activeSection === 'location' ? 'red' : '#fff' }" style="cursor: pointer"
+                >Location</a
+              >
+            </h2>
+            <h2 style="color: #fff">
+              <a
+                (click)="scrollToSection('hotelPolicies')"  [ngStyle]="{ color: activeSection === 'hotelPolicies' ? 'red' : '#fff' }"
+                style="cursor: pointer"
+                >Hotel Policy</a
+              >
+            </h2>
+          </div>
+        </section>
+
+        <!-- more photos carousel DONE -->
+        <div *ngIf="showCarousel && hotelImagesArr.length>0" >
+          <app-hotel-images-slider
+            [hotelImagesArr]="hotelImagesArr"
+          ></app-hotel-images-slider>
+        </div>
+
+
+        <section style="height: 95%; width: 100%">
+          <!-- overview  DONE-->
+          <section
+          #overviewSection
+            id="overview"
+            style="
+              margin: 50px 10px 0 10px;
+              display: flex;
+              background-color: #fff;
+              height: 50vh;
+              width: 98%;
+              box-sizing: border-box;
+              border-radius: 20px;
+              padding: 5px;
+            "
+          >
+            <!-- images section -->
+            <section
+              style="
+                width: 42%;
+                height: 100%;
+                /* border: 1px solid #000; */
+                /* box-shadow: 5px 5px 10px 0 grey; */
+                box-sizing: border-box;
+                padding: 2px;
+              "
+            >
+              <div style="height: 100%; display: flex; flex-direction: column">
+                <div
+                  style="
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <!-- row 1 -->
+                  <div style="display: flex; width: 100%; height: 100%">
+                    <!-- img 1 -->
+                    <div style="width: 50%; margin: 5px 2px 2px 2px">
+                      <img
+                        src="{{ hotelImagesArr[0] }}"
+                        alt="hotel-img-1"
+                        style="height: 100%; width: 100%; border-radius: 8px"
+                      />
+                    </div>
+
+                    <!-- img 2 -->
+                    <div style="width: 50%; margin: 5px 2px 2px 2px">
+                      <img
+                        src="{{ hotelImagesArr[1] }}"
+                        alt="hotel-img-2"
+                        style="height: 100%; width: 100%; border-radius: 8px"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- row 2 -->
+                  <div style="display: flex; width: 100%; height: 100%">
+                    <!-- img 3 -->
+                    <div style="width: 50%; margin: 5px 2px 2px 2px">
+                      <img
+                        src="{{ hotelImagesArr[2] }}"
+                        alt="hotel-img-3"
+                        style="height: 100%; width: 100%; border-radius: 8px"
+                      />
+                    </div>
+
+                    <!-- img 4 -->
+                    <div
+                      style="
+                        width: 50%;
+                        margin: 5px 2px 2px 2px;
+                        position: relative;
+                      "
+                    >
+                      <img
+                        src="{{ hotelImagesArr[3] }}"
+                        alt="hotel-img-4"
+                        style="height: 100%; width: 100%; border-radius: 8px"
+                      />
+                      <button
+                        style="
+                          position: absolute;
+                          right: 0px;
+                          bottom: 0px;
+                          border: none;
+                          background-color: #000000cf;
+                          padding: 0;
+                          margin: 0;
+                          color: #fff;
+                          padding: 3px 7px;
+                          border-radius: 5px;
+                          font-size: 11px;
+                          font-weight: 600;
+                          cursor: pointer;
+                        "
+                        (click)="toShowCarousel()"
+                      >
+                        More photos
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section
+              style="
+                width: 58%;
+                height: 100%;
+                /* border: 2px solid blue; */
+                box-sizing: border-box;
+                padding: 15px 45px;
+              "
+            >
+              <div style="height: 100%">
+                <!-- first section -->
+
+                <!-- hotel name and start rating  -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 20px;
+                    height: 40px;
+                  "
+                >
+                  <div style="display: flex; align-items: center">
+                    <h1 style="font-size: 24px">{{ getHotelFullName() }}</h1>
+                  </div>
+                  <div style="display: flex; align-items: center">
+                    <p style="font-size: 17px">{{ getHotelStars() }}</p>
+                  </div>
+                </div>
+
+                <!-- minor description -->
+                <div
+                  style="display: flex; align-items: center; margin: 10px 2px"
+                >
+                  <p
+                    style="
+                      font-size: 15px;
+                      margin: 0;
+                      font-weight: 400;
+                      color: #37395f;
+                    "
+                    (click)="scrollToSection('description')"
+                  >
+                  {{getDescriptionForOverview()}}
+                    <button
+                      style="
+                        border: none;
+                        background-color: #ffffff00;
+                        text-decoration: underline;
+                        color: rgb(123, 123, 218);
+                        font-size: 12px;
+                      "
+                    >
+                      Read more
+                    </button>
+                  </p>
+                </div>
+
+                <!-- amenities  & locations -->
+                <div
+                  style="
+                    display: flex;
+                    height: 69%;
+                    gap: 30px;
+                    margin-top: 45px;
+                  "
+                >
+                  <div style="width: 48%">
+                    <h2>Popular Facilities</h2>
+                    <ul style="margin: 0; padding-left: 21px; font-size: 14px">
+                      <ng-container
+                        *ngFor="
+                          let facility of hotelFacilitiesArr.slice(0, 4);
+                          let i = index
+                        "
+                      >
+                        <li>
+                          {{ facility }}
+                        </li>
+                      </ng-container>
+                      <button
+                      (click)="scrollToSection('description')"
+                      style="
+                        border: none;
+                        background-color: #ffffff00;
+                        text-decoration: underline;
+                        color: rgb(123, 123, 218);
+                        font-size: 12px;
+                      "
+                    >
+                      Read more
+                    </button>
+                    </ul>
+                   
+                  </div>
+
+                  <div style="width: 48%">
+                    <!-- address -->
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-evenly;
+                        gap: 6px;
+                      "
+                    >
+                      <h2>Location</h2>
+                      <div
+                        style="height: 50%; display: flex; align-items: center"
+                      >
+                        <p
+                          style="
+                            font-size: 14px;
+                            color: rgb(55 57 95);
+                            line-height: 22px;
+                            margin: 0;
+                            font-weight: 300;
+                          "
+                        >
+                          <b>{{ getPropertyAddress() }}</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </section>
+
+          <!-- room combinations -->
+          <section *ngIf="hotelOnDisplayDetails?.room?.GetHotelRoomResult?.RoomCombinations?.InfoSource==='FixedCombination'"
+          #rooms
+            id="rooms"
+            style="
+              margin: 28px 0;
+              display: flex;
+              justify-content: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 32px;
+            "
+          >
+            <h1 style="font-size: 30px; margin: 0; padding: 0">
+              Recommended Combos
+            </h1>
+
+            <div
+              *ngFor="
+                let roomCombination of recommendedRoomCombinationsArr;
+                let i = index
+              "
+              [ngClass]="getClasses(i)"
+              style="
+                width: 94%;
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: 10px;
+              "
+            >
+              <!-- combo name -->
+              <div
+                style="
+                  height: 32px;
+                  background-color: #ffffff;
+                  display: flex;
+                  align-items: center;
+                  padding: 4px 30px;
+                  border-bottom: 1px solid #000;
+                  border-radius: 10px 10px 0 0;
+                "
+              >
+                <h2
+                  style="
+                    margin: 0;
+                    color: #ff5757;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                  "
+                >
+                  {{ getHeadingForRoomCombination(roomCombination) }}
+                </h2>
+              </div>
+
+              <!-- combo body -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                "
+              >
+
+              <!-- room name and options/description -->
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    width: 78%;
+                   
+                  "
+                >
+                  <!-- the below div will be dynamic based on the room combinations -->
+                  <div
+                    *ngFor="let roomIndex of roomCombination.RoomIndex;let i=index;"
+                    style="display: flex; width: 100%; height: 80px"
+                  >
+                    <!--  room name -->
+                    <div
+                      style="
+                        width: 40%;
+                        border-right: 1px solid #000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                      "
+                    >
+                      <h2 style="font-size: 1rem;" [innerHTML]="getCombRoomName(roomIndex)"></h2>
+                    </div>
+
+                    <!-- room options -->
+                    <div
+                      style="
+                        width: 50%;
+                        display: flex;
+                        border-right: 1px solid #000;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        flex-direction: column;
+                        gap: 8px;
+                      "
+                    >
+                      <h2 style="font-size: 1rem;">
+                        {{ getCombRoomInclusions(roomIndex) }} |<span style="position: relative;"  (mouseover)="showCancellationPolicies($event,roomIndex)" (mouseleave)="hideCancellationPolicies(roomIndex)">
+                           Cancellation policies
+                          <div class="tooltip-content"  *ngIf="tooltipVisibility[roomIndex]" >
+                              <table>
+                                  <thead>
+                                      <tr>
+                                          <th>From Date</th>
+                                          <th>To Date</th>
+                                          <th>Charge</th>
+                                         
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr *ngFor="let policy of getCancellation(roomIndex)">
+                                          <td>{{ transform(policy.FromDate) }}</td>
+                                          <td>{{ transform(policy.ToDate) }}</td>
+                                          <td>{{ policy.Charge }} {{ getChargeType(policy.ChargeType,policy?.Currency) }}</td>
+                                         
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                        </span>
+                      
+                      </h2>
+                      <h5 style="margin: 0; font-size: 13px; text-transform: capitalize">
+              
+                        Last Cancellation Date :{{ getLastCancellationDate(roomIndex) }}
+                     
+                      </h5>
+                      <!-- <h5
+                      style="
+                        margin: 0;
+                        font-size: 11px;
+                        text-transform: capitalize;
+                      "
+                    >
+                      ✔ Free Cancellation before {{getLastCancellationDate(room)}}
+                    </h5> -->
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- combo price and selection btn -->
+                <div
+                  style="
+                       display: flex;
+                      /* flex-direction: column; */
+                      height: 100%;
+                      width: 22%;
+                      align-items: center;
+                      justify-content: center;
+                      padding-right: 19px;
+                      gap: 30px;
+                  "
+                >
+                  <!-- combo price -->
+                  <div
+                    style="
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-around;
+                    "
+                  >
+                    <h2>₹{{ getCombPrice(roomCombination) }}</h2>
+                  </div>
+
+                  <!-- select combo -->
+                  <div
+                    style="
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <!-- Check if minorArray matches roomIndexes -->
+                    <button
+                      *ngIf="areArraysEqual(roomCombination); else otherContent"
+                      style="
+                        border: none;
+                        background-color: rgb(107, 107, 107);
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        box-shadow: 4px 4px 10px 0 #000;
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: #fff;
+                        letter-spacing: 0.5px;
+                        cursor: pointer;
+                        width:130px;
+                      "
+                    >
+                      Selected
+                    </button>
+
+                    <ng-template #otherContent>
+                      <!-- Your other content if the arrays are not equal -->
+                      <button
+                        style="
+                          border: none;
+                          background-color: #ff5757;
+                          padding: 4px 8px;
+                          border-radius: 16px;
+                          box-shadow: 4px 4px 10px 0 #000;
+                          font-size: 15px;
+                          font-weight: 600;
+                          color: #fff;
+                          letter-spacing: 0.5px;
+                          cursor: pointer;
+                          width:130px
+                        "
+                        (click)="
+                          settingFinalRoomsArrByRoomIdx(
+                            roomCombination.RoomIndex
+                          )
+                        "
+                      >
+                        Select Combo
+                      </button>
+                    </ng-template>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          <!-- customize room combo -->
+          <section  *ngIf="hotelOnDisplayDetails?.room?.GetHotelRoomResult?.RoomCombinations?.InfoSource==='OpenCombination'">
+            <app-customize-own-combo
+              [roomsArr]="roomsArr"
+              [roomArrFromBackend]="roomArrFromBackend"
+              [isRecommendedComboSelected]="isRecommendedComboSelected"
+              (createdRoomCombination)="gotCustomizedCombo($event)"
+            >
+            </app-customize-own-combo>
+          </section>
+
+          <!-- Info  DONE -->
+          <section #description id="description">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 8px 8px 10px 0 grey;
+                padding: 10px 35px;
+                gap: 10px;
+              "
+            >
+              <div>
+                <h1 style="font-size: 1.4rem">Hotel Info</h1>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  font-size: 18px;
+                "
+                [innerHTML]="getHotelDescription()"
+              >
+             
+              </div>
+            </div>
+          </section>
+
+          <!-- locations and attractions -->
+          <section #location id="location">
+            <div
+              style="
+                width: 100%;
+                height: 500px;
+                display: flex;
+                border: 2px solid #000;
+                margin: 30px 0;
+              "
+            >
+              <div style="width: 50%; background-color: red; height: 100%">
+                <h2>Attractions</h2>
+              </div>
+              <div style="width: 50%; background-color: blue; height: 100%">
+                <h2>Location</h2>
+              </div>
+            </div>
+          </section>
+
+          <!-- Policy  -->
+          <section #hotelPolicies id="hotelPolicies">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 8px 8px 10px 0 grey;
+                padding: 10px 35px;
+                gap: 10px;
+              "
+            >
+              <div>
+                <h1 style="font-size: 1.4rem">Hotel policy</h1>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  font-size: 18px;
+                "
+              >
+                CheckIn Time-Begin: 12:00 PM|CheckOut Time: 12:00 PM|CheckIn
+                Instructions:
+                <ul>
+                  <li>
+                    Extra-person charges may apply and vary depending on
+                    property policy
+                  </li>
+                  <li>
+                    Government-issued photo identification and a credit card,
+                    debit card, or cash deposit may be required at check-in for
+                    incidental charges
+                  </li>
+                  <li>
+                    Special requests are subject to availability upon check-in
+                    and may incur additional charges; special requests cannot be
+                    guaranteed
+                  </li>
+                  <li>
+                    This property accepts credit cards; cash is not accepted
+                  </li>
+                  <li>
+                    Only bookings from non-local guests are accepted; guests
+                    whose residence is within the same city as the property will
+                    not be allowed to check in
+                  </li>
+                  <li>
+                    Please note that cultural norms and guest policies may
+                    differ by country and by property; the policies listed are
+                    provided by the property
+                  </li>
+                </ul>
+                | Special Instructions : Front desk staff will greet guests on
+                arrival. For more details, please contact the property using the
+                information on the booking confirmation. |Minimum CheckIn Age :
+                18| Optional Fees:
+                <ul>
+                  <li>Rollaway bed fee: INR 350 per night</li>
+                </ul>
+                <p>
+                  The above list may not be comprehensive. Fees and deposits may
+                  not include tax and are subject to change.
+                </p>
+                |Cards Accepted: Visa,Debit cards not accepted,Cash not
+                accepted,Mastercard|
+                <ul>
+                  <li>
+                    Local laws may restrict unmarried guests from sharing rooms.
+                    Guests are responsible for providing proof of marriage, if
+                    requested by the property.
+                  </li>
+                  <li>Only registered guests are allowed in the guestrooms.</li>
+                </ul>
+                , Pets not allowed,Professional property host/manager| | |
+              </div>
+            </div>
+          </section>
+        </section>
+        
+      </main>
+
+     
+    </div>
+
+    <!-- FOOTER TO SHOW PRICE AND CLOSE BUTTON -->
+    <div
+      class="modal-footer"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+      "
+    >
+    
+    <ng-container *ngIf="!RoomGuests">
+      <button class="btn btn-secondary" (click)="closeModal()">Close</button>
+
+    </ng-container>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 10px;
+        "
+      >
+        <h2 style="font-size: 20px; font-weight: 600">Total Price:</h2>
+        <h3 style="font-size: 18px;">₹ {{getCurrentRoomsPrice()}}  </h3>
+      </div>
+      <ng-container *ngIf="RoomGuests">
+        <button type="button" class="btn btn-warning" (click)="handleBook()">BookNow</button>
+      </ng-container>
+    </div>
+  </div>
+</div>

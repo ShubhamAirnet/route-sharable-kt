@@ -1,0 +1,760 @@
+<main>
+    <nav id="sidebar">
+      <h1
+      style="
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 13px;
+        color: white;
+      "
+    >
+          Book Hotels
+        </h1>
+        <div class="container p-0">
+          <div id="accordion" style="display: flex;
+          flex-direction: column;
+          gap: 8px;
+          align-items: center;">
+
+            <!-- journey -->
+           
+
+          
+            <!-- Destination -->
+            <div
+              class="card"
+              data-toggle="collapse"
+              data-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              <div
+                class="card-header p-2"
+                id="heading4"
+                style="    text-align: center;
+                display: flex;
+                height: 50px;
+                align-items: center;
+                width: 258px;
+                justify-content: space-between;"
+              >
+                <a
+                  class="btn btn-link p-2 mb-0 dropdown-toggle"
+                  style="
+                    color: #323268;
+                    font-family: 'Lato', sans-serif;
+                    font-size: medium;
+                  "
+                  data-toggle="collapse"
+                  data-target="#collapse3"
+                  aria-expanded="true"
+                  aria-controls="collapse3"
+                >
+                  Destination
+                </a>
+                <ng-container *ngIf="cityName">
+                  <p style="font-size: 14px; font-weight: 600;" class="fw-bold py-2 px-2 m-0 text-dark">
+                    {{ cityName }},{{countryCode}}
+                  </p>
+                </ng-container>
+              </div>
+              <div
+                id="collapse4"
+                class="collapse"
+                aria-labelledby="heading4"
+                data-parent="#accordion"
+              >
+                <div class="container-fluid mt-2">
+                  <div
+                    class="row input shadow-sm"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      text-align: center;
+                      border-radius: 10px;
+                    "
+                  >
+                    <input
+                      type="search"
+                      id="form1"
+                      class="form-control"
+                      placeholder="Search Airports"
+                      [(ngModel)]="searchText1"
+                      (click)="$event.stopPropagation()"
+                      (input)="onSearchChange1()"
+                      aria-label="Search"
+                    />
+                    <datalist id="airport">
+                      <ng-container *ngFor="let data of cityCodes">
+                        <option
+                          [value]="data?.cityName"
+                          class="text-dark"
+                          style="color: black"
+                        >
+                        {{ data?.DESTINATION }} ({{ data.COUNTRY }}, {{ data.COUNTRYCODE }})
+                        </option>
+                      </ng-container>
+                    </datalist>
+                  </div>
+                  <div class="container">
+                    <div
+                      class="row search"
+                      style="
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        max-height: 400px;
+                        overflow-y: scroll;
+                      "
+                    >
+                      <ul
+                        class="scrollable-column text-dark mt-2 p-0"
+                        style="list-style: none"
+                        *ngIf="cityCodes"
+                      >
+                        <li
+                          class="list text-dark fw-bold fs-5"
+                          style="
+                            list-style: none;
+                            margin: 19px;
+                            font-family: 'Nunito', sans-serif;
+                            cursor: pointer;
+                          "
+                          *ngFor="let city of filteredCities "
+                          (click)="onCitySelect(city)"
+                        >
+                        {{ city.DESTINATION }} ({{ city.COUNTRY }}, {{ city.COUNTRYCODE }})
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Destination -->
+            
+           
+            <!-- checkin date -->
+            <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <div
+              class="card-header p-2"
+              id="headingTwo"
+              style="    text-align: center;
+              display: flex;
+              height: 50px;
+              align-items: center;
+              width: 258px;
+              justify-content: space-between;"
+            >
+            <a
+            class="btn btn-link p-2 mb-0 dropdown-toggle"
+            style="
+              color: #323268;
+              font-family: 'Lato', sans-serif;
+              font-size: medium;
+            "
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="true"
+            aria-controls="collapseTwo"
+          >
+                 Check In
+                </a>
+             
+                  <div class="col-12">
+                    <div class="input-group" (click)="$event.stopPropagation()">
+                      <!-- Input field -->
+                      <input
+                          id="datepicker"
+                          type="date"
+                          style="
+                                 height: 31px;
+                                 font-size: 0.8rem;
+                                 border: 1px solid #888;
+                                 border-radius: 5px 0 0 5px;"
+                          placeholder="dd-mm-yyyy"
+                          name="datepicker"
+                          [ngModel]="selectedDate1 | date:'yyyy-MM-dd'"
+                          (ngModelChange)="onDateChangesCheckIn($event)"
+                        
+                      />
+                      
+                      
+                  </div>
+                  
+                  
+                    
+                   
+                  </div>
+               
+                <ng-template #t let-date let-focused="focused">
+                  <span
+                    class="custom-day"
+                    [class.focused]="focused"
+                    [class.range]="isRange(date)"
+                    [class.faded]="isHovered(date) || isInside(date)"
+                    (mouseenter)="hoveredDate = date"
+                    (mouseleave)="hoveredDate = null"
+                    >{{ date.day }}
+                  </span>
+                </ng-template>
+                <!-- </ng-container> -->
+              
+                
+              </div>
+    
+              <div
+                id="collapseTwo"
+                class="collapse"
+                #collapseTwoElement
+                aria-labelledby="headingTwo"
+                data-parent="#accordion"
+              >
+               
+               
+              </div> 
+
+
+            </div>
+            <!-- checkout date -->
+            <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse6"
+            aria-expanded="false"
+            aria-controls="collapse6"
+          >
+            <div
+              class="card-header p-2"
+              id="heading4"
+              style="    text-align: center;
+              display: flex;
+              height: 50px;
+              align-items: center;
+              width: 258px;
+              justify-content: space-between;"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse6"
+                aria-expanded="true"
+                aria-controls="collapse6"
+              >
+                 Check Out
+                </a>
+              
+                  <div class="col-12" style="padding: 0;">
+                    <div class="input-group" (click)="$event.stopPropagation()">
+                      <input
+                        id="datepicker"
+                        style="
+                        height: 31px;
+                        font-size: 0.8rem;
+                        border: 1px solid #888;
+                        border-radius: 5px 0 0 5px;"
+                        placeholder="yyyy-mm-dd"
+                        name="datepicker"
+                        type="date"
+                        [ngModel]="selectedDate2 | date:'yyyy-MM-dd'"
+                        (ngModelChange)="onDateChangesCheckOut($event)"
+                       
+                      />
+                    
+                    </div>
+                    
+                 
+                  </div>
+                <!-- </ng-container> -->
+              
+                
+              </div>
+              <div>
+                <div class="container-fluid mt-2">
+                  <div
+                    class="row input shadow-sm"
+                    style="
+                         display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        border-radius: 10px;
+                        height: 30px;
+                                        "
+                  >
+                 
+                  </div>
+                  </div>
+                  </div>
+    
+              <div
+                id="collapse6"
+                class="collapse"
+                aria-labelledby="heading6"
+                data-parent="#accordion"
+                >
+                <div  class="card-body">
+                  <form class="row row-cols-sm-auto">
+                    <div class="col-12">
+                      <form class="row row-cols-sm-auto">
+                        
+                       
+                        <ng-template #t let-date let-focused="focused">
+                          <span
+                            class="custom-day"
+                            [class.focused]="focused"
+                            [class.range]="isRange(date)"
+                            [class.faded]="isHovered(date) || isInside(date)"
+                            (mouseenter)="hoveredDate = date"
+                            (mouseleave)="hoveredDate = null"
+                            >{{ date.day }}
+                          </span>
+                        </ng-template>
+                      </form>
+                    </div>
+                  </form>
+                  
+                </div>
+
+               
+              </div> 
+
+
+            </div>
+    
+    <!-- fare -->
+           
+    
+            <!-- travellers -->
+            <div
+            class="card"
+            data-toggle="collapse"
+            data-target="#collapse5"
+            aria-expanded="false"
+            aria-controls="collapse5"
+          >
+            <div
+              class="card-header p-2"
+              id="heading5"
+              style="    text-align: center;
+                display: flex;
+                height: 50px;
+                align-items: center;
+                width: 258px;
+                justify-content: space-between;"
+            >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapse5"
+                aria-expanded="true"
+                aria-controls="collapse5"
+              >
+                No of Travelers
+              </a>
+           
+            </div> <div>
+              <div class="container-fluid mt-2">
+                <div
+                  class="row input shadow-sm"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 10px;
+                  "
+                >
+                  <div class="row" style="flex-direction: row;    gap: 10px; justify-content: flex-start; align-items: flex-start; ">
+                      <div class="item">
+                          <span>{{adultsValue}} Adults</span>
+                      </div>
+                      <div class="item">
+                          <span>{{childrenValue}} Child</span>
+                      </div>
+                      <div class="item">
+                          <span>{{Rooms?.length}} Rooms</span>
+                      </div>
+                    
+                  </div>
+                </div>
+                <div class="container">
+                  <!-- <div class="row" *ngFor="let data of filteredData | slice:0:6">
+                  <a class="btn btn-link " (click)="onCountrySelect(data)">{{ data }}</a>
+              </div> -->
+                  <div
+                    class="row search custom-scrollbar"
+                    style="
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: start;
+                    "
+                  >
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="collapse5"
+              class="collapse"
+              aria-labelledby="heading5"
+              data-parent="#accordion"
+              style="padding-left: 10px;"
+            >
+              <div class="card-body p-0" style="display: flex; flex-direction: column; gap: 6px;">
+                <div
+                 
+                  style="padding-right: 0;
+                  padding-left: 5px;
+                  width: 100%;
+                  margin-left: auto;
+                  margin-right: auto;"
+                  (click)="$event.stopPropagation()"
+                >
+                  <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                      <label
+                        style="font-family: 'Lato', sans-serif"
+                        class="text-dark"
+                        >Adults</label
+                      >
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-btn">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="decAdultCount()"
+                          >
+                            -
+                          </button>
+                        </span>
+                        <input
+                          id="typeNumber"
+                          class="form-control py-0 px-4"
+                          style="border: none"
+                          [formControl]="numberFormControl"
+                          #typeNumber
+                        />
+                        <span class="input-group-btn ms-2">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="incAdultCount()"
+                          >
+                            +
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                style="padding-right: 0;
+                padding-left: 5px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;"
+                  (click)="$event.stopPropagation()"
+                >
+                  <div class="row">
+                    <div class="col-4">
+                      <label
+                        style="font-family: 'Lato', sans-serif"
+                        class="text-dark"
+                        >Child</label
+                      >
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-btn">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="decInfantCount()"
+                          >
+                            -
+                          </button>
+                        </span>
+                        <input
+                          id="typeNumber"
+                          class="form-control py-0 px-4"
+                          style="border: none"
+                          [formControl]="numberFormControl1"
+                          #typeNumber
+                        />
+                        <span class="input-group-btn ms-2">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="incInfantCount()"
+                          >
+                            +
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                style="padding-right: 0;
+                padding-left: 5px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;"
+                  (click)="$event.stopPropagation()"
+                >
+                  <div class="row">
+                    <div class="col-4">
+                      <label
+                        style="font-family: 'Lato', sans-serif"
+                        class="text-dark mt-1"
+                        >Children</label
+                      >
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col-9">
+                          <div class="input-group">
+                            <input
+                              id="ageInput"
+                              class="form-control px-2 py-1"
+                              [(ngModel)]="ageInputValue"
+                              placeholder="Enter age"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-3 p-0">
+                          <button
+                            class="btn btn-sm btn-outline-dark fs-3 fw-bold px-2 py-1"
+                            style="border-radius: 5px"
+                            type="button"
+                            (click)="incChildCount()"
+                            [disabled]="!ageInputValue"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <!-- <div class="m-2" style="text-align: end;">
+          <button type="button" class="btn text-white fw-bold p-2 " style="background-color: #323268" data-bs-dismiss="modal" (click)="noOfTraveler(typeNumber.value)" > Save </button>
+        </div> -->
+                <h4 class="text-muted mx-3 lowercase">
+                  * No of Children: {{ noOfChildren }}
+                </h4>
+                <h4 class="text-muted mx-3 lowercase">
+                  * No of Rooms: {{ Rooms?.length }}
+                </h4>
+                <div class="btn-div" style="display: flex; width: 100%; justify-content: space-around;">
+                    <button  class="btns " style="    background-color: #e2472b;
+                    text-align: center;
+                    height: 26px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 76px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px;
+                    border: 0;
+                    border-radius: 10px;" (click)="handleReset()"><span  style="    font-size: 0.67rem;
+    color: white;
+    font-weight: 600;">Reset room</span></button>
+                    <button  class="btns " style="    background-color: #e2472b;
+                    text-align: center;
+                    height: 26px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 76px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px;
+                    border: 0;
+                    border-radius: 10px;" (click)="addRoom()"><span style="    font-size: 0.67rem;
+    color: white;
+    font-weight: 600;">Add room</span></button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+    
+
+          <!-- Nationality -->
+
+          <div
+          class="card"
+          data-toggle="collapse"
+          data-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          <div
+            class="card-header p-2"
+            id="headingOne"
+            style="    text-align: center;
+              display: flex;
+              height: 50px;
+              align-items: center;
+              width: 258px;
+              justify-content: space-between;"
+          >
+              <a
+                class="btn btn-link p-2 mb-0 dropdown-toggle"
+                style="
+                  color: #323268;
+                  font-family: 'Lato', sans-serif;
+                  font-size: medium;
+                "
+                data-toggle="collapse"
+                data-target="#collapseOne "
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Nationality
+              </a>
+              <ng-container *ngIf="guestNationality">
+                <p style="font-size: 14px; font-weight: 600;" class="fw-bold py-2 px-2 m-0 text-dark">
+                  {{ guestNationality }}
+                </p>
+              </ng-container>
+            </div>
+            <div
+            i id="collapseOne"
+            class="collapse"
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+            >
+              <div class="container-fluid mt-2">
+                <div
+                  class="row input shadow-sm"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 10px;
+                  "
+                >
+                  <input
+                    type="search"
+                    id="form1"
+                    class="form-control"
+                    placeholder="Search Airports"
+                    [(ngModel)]="searchText2"
+                    (click)="$event.stopPropagation()"
+                    (input)="onSearchCountry()"
+                    aria-label="Search"
+                  />
+                  <datalist id="airport">
+                    <ng-container *ngFor="let data of countryCodes">
+                      <option
+                        [value]="data?.name"
+                        class="text-dark"
+                        style="color: black"
+                      >
+                      {{ data.name }} ({{ data.alpha2 }})
+                      </option>
+                    </ng-container>
+                  </datalist>
+                </div>
+                <div class="container">
+                  <div
+                    class="row search custom-scrollbar"
+                    style="
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: start;
+                      max-height: 400px;
+                      overflow-y: scroll;
+                      max-width: 180px;
+                    "
+                  >
+                    <ul
+                      class="scrollable-column text-dark mt-2 p-0"
+                      style="list-style: none"
+                      *ngIf="countryCodes"
+                    >
+                      <li
+                        class="list text-dark fw-bold fs-5"
+                        style="
+                          list-style: none;
+                          margin: 19px;
+                          font-family: 'Nunito', sans-serif;
+                          cursor: pointer;
+                        "
+                        *ngFor="let airport of filteredCountries "
+                        (click)="onCountrySelect(airport)"
+                      >
+                      {{ airport.name }} ({{ airport.alpha2 }})
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+       
+    
+            <div class="py-4" style="text-align: center">
+              <button
+                type="button"
+                class="btn text-white"
+                style="background-color: #e2472b;
+                text-align: center;
+                height: 26px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 76px;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;"
+                (click)="authenticateFlightApi()"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+</main>

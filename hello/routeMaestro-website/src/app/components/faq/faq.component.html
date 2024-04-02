@@ -1,0 +1,16 @@
+<main>
+    <div class="faq-background">
+      <div class="faq-question" (click)="toggleAnswer()" id="faq_question">
+        <h2>{{question}}</h2>
+        <img *ngIf="!isAnswerVisible" src="../../../assets/img/brand/down-filled-triangular-arrow.png" alt="down-arrow" >
+   
+      <img *ngIf="isAnswerVisible" src="    ../../../assets/img/brand/caret-up_3916917.png " alt="up-arrow">
+      </div>
+      <div class="faq-answer" *ngIf="isAnswerVisible" id="faq_answer" [@fadeInOut]>
+        <p>
+         {{answer}}
+        </p>
+      </div>
+    </div>
+  </main>
+  

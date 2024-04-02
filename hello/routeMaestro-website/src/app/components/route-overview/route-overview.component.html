@@ -1,0 +1,46 @@
+<div style="width: 100%; ">
+    <div class="route">
+        <h3 style=" border-radius: 20px 20px 0 0 ;padding-bottom:20px ; padding-top: 20px; width: 100%; display: flex; justify-content: center; align-items: center; background-color: #03254A; "><span style="font-size: 1.2rem; color: white;">Route Overview</span></h3>
+        <div class="path">
+            <span style="font-weight:600 ; text-decoration: underline;">{{travelData?.trip?.departureCity}}</span>
+            <div class="big-dot">•</div>
+            <div class="vertical-line"></div>
+          
+            <ng-container *ngIf="travelData?.trip?.next_city_transport==='flight'">
+              <i class="fa-solid fa-plane plane-icon"></i>
+            </ng-container>
+          
+            <ng-container *ngIf="travelData?.trip?.next_city_transport==='road'">
+              <i class="fa-solid fa-car car-icon"></i>
+            </ng-container>
+          
+            <div class="vertical-line"></div>
+            <div class="big-dot">•</div>
+          
+            <ng-container *ngFor="let city of travelData?.cities">
+                <span style="font-weight:600 ;text-decoration: underline;">{{city?.cityName}}</span>
+                <div class="big-dot">•</div>
+                <div class="vertical-line"></div>
+              
+                <ng-container *ngIf="city?.next_city_transport==='flight'">
+                  <i class="fa-solid fa-plane plane-icon"></i>
+                </ng-container>
+              
+                <ng-container *ngIf="city?.next_city_transport==='road'">
+                  <i class="fa-solid fa-car car-icon"></i>
+                </ng-container>
+              
+                <div class="vertical-line"></div>
+                <div class="big-dot">•</div>
+              
+                
+              </ng-container>
+              
+              
+            
+            <span style="font-weight:600 ; text-decoration: underline;">{{travelData?.trip?.departureCity}}</span>
+        </div>
+
+    </div>
+
+</div>

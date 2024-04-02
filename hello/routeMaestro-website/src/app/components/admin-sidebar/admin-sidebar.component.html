@@ -1,0 +1,114 @@
+<div class="container" [class.expanded]="isContainerExpanded">
+    <div class="left" [class.expanded]="isContainerExpanded">
+        <ng-container *ngIf="isContainerExpanded">
+            <img src="./assets/img/route-maestro-logo.png" alt="RouteMaestro" height="33px"  >
+
+        </ng-container>
+        <ng-container *ngIf="!isContainerExpanded">
+            <img src="../../../assets/img/logos/Copy of ROUTE MAESTRO (1) (1).png" style="margin-top: -3px;
+    margin-left: -7px;" alt="RouteMaestro" height="80px" width="80px"  >
+
+        </ng-container>
+        <div class="details">
+            <!-- Add a class to the icon divs for styling -->
+            <div class="nav-item" (click)="toggleExpanded()" [ngClass]="{'active': isActive('/dashboard')}">
+                <i style="width: 20px;" class="fa-solid fa-house"></i>
+                <div>
+                    <a routerLinkActive="active-link" [routerLink]="'/dashboard'" >
+                    <span >Dashboard</span>
+                </a>
+                </div>
+            </div>
+            <div class="nav-item" (click)="toggleExpanded()" [ngClass]="{'active': isActive('/flight-search')}">
+                <i style="transform: rotate(-45deg); width: 20px;" class="fa-solid fa-plane"></i>
+                <div> 
+                    <a routerLinkActive="active-link" [routerLink]="'/flight-search'" >
+                    <span>Book Flights</span>
+                </a>
+            </div>
+            </div>
+            <div class="nav-item" (click)="toggleExpanded()" [ngClass]="{'active': isActive('/hotel-search')}">
+                <i style="width: 20px;"  class="fa-solid fa-hotel"></i>
+                <div> 
+                    <a routerLinkActive="active-link" [routerLink]="'/hotel-search'" >
+                    <span>Book Hotels</span>
+                </a>
+            </div>
+            </div>
+            <div class="nav-item" (click)="isContainerExpanded ? toggleItinerary() : toggleExpanded()" [ngClass]="{'active': isActive('/generate-aI-itinerary')}">
+                <i style="width: 20px;"  class="fa-solid fa-clipboard-list"></i>
+                <div>  <span>Itinerary</span></div>
+            </div>
+           <ng-container *ngIf="isItineararyExpanded">
+            <div class="nav-item" style="margin-left: 30px;" (click)="toggleSubItinerary()">
+                <div >
+                    <i style="width: 20px;"  class="fa-solid fa-clipboard-list"></i>
+                    <a routerLinkActive="active-link" [routerLink]="'/generate-aI-itinerary'" >
+                        <span>Create AI Itinerary</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-item" style="margin-left: 30px;" (click)="toggleSubItinerary()" [ngClass]="{'active': isActive('/collections')}">
+                
+                <div>  
+                    <i style="width: 20px;" class="fa-solid fa-list"></i>
+                    <a routerLinkActive="active-link" [routerLink]="'/collections'" >
+                    <span>Collections</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-item" style="margin-left: 30px;" (click)="toggleSubItinerary()">
+                <i class="fa-solid fa-plus" style="width: 20px;"></i>
+                <div>  <span>Create Your Own Itinerary</span></div>
+            </div>
+           </ng-container>
+            <div class="nav-item" (click)="isContainerExpanded ? toggleTravel() : toggleExpanded()">
+                <i style="width: 20px;"  class="fa-solid fa-truck-fast"></i>
+                <div><span>Travel Packages</span></div>
+            </div>
+            <ng-container *ngIf="isTravelExpanded">
+                <div class="nav-item" style="margin-left: 30px;" (click)="toggleSubTravel()">
+                    <i class="fa-solid fa-box" style="width: 20px;"></i>
+                    <div><span>Create Package</span></div>
+                </div>
+                <div class="nav-item" style="margin-left: 30px;" (click)="toggleSubTravel()">
+                    <i style="width: 20px;" class="fa-solid fa-list"></i>
+                    <div><span>Collections</span></div>
+                </div>
+            </ng-container>
+            <div class="nav-item" (click)="toggleExpanded()">
+                <i style="width: 20px;"  class="fa-solid fa-phone"></i>
+                <div><span>Support</span></div>
+            </div>
+            <div class="nav-item" (click)="toggleExpanded()">
+                <i style="width: 20px;"  class="fa-solid fa-list"></i>
+               <div> <span>Billing</span></div>
+            </div>
+        </div>
+
+
+        <div class="user-details">
+            <div class="nav-item" (click)="toggleExpanded()">
+                <i style="width: 20px;"  class="fa-regular fa-user"></i>
+                <div><span>Sam</span></div>
+            </div>
+            <div class="nav-item" (click)="toggleExpanded()">
+                <i style="width: 20px;" class="fa-solid fa-gear"></i>
+                <div><span>Settings</span></div>
+            </div>
+        </div>
+
+        <div class="end">
+            <div class="nav-item" style=" height: fit-content;
+            padding-top:15px; padding-bottom: 15px;" (click)="toggleExpanded()">
+            <ng-container *ngIf="isContainerExpanded">
+                <img src="../../../assets/img/logos/Hemant Sahdev (1).png" style="transform: rotate(180deg); margin: 0;" height="40px" width="40px" alt="">
+            </ng-container>
+            <ng-container *ngIf="!isContainerExpanded">
+                <img src="../../../assets/img/logos/Hemant Sahdev (1).png" style="margin: 0;" height="40px" width="40px" alt="">
+            </ng-container>
+              </div>
+              
+        </div>
+    </div>
+</div>

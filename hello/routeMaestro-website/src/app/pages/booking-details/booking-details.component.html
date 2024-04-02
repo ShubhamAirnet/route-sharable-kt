@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="content">
+        <div class="px-2" style="width: 100%;">
+            <ul class="nav-tabs" role="tablist" style="display: flex; list-style: none;">
+                <li class="nav-item" style="width: fit-content;">
+                    <a (click)="toggle('flights')"  [class.active]="isFlight" class="nav-link " aria-disabled="false" aria-disabled="false" aria-controls="ngb-nav-0-panel" id="ngb-nav-0" role="tab" > Flights</a>
+                </li>
+                <li class="nav-item" style="width: fit-content;">
+                    <a (click)="toggle('hotels')"   [class.active]="isHotel" class="nav-link" aria-disabled="false" aria-disabled="false" aria-controls="ngb-nav-1-panel" id="ngb-nav-1" role="tab" > Hotels</a>
+                </li>
+                <li class="nav-item" style="width: fit-content;">
+                    <a (click)="toggle('packages')"  [class.active]="isPackage" class="nav-link " aria-disabled="false" aria-disabled="false" aria-controls="ngb-nav-2-panel" id="ngb-nav-2" role="tab" > Packages</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

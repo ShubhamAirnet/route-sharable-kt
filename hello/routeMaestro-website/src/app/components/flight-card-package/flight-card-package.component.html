@@ -1,0 +1,141 @@
+<main style="width: 700px;" >
+
+    <div class="flightCard">
+  
+      <div class="airline">
+        <div class="airline-section1">
+          <div class="airline-section1-logo">
+            <ng-container *ngIf="currentFlightSetLogosArray">
+              <img
+              src={{flightLogoOnFront()}}
+              alt="aLogo"
+            />
+            </ng-container>
+            <p style="font-size: 10px">{{ getAirlineCode(0) }} {{ getFlightNumber(0) }}</p>
+          </div>
+        </div>
+        <div class="airline-section2">
+          <h3 style="font-size: 0.9rem;">{{ getAirlineName(0) }}</h3>
+          <h4>{{ getCabinClass(0) }}</h4>
+        </div>
+      </div>
+  
+      <div class="timings">
+        <div class="timings-city-stats">
+          <h3>{{ getDepartureTime(0) }}</h3>
+          <h4> {{ getFirstOriginCity(0) }} </h4>
+          <h3> {{ getDepartDate(0) }} </h3>
+        </div>
+        <div class="timings-duration">
+          <h4>{{ getFlightDuration(0) }}</h4>
+           <button type="button" class="btn flight-stops-btn "  placement="top" ngbTooltip>
+            <img src="{{ getStopsImageUrl(0) }}" alt="stops Bar" />
+            </button>
+          
+           
+            <ng-template class="flightStopsContent"  #flightStopsContent>
+  
+                <div class="flight-stop-tooltip">
+                  <h3>Plane change</h3>
+                  <div class="flight-stop-tooltip-footer">
+                    <h4>Amritsar (ATQ)</h4>
+                    <h4>4h 20m </h4>
+                  </div>
+                </div>
+  
+  
+               </ng-template>
+          <h4>{{ getFlightStops(0) }}</h4>
+        </div>
+        <div class="timings-city-stats">
+          <h3>{{ getArrivalTime(0) }}</h3>
+          <h4>{{ getFinalDestinationCity(0) }}  </h4>
+          <h3> {{ getArrDate(0) }}  </h3>
+        </div>
+      </div>
+     
+  
+     <ng-container *ngIf="fare">
+      <div class="pricing">
+        <div class="hover">
+          <!-- Baggage -->
+          <div style="position: relative">
+            <img
+              src="../../../assets/img/brand/travel-luggage.png"
+              alt="Baggage"
+              height="20px"
+              width="20px"
+              (mouseenter)="mouseEntered(0)"
+              (mouseleave)="mouseLeft(0)"
+              style="cursor: grab"
+            />
+            <div
+              *ngIf="tooltipStates[0]"
+              [ngClass]="{ tooltipContainer: true, baggageTooltip: true }"
+              (mouseenter)="mouseOnTooltip(0)"
+            >
+              <div class="tooltipContent">
+                <div class="scrollable-container">
+                  <table border="1" style="border-color: #fff">
+                    <tr>
+                      <th>Flight</th>
+                      <th>Baggage</th>
+                      <th>Cabin Baggage</th>
+                    </tr>
+                    <tr *ngFor="let city of completeFlight">
+                      <td>
+                        <span>{{ city?.Origin?.Airport?.CityCode }} </span> ->
+                        <span>{{ city.Destination?.Airport?.CityCode }} </span>
+                      </td>
+                      <td>{{ city.Baggage }}</td>
+                      <td>{{ city.CabinBaggage }}</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div> 
+  
+          <!-- Refundable -->
+  
+          <div style="position: relative">
+            <img
+              src="../../../assets/img/brand/refundable.png"
+              alt="Refundable"
+              height="20px"
+              width="20px"
+              (mouseenter)="mouseEntered(2)"
+              (mouseleave)="mouseLeft(2)"
+              style="cursor: grab"
+            />
+            <div
+              *ngIf="tooltipStates[2]"
+              [ngClass]="{ tooltipContainer: true, refundableTooltip: true }"
+              (mouseenter)="mouseOnTooltip(0)"
+            >
+              <div class="tooltipContent">
+                <h1 style="margin: 0; color: #fff; font-size: 13px; padding: 2px 4px;">{{isRefundable ? 'Refundable' : 'Non-Refundable'}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span style="font-size: 1rem; font-weight: 600;">₹ {{fare?.PublishedFare}}</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 0.8rem; ">₹ {{fare?.CommissionEarned.toFixed(2)}}</span>
+
+          <span style="font-size: 0.8rem; font-weight: 600;">Incentive</span>
+        </div>
+      </div>
+     </ng-container>
+      
+      <div>
+  
+      </div>
+    
+    </div>
+  
+    <!-- <app-flight-details *ngIf="isflightDetails" (click)="toTriggerAlternateFlightsetDialogBox()"  ></app-flight-details> -->
+  
+      
+  </main>
+  

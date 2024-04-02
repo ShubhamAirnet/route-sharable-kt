@@ -1,0 +1,61 @@
+  .is-active{
+    background-color: var(--bg-color);
+  }
+  
+  .container_outer{
+      display: flex;
+      font-family: 'Outfit', sans-serif;
+      height: 90vh;
+      background-color: var(--bg-color);
+      // background: url('assets/img/brand/logo12.png');
+  }
+  
+  .container_inner{
+      background-color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      border-radius: 5px;
+      margin-top: 50px !important;
+      margin-bottom: 50px !important;
+      padding: 20px 30px 20px 20px; 
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+  
+  
+  .scrollable-column {
+      height: 71vh;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }
+  
+    .scrollable-column::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .scrollable-column2 {
+      height: fit-content;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }
+  
+    .scrollable-column2::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .scrollable-column2 a {
+    padding: 8px;
+    padding-left: 16px;
+  }
+  
+  .scrollable-column2 a:hover {
+    background: var(--bg-color);
+  }
+  
+  
+  @media (max-width: 996px) {
+    .container_inner{
+      height: 96vh;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+  }

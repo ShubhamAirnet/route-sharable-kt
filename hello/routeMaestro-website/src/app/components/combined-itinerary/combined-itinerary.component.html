@@ -1,0 +1,47 @@
+<main>
+  <!-- flight cards for default Itinerary -->
+  <div
+    *ngFor="let flight of currentFlightSetSegmentsArray; let i = index"
+    style="width: 550px; display: flex; flex-direction: column; gap: 21px"
+  >
+    <!-- completeFlight = all flights to reach from a->b  with all layovers   -->
+    <app-flight-card
+      [completeFlight]="flight"
+      (triggerAlternateFlightSetsDialog)="showFlightOptions($event)"
+      [currentFlightSetLogosArray]="currentFlightSetLogosArray[i]"
+    ></app-flight-card>
+
+    <ng-container
+      *ngIf="i < allSchedules?.length"
+      style="width: 40rem; display: flex; flex-direction: column; gap: 21px"
+    >
+      <app-city-schedule
+        [citySchedule]="allSchedules[i]"
+        [allHotels]="allHotels"
+        [currentFlightSet]="currentFlightSet"
+        (currHotelsForParticularCity)="gotCurrHotelsForCity($event)"
+      ></app-city-schedule>
+
+    </ng-container>
+
+    
+
+  </div>
+
+  <!--  containing Alternate flight Sets  -->
+  <div>
+    <div *ngIf="isFlightOptionsAvailable">
+      <app-alternate-flight-options
+        [allFlightSets]="allFlights"
+        [currentFlightSetResultIdx]="currentFlightSetIndex"
+        (highlightedFlightSetIdxChange)="
+          onHighlightedFlightSetIdxChange($event)
+        "
+      >
+      </app-alternate-flight-options>
+    </div>
+  </div>
+
+  <!-- <button class="btn btn-secondary" (click)="emitCurrentFlightSetIdx()">Emit Flights</button> -->
+
+</main>

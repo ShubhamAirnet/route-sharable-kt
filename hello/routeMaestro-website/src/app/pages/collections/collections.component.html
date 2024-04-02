@@ -1,0 +1,178 @@
+<main style="margin-top: 70px;">
+  
+
+<!-- <div>
+ <nav class="navbar navbar-expand-lg sticky-top p-2" style="background-color: #339199;">
+    <div class="container-fluid my-2 p-4"> 
+<div class="col-1 ms-md-5 ms-sm-2">
+        <a href="/home">
+        <img src="./assets/img/brand/Logo.png" alt="Logo" class="logo">
+        </a>
+      </div> 
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          Navbar items go here
+        </ul> 
+ <div class="d-flex align-items-center" style="font-family: 'Nunito', sans-serif;">
+          <button type="button" class="btn custom-rounded fw-bold p-2 px-3 me-3" style="background-color: white; border: 1px solid #339199;"  >
+            <span><i class="fa fa-download me-2"></i></span> Download
+          </button>
+          <button type="button" class="btn custom-rounded fw-bold p-2 px-3" style="background-color: white; border: 1px solid #339199;">
+            <span><i class="fa fa-share-alt me-2" aria-hidden="true"></i></span> Share
+          </button>
+        </div> 
+</div> 
+
+ </div>
+ </nav>
+</div> -->
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div
+            class="row w-100 m-0 p-1 d-flex justify-content-between align-items-center"
+          >
+            <h3>Collections</h3>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Sr. No</th>
+                <th scope="col">Itinerary Name</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Acknowledged</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let collection of collectionList; index as idx">
+                <td>{{ idx + 1 }}</td>
+                <td class="text-wrap">
+                  <span class="paraLimit">{{
+                    collection.itineraryName || "No Title Provided"
+                  }}</span>
+                </td>
+                <td class="text-wrap">
+                  <span class="paraLimit">{{
+                    collection?.trip?.start_date || "No Start Date Provided"
+                  }}</span>
+                </td>
+                <td class="text-wrap">
+                  <span class="paraLimit">{{
+                    collection?.trip?.end_date || "No End Date Provided"
+                  }}</span>
+                </td>
+                <td >
+                    <span >No</span>
+                  </td>
+                 
+
+                <td>
+
+                  <button type="button" class="btn btn-dark btn-sm">
+                    Details
+                  </button>
+                  <a
+                    routerLinkActive="active"
+                    [routerLink]="[
+                      '/generate-aI-itinerary',
+                      collection.responseId
+                    ]"
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                  >
+                    Create Package
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- <div class="card">
+            <div class="first" style="background-color: #03254A;">
+                <div class="items" style="width: 60px;">
+                    <span>Sr.No</span>
+                </div>
+                <div class="items">
+                    <span>Itinerary Name</span>
+                </div>
+                <div class="items" style="width: 140px; padding-left: 45px;">
+                    <span style="width: 110px;">Start Date</span>
+                </div>
+                <div class="items"  style="width: 140px;">
+                    <span>End Date</span>
+                </div>
+                <div class="items"  style="width: 140px;">
+                    <span>Acknowledged</span>
+                </div>
+                <div class="items" style="width: 200px;">
+                    <span>Action</span>
+                </div>
+                
+            </div>
+           
+        </div>
+
+
+        <ng-container *ngFor="let collection of collectionList; index as idx">
+          <div class="card">
+            <div class="second">
+                <div class="items-second" style="width: fit-content; margin-right: 0px;">
+                    <span>{{idx+1}}</span>
+                </div>
+                <div class="items-second" style="width: 300px; margin-right: 4px;">
+                    <span>{{
+                      collection.itineraryName || "No Title Provided"
+                    }}</span>
+                </div>
+                <div class="items-second" style="width: 140px;">
+                    <span>{{
+                      collection?.trip?.start_date || "No Start Date Provided"
+                    }}</span>
+                </div>
+                <div class="items-second"  style="width: 140px;">
+                    <span>{{
+                      collection?.trip?.end_date || "No End Date Provided"
+                    }}</span>
+                </div>
+                <div class="items-second"  style="width: 165px; align-items: center; justify-content: center; padding-right: 50px;">
+                    <span style="color: rgb(73, 202, 73);">No</span>
+                </div>
+                <div class="items-second" style="width: 200px;">
+                    <span style="display: flex; flex-direction: column; gap: 3px; align-items: flex-start; justify-content: flex-start;"><button type="button" style="background-color: #E2472B;" class="btn btn btn-sm">
+                      <span style="color: white; font-weight: 600; font-size: 0.8rem;">Deatils</span>
+                    </button>
+                    <a
+                      routerLinkActive="active"
+                      [routerLink]="[
+                        '/generate-aI-itinerary',
+                        collection.responseId
+                      ]"
+                      type="button"
+                      style="background-color: #E2472B;"
+                      class="btn  btn-sm"
+                    >
+                      <span style="color: white; font-weight: 600; font-size: 0.8rem;">Create Package</span>
+                    </a></span>
+                </div>
+                
+            </div>
+           
+        </div>
+        </ng-container> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>

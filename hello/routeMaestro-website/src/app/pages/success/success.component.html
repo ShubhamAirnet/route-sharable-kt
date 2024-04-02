@@ -1,0 +1,348 @@
+<ngx-spinner></ngx-spinner>
+
+<app-cancel-package (cancelDialog)="handleCancel($event)" *ngIf="isCancel"></app-cancel-package>
+<body>
+  <main>
+      <div class="container">
+          <div class="header">
+              <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Your {{isFlight==='1' ? 'Flight' : isFlight==='0' ? 'Hotel' : isFlight==='2' ? 'Package': null}} has been Booked !</span>
+              <div class="pdf">
+                  <i class="fa-solid fa-download"></i>
+                  <span>Package pdf</span>
+              </div>
+          </div>
+         <ng-container *ngIf="segments?.journeyType!==2">
+            <ng-container *ngFor="let item of segments?.segments; let j =index;">
+                <div class="cards"  >
+                <app-flight-card-package [currentFlightSetLogosArray]="segments?.airlineLogos" [completeFlight]="item" ></app-flight-card-package>
+    
+                </div>
+            </ng-container>
+         </ng-container>
+         <ng-container *ngIf="segments?.journeyType===2">
+            <ng-container *ngFor="let item of segments?.segments1; let j =index;">
+                <div class="cards"  >
+                <app-flight-card-package [currentFlightSetLogosArray]="segments?.airlineLogos1" [completeFlight]="item" ></app-flight-card-package>
+    
+                </div>
+            </ng-container>
+            <ng-container *ngFor="let item of segments?.segments2; let j =index;">
+                <div class="cards"  >
+                <app-flight-card-package [currentFlightSetLogosArray]="segments?.airlineLogos2" [completeFlight]="item" ></app-flight-card-package>
+    
+                </div>
+            </ng-container>
+         </ng-container>
+          <div *ngIf="segments" class="route">
+            <h3 style="padding-bottom:10px ;">Route Overview</h3>
+            <div class="path">
+                <!-- <div class="city">
+                </div> -->
+                <div class="city">
+                <div class="dot">
+                    <div class="big-dot">•</div>
+                    <span style="font-size: 0.9rem;">{{ segments?.segments[0][0]?.Origin?.Airport?.CityName }}</span>
+                    <!-- <span style="font-size: 0.9rem;">{{ segments?.segments[0][0]?.Origin?.DepTime }}</span> -->
+                </div>
+                <ng-container *ngFor="let city of segments?.segments; let i=index">
+                   <ng-container *ngFor="let flight of city">
+                    <div class="vertical-line"></div>
+                
+                    <span style="margin-top: 10px;"><i class="fa-solid fa-plane" style="font-size: 1.2rem;"></i></span>
+                
+                    <div class="vertical-line"></div>
+                    <div class="dot">
+                        <div class="big-dot">•</div>
+                        <span style="font-size: 0.9rem;">{{ flight?.Destination?.Airport?.CityName }}</span>
+                        <!-- <span style="font-size: 0.9rem;">{{ flight?.Destination?.Airport?.CityName }}</span> -->
+                    </div>
+                   </ng-container>
+                </ng-container>
+                
+    
+                
+                
+                
+                
+        
+                </div>
+            
+            
+            </div>
+        
+        </div>
+
+        <ng-container *ngIf="flightData && flightResponse?.trip?.JourneyType===1">
+            <ng-container *ngFor="let selectedFlight of flightData?.segments">
+                    <div class="cards"  >
+                    <app-book-flight-card  [isRefundable]="selectedFlight?.isRefundable" [currentFlightSetLogosArray]="selectedFlight?.airlineLogos" [completeFlight]="item" [fare]="selectedFlight?.fare" ></app-book-flight-card >
+      
+                    </div>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="flightData && flightResponse?.trip?.JourneyType===2">
+            <ng-container *ngFor="let selectedFlight of flightData?.segments1">
+                    <div class="cards"  >
+                    <app-book-flight-card  [isRefundable]="selectedFlight?.isRefundable" [currentFlightSetLogosArray]="selectedFlight?.airlineLogos" [completeFlight]="item" [fare]="selectedFlight?.fare" ></app-book-flight-card >
+      
+                    </div>
+            </ng-container>
+            <ng-container *ngFor="let selectedFlight of flightData?.segments2">
+                    <div class="cards"  >
+                    <app-book-flight-card  [isRefundable]="selectedFlight?.isRefundable" [currentFlightSetLogosArray]="selectedFlight?.airlineLogos" [completeFlight]="item" [fare]="selectedFlight?.fare" ></app-book-flight-card >
+      
+                    </div>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="flightData && flightResponse?.trip?.JourneyType===3">
+            <div class="cards" >
+                <app-flight-set-card [flightSet]="flightData"></app-flight-set-card>
+
+            </div>
+        </ng-container>
+  
+          <button *ngIf="flightResponse" class="collapsible" (click)="toggleSection('flightDetails')">Flight Booking Details</button>
+          <div *ngIf="flightResponse" class="content" [ngClass]="{'active': sectionStates.flightDetails}">
+             
+              
+              <ng-container *ngIf="flightResponse?.flight_details?.bookingDetails">
+               
+                
+               
+                <ng-container *ngFor="let item of flightResponse?.flight_details?.bookingDetails">
+                  
+                    <span>{{item?.Origin}} - {{item?.Destination}}</span>
+                    <div class="details">
+                        <div class="item">
+                            <span style="font-size: 0.9rem; font-weight: 600;">Booking Id: </span>
+                        </div>
+                        <div class="items">
+                            <span style="font-size: 0.9rem; ">{{item?.BookingId}} </span>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="item">
+                            <span style="font-size: 0.9rem; font-weight: 600;">PNR </span>
+                        </div>
+                        <div class="items">
+                            <span style="font-size: 0.9rem;">{{item?.PNR}}   </span>
+                        </div>
+                    </div>
+                </ng-container>
+
+               
+              </ng-container>
+            
+          </div>
+          <button *ngIf="hotelData" class="collapsible" (click)="toggleSection('hotelDetails')">Hotel Booking Details</button>
+          <div  class="content" [ngClass]="{'active': sectionStates.hotelDetails}">
+              
+              <ng-container *ngFor="let hotel of hotelData?.hotel_details?.hotelBookingDetails">
+                <div class="details">
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">Hotel Name: <span style="font-weight: 400;">{{hotel?.hotelName}} ({{hotel?.cityName}})</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">BookingId: <span style="font-weight: 400;">{{hotel?.data?.BookResult?.BookingId}}</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">BookingRefNo:  <span style="font-weight: 400;">{{hotel?.data?.BookResult?.BookingRefNo}}</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">ConfirmationNo:  <span style="font-weight: 400;">{{hotel?.data?.BookResult?.ConfirmationNo}}</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">Status:  <span style="font-weight: 400;">{{hotel?.data?.BookResult?.HotelBookingStatus}}</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">Address:  <span style="font-weight: 400;">{{hotelData?.hotelInfo?.address}}</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">CheckIn:  <span style="font-weight: 400;">{{transformDate(hotelData?.trip?.checkInDate)}}</span> </span>
+                    </div>
+                    <div class="item">
+                        <span style="font-size: 0.8rem; font-weight: 600;">CheckOut:  <span style="font-weight: 400;">{{hotelData?.trip?.checkOutDate}}</span> </span>
+                    </div>
+                </div>
+              </ng-container>
+             
+              <div>
+                
+                  
+                  <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                      
+                        <th scope="col">Rooms</th>
+                        <th scope="col">Room Type</th>
+                        <th scope="col">No.OfGuests</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <ng-container *ngFor="let item of hotelData?.hotel_details?.rooms;let i =index;">
+                        <tr>
+                       
+                            <td>Room {{i+1}}</td>
+                            <td>{{item?.room?.RoomTypeName}}</td>
+                            <td><div >
+                                {{item?.NoOfAdults}} Adult
+                                {{item?.NoOfAdults}} Child
+                            </div></td>
+                            
+                          </tr>
+                      </ng-container>
+                     
+                    </tbody>
+                  </table>
+              </div>
+
+              <div *ngIf="hotelData?.hotelInfo?.description">
+                <span style="font-size: 1rem; font-weight: 600; color: black;">Hotel Norms</span>
+                <div [innerHTML]="hotelData?.hotelInfo?.description" style="margin-top: 10px; margin-bottom: 10px;"></div>
+              </div>
+              <div *ngIf="hotelData?.hotelInfo?.hotelPolicy">
+                <span style="font-size: 1rem; font-weight: 600; color: black;">Hotel Policy</span>
+                <div [innerHTML]="hotelData?.hotelInfo?.hotelPolicy" style="margin-top: 10px; margin-bottom: 10px;"></div>
+              </div>
+              <div *ngIf="hotelData?.hotelInfo?.specialInstruction">
+                <span style="font-size: 1rem; font-weight: 600; color: black;">Special Instructions</span>
+                <div [innerHTML]="hotelData?.hotelInfo?.specialInstruction" style="margin-top: 10px; margin-bottom: 10px;"></div>
+              </div>
+              <div *ngIf="hotelData?.hotelInfo?.specialInstruction">
+                <span style="font-size: 1rem; font-weight: 600; color: black;">Special Instructions</span>
+                <div [innerHTML]="hotelData?.hotelInfo?.specialInstruction" style="margin-top: 10px; margin-bottom: 10px;"></div>
+              </div>
+          </div>
+          <button class="collapsible" *ngIf="flightResponse" (click)="toggleSection('ssr')">Specail Service Requests(SSR)</button>
+          <div class="content" [ngClass]="{'active': sectionStates.ssr}">
+              
+            <ng-container *ngIf="flightResponse">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Journey</th>
+                            <th scope="col">Baggage</th>
+                            <th scope="col">Meal</th>
+                            <th scope="col">Seat</th>
+                            <th scope="col">Passenger</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let segment of segments?.segments; let i = index">
+                            <ng-container *ngFor="let item of segment">
+                                <ng-container *ngFor="let passenger of flightResponse?.passengers; let j = index">
+                                    <tr>
+                                        <td>{{ item?.Origin?.Airport?.CityCode }} - {{ item?.Destination?.Airport?.CityCode }}</td>
+                                        <td>{{ passenger?.ssr?.extraBaggage?.Weight || 'N/A' }} kgs</td>
+                                        <td>{{ passenger?.ssr?.meal?.AirlineDescription || 'N/A' }}</td>
+                                        <td>{{ passenger?.ssr?.seat?.RowNo || 'N/A' }}</td>
+                                        <td>{{ passenger?.personalInfo?.FirstName }}</td>
+                                    </tr>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </ng-container>
+            
+             
+             <ng-container *ngIf="hotelData">
+                <ng-container *ngFor="let item of hotelData.passengers">
+                          
+                          <div class="details">
+                              <div class="item">
+                                  <span>{{item?.personalInfo?.FirstName}} {{item?.personalInfo?.LastName}} </span>
+                              </div>
+                              <div class="items">
+                                  <span>{{calculateAge(item?.personalInfo?.DateOfBirth)}}yr {{item?.personalInfo?.Gender}}</span>
+                              </div>
+                          </div>
+                     
+                    </ng-container>
+                   
+             </ng-container>
+             
+             
+          </div>
+          <button class="collapsible" (click)="toggleSection('travellers')">Travellers</button>
+          <div class="content" [ngClass]="{'active': sectionStates.travellers}">
+           
+             <ng-container *ngIf="flightResponse ">
+                
+                <ng-container *ngFor="let item of flightResponse?.flight_details?.bookingDetails">
+                    <span>{{item?.Origin}} - {{item?.Destination}}</span>
+                  <ng-container *ngFor="let ticket of flightResponse?.flight_details?.ticket_details">
+                    <ng-container *ngIf="item?.Origin === ticket?.Origin && item?.Destination===ticket?.Destination">
+                        
+                        <div class="details">
+                            <div class="item">
+                                <span>{{ticket?.firstName}} {{ticket?.lastName}} </span>
+                            </div>
+                            <div class="items">
+                                <span>{{calculateAge(ticket?.DateOfBirth)}}yr {{ticket?.Gender===1 ? 'Male' :'Female'}}</span>
+                                <span>(TicketId: {{ticket?.Ticket?.TicketId}}) </span>
+                            </div>
+                        </div>
+                    </ng-container>
+                  </ng-container>
+                  </ng-container>
+             </ng-container>
+             
+             <ng-container *ngIf="hotelData">
+                <ng-container *ngFor="let item of hotelData.passengers">
+                          
+                          <div class="details">
+                              <div class="item">
+                                  <span>{{item?.personalInfo?.FirstName}} {{item?.personalInfo?.LastName}} </span>
+                              </div>
+                              <div class="items">
+                                  <span>{{calculateAge(item?.personalInfo?.DateOfBirth)}}yr {{item?.personalInfo?.Gender}}</span>
+                              </div>
+                          </div>
+                     
+                    </ng-container>
+                   
+             </ng-container>
+             
+             
+          </div>
+          <button class="collapsible" (click)="toggleSection('contactInfo')">Contact Information</button>
+          <div class="content" [ngClass]="{'active': sectionStates.contactInfo}">
+              
+              <div class="details">
+                  <div class="items">
+                      <span>Name</span>
+                  </div>
+                  <div class="items">
+                      <span>{{flightResponse?.primary_details?.name || hotelData?.primary_details?.name}}</span>
+                  </div>
+              </div>
+              <div class="details">
+                  <div class="items">
+                      <span>Email</span>
+                  </div>
+                  <div class="items">
+                      <span>{{flightResponse?.primary_details?.email || hotelData?.primary_details?.email}}</span>
+                  </div>
+              </div>
+              <div class="details">
+                  <div class="items">
+                      <span>Phone</span>
+                  </div>
+                  <div class="items">
+                      <span>{{flightResponse?.primary_details?.phone || hotelData?.primary_details?.phone}}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <ng-container *ngIf="isFlight==='1'">
+        <app-payment-breakdown-package (cancelDialog)="handleCancel($event)" [flightCost]="flightCost" [otherCharges]="otherCharges" [totalCost]="totalCost" [taxes]="taxes" style="margin-top: 60px; display: flex; justify-content: center; align-items: center;"></app-payment-breakdown-package>
+      </ng-container>
+      <ng-container *ngIf="isFlight==='0'">
+        <app-payment-breakdown-package (cancelDialog)="handleCancel($event)" [hotelCost]="hotelCost" [otherCharges]="otherCharges" [totalCost]="totalCost" [taxes]="taxes" style="margin-top: 60px; display: flex; justify-content: center; align-items: center;"></app-payment-breakdown-package>
+      </ng-container>
+     
+  </main>
+
+
+</body>

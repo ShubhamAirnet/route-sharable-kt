@@ -1,0 +1,160 @@
+
+<ngx-spinner></ngx-spinner>
+<main>
+    <nav
+    class="navbar navbar-expand-lg p-2 mb-2"
+    style="background-color: #323268; margin-top: 65px;"
+  >
+    <div class="container-fluid my-2 p-2">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        style="
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+      >
+      <div style="display: flex;gap: 80px;color: #fff;margin: 0;align-items: center; ">
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep1.png" alt="" height="49px" width="70px" ></span>  Hotel Search </h3>
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep2.png" alt="" height="53px" width="70px" ></span>  Results </h3>
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep3.png" alt="" height="53px" width="70px" ></span>  Guest Details </h3>
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itinerary(4).png" alt="" height="53px" width="70px" ></span>  Review Booking </h3>
+        <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itinerary(5).png" alt="" height="53px" width="70px" ></span>  Confirmation </h3>
+        <!-- <h3 style="margin: 0;color: #fff"> <span style="height: 50px; width: 50px;"><img src="../../../assets/img/brand/itineraryStep3.png" alt="" height="53px" width="70px" ></span>   Final result  </h3> -->
+      </div>
+       
+        <!-- <div
+          class="d-flex align-items-center"
+          style="font-family: 'Nunito', sans-serif"
+        >
+          <button
+            type="button"
+            class="btn custom-rounded fw-bold p-2 px-3 me-3"
+            style="background-color: white; border: 1px solid #323268"
+            (click)="generatePdf('download')"
+          >
+            <span><i class="fa fa-download me-2"></i></span> Download
+          </button>
+          <button
+            type="button"
+            class="btn custom-rounded fw-bold p-2 px-3"
+            style="background-color: white; border: 1px solid #323268"
+          >
+            <span><i class="fa fa-share-alt me-2" aria-hidden="true"></i></span>
+            Share
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </nav>
+   <div style="display: flex; width: 100%;">
+
+    <!-- hotel search inputs -->
+    <app-hotel-input-sidebar (payloadData)="handlePayloadData($event)" (responseData)="handleResponseChange($event)" (roomGuests)="handleRoomGuests($event)"></app-hotel-input-sidebar>
+
+    <div class="searchs" *ngIf="allHotels"> 
+        
+        <div class="col">
+        <div class="containers" *ngIf="allHotels">
+            <ng-container *ngIf="filteredHotels">
+                <ng-container *ngFor="let hotels of filteredHotels">
+                    <ng-container *ngFor="let hotel of hotels?.Response.slice(0, count); let i = index">
+                        <div style="width: 100%;" (click)="handleClick(i)" [class.selected]="selectedFlightIndex === i" class="cards">
+                            <app-alternate-hotel-cards [nationality]="nationality" [hotel]="hotel" [checkOutDate]="checkOutDate" [countryCode]="countryCode" [cityId]="cityId" [RoomGuests]="roomGuests" [cityName]="hotels?.cityName"></app-alternate-hotel-cards>
+                        </div>
+                    </ng-container>
+                    
+
+                </ng-container>
+            </ng-container>
+          
+
+            
+        </div>
+
+        <!-- load more button to load 10 more hotels  -->
+        <div *ngIf="filteredHotels.length>0" style="display: flex; width: 100%; justify-content: center; align-items: center;">
+            <button type="button" class="btn btn-primary" style="padding: 6px 12px;" (click)="loadMore()">Load More</button>
+        </div>
+
+        </div>
+        
+
+       <!-- hotel filters -->
+        <div *ngIf="filteredHotels.length>0 && !global.isToggle"  class="main">
+            
+            <div class="containerss">
+               
+              <div class="head">
+                <span>Filters</span>
+                <button type="button" class="btn btn-warning" style="padding: 2px 6px;" (click)="handleFilterReset()">Reset</button>
+               </div>
+                    <div class="contentss">
+                        <div class="airline">
+                            <span style="font-weight: 600;">Sort By Price</span>
+                            <div class="boxs">
+                                <div class="items">
+                                    <input type="radio" name="sortOrder" [(ngModel)]="selectedSortOrder" value="lowToHigh" (change)="sortItems()" />
+                                    <span>Low to High</span>
+                                  </div>
+                                  <div class="items">
+                                    <input type="radio" name="sortOrder" [(ngModel)]="selectedSortOrder" value="highToLow" (change)="sortItems()" />
+                                    <span>High to Low</span>
+                                  </div>
+                                  
+                                
+                            </div>
+                          </div>
+                        
+                        <div class="airline">
+                            <span style="font-weight: 600;">Star Rating</span>
+                            <div class="boxs">
+                                <div class="items">
+                                    <input type="checkbox" [ngModel]="threeStarRating" (ngModelChange)="onStarCheckboxChange('threeStarRating', $event)" />
+                                    <span>3 Star</span>
+                                </div>
+                                <div class="items">
+                                    <input type="checkbox" [ngModel]="fourStarRating" (ngModelChange)="onStarCheckboxChange('fourStarRating', $event)" />
+                                    <span>4 Star</span>
+                                </div>
+                                <div class="items">
+                                    <input type="checkbox" [ngModel]="fiveStarRating" (ngModelChange)="onStarCheckboxChange('fiveStarRating', $event)" />
+                                    <span>5 Star</span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div class="airline">
+                            <span style="font-weight: 600;">User rating</span>
+                            <div class="boxs">
+                                <div class="items">
+                                    <input type="checkbox" [ngModel]="threeUserRating" (ngModelChange)="onUserCheckboxChange('threeUserRating', $event)" />
+                                    <span>3+</span>
+                                </div>
+                                <div class="items">
+                                    <input type="checkbox" [ngModel]="fourUserRating" (ngModelChange)="onUserCheckboxChange('fourUserRating', $event)" />
+                                    <span>4+</span>
+                                </div>
+                                <div class="items">
+                                    <input type="checkbox" [ngModel]="fourPlusTwoUserRating" (ngModelChange)="onUserCheckboxChange('fourPlusTwoUserRating', $event)" />
+                                    <span>4.2+</span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          
+                         
+                    </div>
+        
+               
+            </div>
+        
+    </div>
+    
+        
+
+        
+    </div>
+   </div>
+</main>

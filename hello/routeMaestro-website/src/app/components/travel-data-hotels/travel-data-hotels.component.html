@@ -1,0 +1,216 @@
+<app-flight-seat-map *ngIf="seatMapDialog" style="width: 100vw; height: 100vh;" [ssrNo]="ssrNo" [index]="selectedSeatMapIndex" [ssr]="RowSeats" [seatsArray]="seatsArray" [seatMapDaialog]="seatMapDialog" (closeDialog)="handleSeatMapClick()" (seatMapData)="handleSeatMapData($event)" ></app-flight-seat-map>
+
+<body>
+
+  <div class="sub-container" (click)="dialogbox()"></div>
+    <main>
+        <div class="header">
+            <h2 style="padding-left: 30px;">Add Traveeller Details</h2>
+            <h2 style="padding-right: 15px; cursor: pointer;" (click)="dialogbox()">X</h2>
+        </div>
+
+
+        <div class="travellers">
+            <div style="display: flex; justify-content: flex-start; align-items: center;  padding-left:20px;">
+                <h2>Traveller {{currentIndex? currentIndex+1 :currentTravellerCount}} </h2>
+                <span> /{{adults+childs}}</span>
+            </div>
+           
+        
+         
+            <ng-container *ngIf="RoomGuest && RoomGuest.length > 0">
+              <div class="container">
+                <!-- Loop through RoomGuest array -->
+                <div class="boxes">
+                  <ng-container *ngFor="let item of RoomGuest; let i = index">
+                    <!-- Calculate the total count of adults from previous rooms -->
+                    <ng-container *ngIf="i > 0">
+                     
+                    </ng-container>
+            
+                    <ng-container *ngIf="item?.NoOfAdults && item?.NoOfAdults > 0">
+                      <!-- Loop to generate cards for adults -->
+                      <ng-container *ngFor="let star of getArray(item?.NoOfAdults + item?.NoOfChild); let j = index">
+                        <div class="card" (click)="i === 0 ? handleCardClick(j) : handleCardClick(calculateTotalAdultsCount(i) + j)" 
+                            [ngClass]="{'selected': selectedCard === (i === 0 ? j : calculateTotalAdultsCount(i) + j)}">
+                            <!-- Your card content goes here -->
+                            <span style="width: 100%; background-color: black; color: white; display: flex; justify-content: center;">Room -{{ i + 1 }}</span>
+                            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <ng-container *ngIf="j < item?.NoOfAdults">
+                                    <i (click)="adult()" class="fa-solid fa-user adult-icon"></i>
+                                    <p>Traveller</p>
+                                </ng-container>
+                                <ng-container *ngIf="j >= item?.NoOfAdults">
+                                    <i (click)="child()" class="fa-solid fa-baby child-icon"></i>
+                                    <p>Traveller</p>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </ng-container>
+                    
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </div>
+            </ng-container>
+            
+            
+            
+            
+            
+              
+                  
+                
+              <form [formGroup]="travelerForm" >
+                <div class="info">
+                  <div class="head">
+                    <h2>Mandatory Information</h2>
+                  </div>
+                  <hr>
+                  
+                    
+                      <div class="traveller-info">
+                        <div style="padding-top: 20px; padding-bottom: 20px; width: 100%; display: flex; justify-content: flex-start; gap: 20px;">
+                          <ng-container *ngIf="!isSamePanAllowed">
+                            <span>Note: </span>
+                            <span>Same PAN is not allowed for this booking  </span>
+                          </ng-container>
+                        </div>
+                        
+                        <fieldset class="inputs" formGroupName="personalInfo">
+                          <legend>Personal Info</legend>
+                          <div>
+                            <label><span>Title</span></label>
+                            <select  formControlName="Title" required [value]="travelers[currentIndex]?.personalInfo?.Title || ''">
+                              <option></option>
+                              <option>Mr</option>
+                              <option>Mrs</option>
+                              <option>Miss</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label><span>First Name</span></label>
+                            <input type="text" formControlName="FirstName" required [value]="travelers[currentIndex]?.personalInfo?.FirstName || ''" />
+                          </div>
+                          <div>
+                            <label><span>Last Name</span></label>
+                            <input type="text" formControlName="LastName" required [value]="travelers[currentIndex]?.personalInfo?.LastName || ''" />
+                          </div>
+                          <div>
+                            <label><span>Date of Birth</span></label>
+                            <input type="date" formControlName="DateOfBirth" required [value]="travelers[currentIndex]?.personalInfo?.DateOfBirth || ''" />
+                          </div>
+                          <div>
+                            <label><span>Contact No</span></label>
+                            <input type="text" formControlName="ContactNo" required [value]="travelers[currentIndex]?.personalInfo?.ContactNo || ''" />
+                          </div>
+                          <div>
+                            <label><span>Email</span></label>
+                            <input type="email" formControlName="Email" required [value]="travelers[currentIndex]?.personalInfo?.Email || ''" />
+                          </div>
+                           
+                        
+                          
+                          
+                          <div>
+                            <label><span>Gender</span></label>
+                            <select formControlName="Gender" required [value]="travelers[currentIndex]?.personalInfo?.Gender || ''" >
+                              <option></option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                        
+                          
+                          
+                          <div *ngIf="isPanRequired">
+                            <label><span>PAN</span></label>
+                            <input type="text" formControlName="PAN" required [value]="travelers[currentIndex]?.personalInfo?.PAN || ''" />
+                        </div>
+                          <ng-container *ngIf="isPassportRequired">
+                            <div > 
+                              <label><span>Passport No.</span></label>
+                              <input type="text" formControlName="PassportNo" required [value]="travelers[currentIndex]?.personalInfo?.PassportNo || ''"/>
+                            </div>
+                            <div >
+                              <label><span>Passport Issue date</span></label>
+                              <input type="date" formControlName="PassportIssueDate" required [value]="travelers[currentIndex]?.personalInfo?.PassportIssueDate || ''" />
+                            </div>
+                            <div >
+                              <label><span>Passport Expiry date</span></label>
+                              <input type="date" formControlName="PassportExpiry" required [value]="travelers[currentIndex]?.personalInfo?.PassportExpiry || ''" />
+                            </div>
+                            
+                          </ng-container>
+                          
+                          
+                       
+                           
+                        
+                        </fieldset>
+
+                        <fieldset *ngIf="IsPackageDetailsMandatory" class="inputs" formGroupName="ArrivalTransport">
+                          <legend>Arrival</legend>
+                          <div>
+                              <label><span>Transport Type</span></label>
+                              <select formControlName="ArrivalTransportType" required>
+                                  <option></option>
+                                  <option value="0">Flight</option>
+                                  <option value="1">Road</option>
+                              </select>
+                          </div>
+                          <div>
+                              <label><span>Transport Id</span></label>
+                              <input type="text" formControlName="TransportInfoId" required />
+                          </div>
+                          <div>
+                              <label for="arrival-datetime">Select arrival date and time:</label>
+                              <input type="datetime-local" id="arrival-datetime" formControlName="Time">
+                          </div>
+                      </fieldset>
+                      
+                      <fieldset *ngIf="IsDepartureDetailsMandatory" class="inputs" formGroupName="DepartureTransport">
+                          <legend>Departure</legend>
+                          <div>
+                              <label><span>Transport Type</span></label>
+                              <select formControlName="DepartureTransportType" required>
+                                  <option></option>
+                                  <option value="0">Flight</option>
+                                  <option value="1">Road</option>
+                              </select>
+                          </div>
+                          <div>
+                              <label><span>Transport Id</span></label>
+                              <input type="text" formControlName="TransportInfoId" required />
+                          </div>
+                          <div>
+                              <label for="departure-datetime">Select departure date and time:</label>
+                              <input type="datetime-local" id="departure-datetime" formControlName="Time">
+                          </div>
+                      </fieldset>
+                      
+
+                    
+
+                        
+                        <!-- <ng-container *ngIf=" travelers[currentIndex]?.personalInfo?.FirstName==='' "> -->
+                          <div class="btn" >
+                            <button type="submit" (click)="addTraveler()"><span>Add Traveler</span></button>
+                          </div>
+                        <!-- </ng-container> -->
+                       
+                        <ng-container *ngIf="travelers[currentIndex]?.personalInfo?.FirstName!==''">
+                          <div class="btn"   >
+                           
+                            <button type="submit" (click)="updateTraveller()"><span>Update</span></button>
+                          </div>
+                        </ng-container>
+                        
+                      </div>
+                   
+                </div>
+              </form>
+                  
+        </div>
+    </main>
+</body>

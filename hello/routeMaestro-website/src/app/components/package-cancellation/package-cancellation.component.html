@@ -1,0 +1,80 @@
+<div>
+    <h2 style=" padding-top: 10px;">
+        <span style=" width: 250px; font-size: 1.5rem; font-weight: 800; text-decoration: underline;">Package Cancellation Policy</span>
+    </h2>
+
+    <div class="note" *ngIf="!flightShort && !isFlightCancelPresent">
+      <span style="font-weight: 800;">Note:</span>
+      <span style="font-size: 0.9rem;">Below are only Cancellation Charges for the Hotels to see the Cancellation Charges of the Flights please refer to <span style="text-decoration: underline;" (click)="flightCancelSection()">Flight Cancellation</span> section</span>
+    </div>
+    <div class="note">
+      <span style="font-weight: 800;">Note:</span>
+      <span style="font-size: 0.9rem;">If the Flight Cancels or delays due to some reasons then we are not responsible that day hotel bookings</span>
+    </div>
+    <div class="terms" style="margin-top: 20px;" >
+        
+       
+        <div class="cancellation-table"  >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Cancellation Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngIf="flightShort && isFlightCancelPresent">
+                      <tr>
+                        <td>Till {{flightLastCancelDate}}</td>
+                        <td>₹ 0</td>
+                    </tr>
+                    <tr>
+                      <td>Till {{formattedLastCancellationDate}}</td>
+                      <td>₹ {{flightCharges}}</td>
+                  </tr>
+                    </ng-container>
+                    <ng-container *ngIf="!flightShort && !isFlightCancelPresent">
+                      
+                    <tr>
+                      <td>Till {{formattedLastCancellationDate}}</td>
+                      <td>₹ 0</td>
+                  </tr>
+                    </ng-container>
+                   
+                    <ng-container *ngFor="let item of LastCancelPolicy; let i=index">
+                        <ng-container *ngIf="i === 0">
+                          <tr>
+                            <td>Till {{ item.FromDate | date: 'EEE MMM d yyyy' }}</td>
+                            <td>₹ {{ item.chargeBefore }}</td>
+                          </tr>
+                          <tr>
+                            <td>Till {{ item.ToDate | date: 'EEE MMM d yyyy' }}</td>
+                            <td>₹ {{ item.chargeAfter }}</td>
+                          </tr>
+                        </ng-container>
+                        <ng-container *ngIf="i !== 0">
+                          <tr *ngIf="item.chargeBefore !== 0">
+                            <td>Till {{ item.FromDate | date: 'EEE MMM d yyyy' }}</td>
+                            <td>₹ {{ calculateTotalAmount(i) + item.chargeBefore - item.chargeAfter }}</td>
+                          </tr>
+                          <tr>
+                            <td>Till {{ item.ToDate | date: 'EEE MMM d yyyy' }}</td>
+                            <td>₹ {{ calculateTotalAmount(i) }}</td>
+                          </tr>
+                        </ng-container>
+                      </ng-container>
+                   
+                </tbody>
+            </table>
+        </div>
+
+        
+      
+        </div>
+
+        <p class="disclaimer" >These are non-refundable amounts as per the current components attached. In the case of component change/modifications, the policy will change accordingly.</p>
+        <p class="disclaimer" >Please note, TCS once collected cannot be refunded in case of any cancellation/modification. You can claim the TCS amount as an adjustment against Income Tax payable at the time of filing the return of income.</p>
+        <p class="disclaimer" >Cancellation charges shown are exclusive of all taxes, and taxes will be added as per applicable.</p>
+        
+</div>
+        

@@ -1,0 +1,116 @@
+main{
+    margin-top: 70px;
+    background-color: #fff;
+  }
+  
+  .wrapper {
+      display: flex;
+      height: 94vh; // Adjust to your needs
+    }
+    
+    #sidebar {
+      background-color: #fffefe;
+      color: white;
+      width: 30%;
+    // Set the width to 50%
+    //   max-width: 250px; // Add a max-width to prevent the sidebar from becoming too wide
+      overflow-y: auto; // Add scrollbar when content overflows
+      padding: 20px;
+    }
+    
+    #content {
+      flex: 1;
+      // padding: 20px;
+      overflow: auto; // Add scrollbar when content overflows
+    }
+    
+    // Additional styles for the table if needed
+    .table {
+      width: 100%;
+    }
+    
+    .dp-hidden {
+      width: 0;
+      margin: 0;
+      border: none;
+      padding: 0;
+    }
+    
+    .custom-day {
+      text-align: center;
+      padding: 0.185rem 0.25rem;
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+    
+      &.focused {
+        background-color: #e6e6e6;
+      }
+    
+      &.range,
+      &:hover {
+        background-color: rgb(2, 117, 216);
+        color: white;
+      }
+    
+      &.faded {
+        background-color: rgba(2, 117, 216, 0.5);
+      }
+    }
+    
+    // Custom color definition
+    $custom-color: #339199; 
+    
+    // Custom toggle button class
+    .custom-toggle-button {
+      color: $custom-color;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    
+      .scrollable-list {
+        overflow-y: auto; // Enable vertical scrolling
+        flex-grow: 1; // Allow the scrolling list to expand and take available space
+        background-color: white; // Optional: Set a background color
+        border-top: 1px solid #ccc; // Optional: Add a border between the sections
+        max-height: 300px; // Set a maximum height for the list to trigger scrolling
+        margin-top: 10px;
+      }
+    }
+    
+    .icon-button {
+      display: inline-block;
+      padding: 5px; /* Adjust padding as needed */
+      background-color: #f7f8f9; /* Button background color */
+      color: #fff; /* Button text color */
+      border: none;
+      border-radius: 5px; /* Adjust border radius as needed */
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .icon-button:hover {
+      background-color: #adadae; /* Change color on hover if desired */
+    }
+    
+    .div button {
+      display: inline-block;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span{
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.8rem;
+            color: black;
+        }
+        input{
+            height: 10px;
+            width: 10px;
+        }
+    }

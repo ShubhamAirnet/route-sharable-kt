@@ -1,0 +1,120 @@
+<!-- <main >
+  <h1>
+    Login 
+  </h1>
+    <form class="login-form">
+
+        <div class="input-field">
+          <label class="form-label" for="email">Email </label>
+          <input type="email" name="email" id="email" class="form-control "  placeholder="Enter your Email" [(ngModel)]="email" />
+    
+        </div>
+      
+        <div class="input-field">
+          <label class="form-label" for="password">Password </label>
+          <input type="password" name="password" id="password" class="form-control "  placeholder="Enter your password" [(ngModel)]="password"/>
+    
+        </div>
+      
+        <button type="button" class="btn btn-primary btn-block " (click)="login()" >Login</button>
+      
+        <div class="text-center">
+          <p>Not a member? <a href="/register">Register</a></p>
+          <p>or sign up with:</p>
+
+          <button class="google-login-btn" (click)="signInWithGoogle()" type="button">
+            <h3>Login with Google</h3>
+            <img src="../../../assets/img/brand/search_281764.png" alt="google-image" style="height: 30px;">
+          </button>
+          </div>
+      </form>
+</main> -->
+
+
+<!-- <main>
+  <div class="card w-75 shadow-sm mt-4">
+  <div class="card-header bg-white border-0">
+    <h3 class="text-center m-0">Login</h3>
+  </div>
+  <div class="card-body">
+   <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
+    <div class="form-group mb-3">
+      <label for="email" class="text-sm">Email</label>
+      <input class="form-control" placeholder="eg: abc@example.com" formControlName="email" name="email"
+        type="email" required>
+
+        <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+        class="text-sm text-danger">
+       <div *ngIf="loginForm.get('email')!.hasError('required')">Email is required.</div>
+       <div *ngIf="loginForm.get('email')!.hasError('email')">Please write Email with syntax @gmail.com</div>
+       </div>
+
+    </div>
+    <div class="form-group mb-3">
+      <label for="password" class="text-sm">Password</label>
+      <input class="form-control" placeholder="********" formControlName="password" name="password"
+        type="password" required>
+
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+        class="text-sm text-danger">
+       <div *ngIf="loginForm.get('password')!.hasError('required')">Password is required.</div>
+       <div *ngIf="loginForm.get('password')!.hasError('minLength(6)')">Password should be of 6 words</div>
+       </div>
+
+    </div>
+
+    <p class="alert alert-danger text-center h6 mb-3" *ngIf="errorMsg !== undefined">
+      {{ errorMsg }}
+    </p>
+
+    <button type="submit" class="btn text-white w-100 mt-4 btn-dark" [disabled]="loader">
+      Sign In
+      <span *ngIf="loader">&nbsp;</span>
+      <div *ngIf="loader" class="spinner-border spinner-border-sm text-light" role="status">
+      </div>
+    </button> 
+    <p class="mt-3 d-flex gap-2">Don't have account? <a routerLink="/register" [replaceUrl]="true" class="nav-link p-0 text-primary m-0">Create an account</a></p>
+   </form>
+  </div>
+</div>
+</main> -->
+<main>
+  <div class="left">
+    <img src="./assets/img/route-maestro-logo.png" class="navbar-brand-img" class="logo" alt="..." style="height: 55px; width: auto;">
+    <img src="../../../assets/img/21303.jpg" alt="Welcome Image">
+  </div>
+  <div class="right">
+    <div class="container">
+      <div class="heading">
+        <h4 style="font-family: cursive; font-weight: 300; font-size: 0.975rem;">Welcome Back</h4>
+        <h2 style="font-size: 2rem; color: #101c1f; font-weight: 600;     font-family: cursive, sans-serif, ui-monospace;">Log In</h2>
+      </div>
+
+      <form class="inputs" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
+        <div class="input">
+          <input type="email" formControlName="email" placeholder="eg: abc@example.com"
+                 style="width: 340px;height: 31px; font-size: 0.875rem; font-family: inherit; padding: 10px 12px; border-radius: 5px;border: 0; border: 1px solid #cad1d7">
+          <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+               class="text-sm text-danger">
+            <div *ngIf="loginForm.get('email')!.hasError('required')">Email is required.</div>
+            <div *ngIf="loginForm.get('email')!.hasError('email')">Please enter a valid email address.</div>
+          </div>
+        </div>
+
+        <div class="input">
+          <input type="password" formControlName="password" placeholder="********"
+                 style="width: 340px;height: 31px; font-size: 0.875rem; font-family: inherit; padding: 10px 12px; border-radius: 5px;border: 0; border: 1px solid #cad1d7">
+          <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+               class="text-sm text-danger">
+            <div *ngIf="loginForm.get('password')!.hasError('required')">Password is required.</div>
+            <div *ngIf="loginForm.get('password')!.hasError('minlength')">Password should be at least 6 characters long.</div>
+          </div>
+        </div>
+
+        <div class="btns" >
+          <button (click)="onSubmit()" type="submit"><span>Login</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

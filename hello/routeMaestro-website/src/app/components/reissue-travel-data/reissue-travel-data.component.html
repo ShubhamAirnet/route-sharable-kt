@@ -1,0 +1,231 @@
+
+<body>
+
+  <div class="sub-container" (click)="dialogbox()"></div>
+    <main>
+        <div class="header">
+            <h2 style="padding-left: 30px;">Traveeller Details</h2>
+            <h2 style="padding-right: 15px; cursor: pointer;" (click)="dialogbox()">X</h2>
+        </div>
+
+
+        <div class="travellers">
+            <div style="display: flex; justify-content: flex-start; align-items: center;  padding-left:20px;">
+                <h2>Traveller {{currentIndex? currentIndex+1 :currentTravellerCount}} </h2>
+                <span> /{{travelers?.length}}</span>
+            </div>
+           
+        
+         
+              <div class="container">
+            
+                <div class="boxes">
+                
+            
+                    
+                
+                  <div style="display: flex; gap:12px" *ngIf="travelers?.length > 0; else noContent" >
+                    <ng-container *ngFor="let star of getArray(travelers?.length); let j = index">
+                      <div class="card" (click)=" handleCardClick(j) " 
+                          [ngClass]="{'selected': selectedCard === j}">
+                         
+                      
+                          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                              <ng-container *ngIf="j < this.flightData?.trip?.tripData?.AdultCount">
+                                  <i (click)="adult()" class="fa-solid fa-user adult-icon"></i>
+                                  <p>Traveller</p>
+                              </ng-container>
+                              <ng-container *ngIf="j >= this.flightData?.trip?.tripData?.AdultCount">
+                                  <i (click)="child()" class="fa-solid fa-baby child-icon"></i>
+                                  <p>Traveller</p>
+                              </ng-container>
+                          </div>
+                      </div>
+                  </ng-container>
+                    </div>
+                    <ng-template #noContent>
+                      <p>No content to display.</p>
+                    </ng-template>
+
+
+
+                    
+                  
+               
+                </div>
+              </div>
+            
+            
+            
+            
+            
+              
+                  
+                
+              <form  >
+                <div class="info">
+                  <div class="head">
+                    <h2>Mandatory Information</h2>
+                  </div>
+                  <hr>
+                 
+                    
+                      <div class="traveller-info">
+                        <div style="padding-top: 20px; padding-bottom: 20px; width: 100%; display: flex; justify-content: flex-start; gap: 20px;">
+                        </div>
+                        
+                        <fieldset class="inputs" formGroupName="personalInfo">
+                          <legend>Personal Info</legend>
+                          <div>
+                            <span>Title</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.Title}}</span>
+                          </div>
+                          <div>
+                        <span>First Name</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.FirstName}}</span>
+                          </div>
+                          <div>
+                        <span>Last Name</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.LastName}}</span>
+                          </div>
+                          <div>
+                        <span>Date of Birth</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.DateOfBirth}}</span>
+                          </div>
+                           
+                        
+                          
+                          
+                          <div>
+                        <span>Gender</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.Gender}}</span>
+
+                          </div>
+                          <div>
+                        <span>Nationality</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.Nationality}}</span>
+
+                          </div>
+                          <div>
+                        <span>City</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.City}}</span>
+                          </div>
+                          <div>
+                            <span>Country Name</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.CountryName}}</span>
+
+                          </div>
+                          <div>
+                        <span>Address Line 1</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.AddressLine1}}</span>
+                          </div>
+                          <div>
+                        <span>Address Line 2</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.AddressLine2}}</span>
+                          </div>
+                          <div *ngIf="travelers[currentIndex]?.personalInfo?.PAN">
+                        <span>PAN</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.PAN}}</span>
+                        </div>
+                          <div > 
+                        <span>Passport No.</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.PassportNo}}</span>
+                          </div>
+                          <div >
+                        <span>Passport Issue date</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.PassportIssueDate}}</span>
+                          </div>
+                          <div >
+                        <span>Passport Expiry date</span>
+                            <span>{{travelers[currentIndex]?.personalInfo?.PassportExpiry}}</span>
+                          </div>
+                          
+                          
+                          
+                       
+                            <div>
+                            <span>Contact No</span>
+                              <span>{{travelers[currentIndex]?.personalInfo?.ContactNo}}</span>
+                            </div>
+                            <div>
+                        <span>Email</span>
+                              <span>{{travelers[currentIndex]?.personalInfo?.Email}}</span>
+                            </div>
+                        
+                        </fieldset>
+
+                        <fieldset class="inputs" formGroupName="guardianDetails"  *ngIf="travelers[currentIndex]?.personalInfo?.PaxType===2">
+                          <legend>Guardian Details</legend>
+                          <div>
+                        <span>Title</span>
+                            <span>{{travelers[currentIndex]?.guardianDetails?.Title}}</span>
+
+                          </div>
+                          <div>
+                        <span>First Name</span>
+                            <span>{{travelers[currentIndex]?.guardianDetails?.FirstName}}</span>
+                          </div>
+                          <div>
+                        <span>Last Name</span>
+                            <span>{{travelers[currentIndex]?.guardianDetails?.LastName}}</span>
+                          </div>
+                          <div>
+                        <span>PAN</span>
+                            <span>{{travelers[currentIndex]?.guardianDetails?.PAN}}</span>
+                          </div>
+                          <div>
+                        <span>Passport No</span>
+                            <span>{{travelers[currentIndex]?.guardianDetails?.PassportNo}}</span>
+                          </div>
+                        </fieldset>
+
+                        <fieldset class="inputs" *ngIf="travelers[currentIndex]?.ssr?.extraBaggage!==''">
+                            <legend>SSR</legend>
+
+                              
+                                <div *ngIf="travelers[currentIndex]?.ssr?.extraBaggage?.Weight">
+                                <span>Extra Baggage (kgs)</span>
+                                  <span >{{ travelers[currentIndex]?.ssr?.extraBaggage?.Weight  }}</span>
+                                </div>
+                                <div *ngIf="travelers[currentIndex]?.ssr?.meal?.AirlineDescription">
+                                <span>Meal</span>
+                                  <span >{{ travelers[currentIndex]?.ssr?.meal?.AirlineDescription }}</span>
+
+                                 
+                                </div>
+                                <div *ngIf="travelers[currentIndex]?.ssr?.meal?.Description">
+                                <span>Meal</span>
+                                  <span >{{ travelers[currentIndex]?.ssr?.meal?.Description }}</span>
+                                </div>
+
+
+                            
+                                  <div *ngIf="travelers[currentIndex]?.ssr?.seat?.rowNo">
+                                <span> Seat ( {{seats?.RowSeats[0].Seats[0].Origin}} - {{seats?.RowSeats[0].Seats[0].Destination}} )</span>
+                                    <span>{{ travelers[currentIndex]?.ssr?.seat?.rowNo }}</span>
+                                    
+    
+                                    </div>
+                             
+
+
+                                    <div>
+                                    <span>Seat ( {{ssr?.Origin}} - {{ssr?.Destination}} )</span>
+                                      <span>{{travelers[currentIndex]?.ssr?.seat?.Description}}</span>
+                                 
+      
+                                  </div>
+                       
+                            
+                        </fieldset>
+                        <!-- <ng-container *ngIf=" travelers[currentIndex]?.personalInfo?.FirstName==='' "> -->
+                          
+                        
+                      </div>
+                   
+                </div>
+              </form>
+                  
+        </div>
+    </main>
+</body>

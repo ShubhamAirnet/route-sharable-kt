@@ -1,0 +1,302 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+  }
+  .flightCard {
+    display: flex;
+    height: 82px;
+    width: 100%;
+    padding: 4px;
+  }
+  .airline {
+    width: 30%;
+    display: flex;
+  }
+  .airline-section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .airline-section1-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .airline-section1-logo img{
+    height: 30px;
+    width: 30px;
+  }
+  .airline-section1-logo p{
+    font-size: 0.8rem;
+  }
+  .airline-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 60%;
+  }
+  .airline-section2 h3{
+    font-size: 0.8rem;
+  }
+  .airline-section2 h4{
+    font-size: 0.8rem;
+  }
+  // ===================================================
+  .timings {
+    width: 50%;
+    display: flex;
+    padding: 0px 0;
+    justify-content: space-evenly;
+  }
+  .timings-city-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .timings-city-stats h3{
+    font-size:0.8rem;
+    color: #46413fb5;
+  }
+  .timings-city-stats h4{
+    font-size: 0.8rem;
+    color: #000;
+    text-decoration-line: underline;
+  }
+  .timings-duration {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .timings-duration img{
+    height: 10px;
+    width: 75px;
+  }
+  .flight-stops-btn{
+    border: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    &:hover{
+      transition: none;
+      box-shadow: none;
+    }
+  }
+  .flightStopsContent{
+    background-color: #fff;
+    border: 1px soild red;
+  }
+  .flight-stop-tooltip {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    padding: 10px; /* Add padding for better visual appearance */
+    max-width: 200px; /* Adjust the max width as needed */
+  }
+  .flight-stop-tooltip h3 {
+    font-size: 0.8rem; /* Increase the font size for better readability */
+    color: #000;
+    margin-bottom: 5px; /* Add some spacing between heading and content */
+  }
+  .flight-stop-tooltip-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .flight-stop-tooltip-footer h4 {
+    font-size: 0.8rem;
+    color: #000;
+  }
+  /* Optional: Adjust tooltip arrow color */
+  .tooltip-inner::before {
+    border-top-color: #fff;
+  }
+  // =========================================
+  .pricing {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 5px;
+    padding-right: 5px;
+
+  }
+  .pricing-head-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .refundable-btn{
+    border: none;
+    background-color: #169930;
+    color: #fff;
+    border-radius: 50%;
+    height: 16px;
+    width: 17px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .edit-btn{
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    height: 18px;
+    width: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .edit-btn img{
+    height: 12px;
+    width: 12px;
+  }
+  .pricing-fare-detailsBtn {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content:space-evenly ;
+    // align-items: flex-end ;
+    position: relative;
+  }
+  .pricing-fare-detailsBtn h3{
+    font-size: 0.8rem;
+  }
+  .flightDetails-btn{
+    border: none;
+    background-color: #fff;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    width: fit-content;
+    position: absolute;
+    right: 3px;
+    bottom: -4px;
+  }
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  
+   
+  .tooltipContainer:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .tooltipContent {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.884);
+    /* color: white; */
+    border-radius: 8px;
+    /* padding: 2px 6px; */
+  }
+  
+  /* Optional: Adjust styles for the trigger div */
+  div:hover .tooltipContainer {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+
+
+  .scrollable-container {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+th{
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 400;
+}
+td{
+    padding: 2px 7px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 18px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #e2472b; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Border radius of the scrollbar thumb */
+}
+
+
+
+.tooltipContainer {
+    position: absolute;
+    /* background-color: rgba(245, 7, 7, 0.8); */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0px;
+    white-space: nowrap;
+    z-index: 1000;
+    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .baggageTooltip{
+    top: -4px;
+    left: -270px;
+    max-height: 148px;
+    width: 251px;
+
+  }
+
+  .refundableTooltip{
+    top: -33px;
+    left: -31px;
+    height: 30px;
+    width: 80px;
+    
+
+  }
+
+  .hover{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50px;
+  }

@@ -1,0 +1,23 @@
+.sub-menu.collapsed {
+  display: none;
+}
+
+.sub-menu:not(.collapsed) {
+  display: block;
+}
+
+.nav-link {
+  color: #fffefe !important;
+  text-decoration: none;
+  // margin: 3%;
+}
+.active-link, .nav-link:hover {
+  border-radius: 0.4rem;
+  background-color: rgba($color: rgb(51, 145, 153), $alpha: 1.0);
+  color: #fffefe !important;
+  // font-weight: 900;
+}
+
+.navbar-nav .nav-item {
+  list-style-type: none;
+}

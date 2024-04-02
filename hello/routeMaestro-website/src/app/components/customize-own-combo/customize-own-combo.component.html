@@ -1,0 +1,301 @@
+<!--single room selection -->
+<section
+  style="
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  "
+>
+  <h1 style="font-size: 1.4rem; margin: 0; padding: 0">Choose Your Rooms</h1>
+
+  <div
+    style="
+      display: flex;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px 0 grey;
+      /* background-color: #ddedf3; */
+      /* border: 2px solid grey; */
+      width: 95%;
+    "
+  >
+    <!-- table of all available rooms -->
+    <div
+      style="
+        width: 80%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+      "
+    >
+      <!--general heading for the whole div -->
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+          height: 36px;
+        "
+      >
+        <div
+          style="
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            height: 100%;
+            font-size: 22px;
+            font-weight: 600;
+          "
+        >
+          Room Type
+        </div>
+        <div
+          style="
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            height: 100%;
+            font-size: 22px;
+            font-weight: 600;
+          "
+        >
+          Options
+        </div>
+        <div
+          style="
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            height: 100%;
+            font-size: 22px;
+            font-weight: 600;
+          "
+        >
+          Price
+        </div>
+        <div
+          style="
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            height: 100%;
+            font-size: 22px;
+            font-weight: 600;
+          "
+        >
+          Select Room
+        </div>
+      </div>
+
+      <!-- rows according to the availability of the rooms -->
+      <div
+        *ngFor="let room of roomsArr"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100%;
+          height: 110px;
+        "
+      >
+        <!-- room type -->
+        <div
+          style="
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(0, 0, 0);
+            height: 100%;
+            text-align: center;
+          "
+        >
+        <ul style="margin: 0;">
+          <ng-container *ngIf="getRoomTypeName(room);">
+            <ng-container *ngFor="let roomName of roomNameArr;let i=index;">
+              <li *ngIf="i===0"  style="margin: 0; font-weight: 600;">
+                {{ getValue(roomName) }}
+              </li>
+              <li *ngIf="i!==0"  style="margin: 0;font-size: 0.9rem;">
+                {{ getValue(roomName) }}
+              </li>
+            </ng-container>
+             
+
+          </ng-container>
+        </ul>
+       
+        </div>
+
+        <!-- options -->
+        <div
+          style="
+            width: 30%;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            border: 1px solid #000;
+            height: 100%;
+            padding: 7px 7px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: space-evenly;
+              height: 100%;
+            "
+          >
+            <h3 style="margin: 0; font-size: 1rem; text-transform: initial;" >
+              {{ getRoomInclusions(room) }} | <span style="position: relative;" (mouseover)="showCancellationPolicies($event,room?.RoomIndex)" (mouseleave)="hideCancellationPolicies(room?.RoomIndex)">
+                Cancellation policies
+               <div class="tooltip-content" *ngIf="tooltipVisibility[room?.RoomIndex]"  >
+                   <table>
+                       <thead>
+                           <tr>
+                               <th>From Date</th>
+                               <th>To Date</th>
+                               <th>Charge</th>
+                            
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr *ngFor="let policy of getCancellation(room?.RoomIndex)">
+                            <td>{{ transform(policy.FromDate) }}</td>
+                            <td>{{ transform(policy.ToDate) }}</td>
+                            <td>{{ policy.Charge }} {{ getChargeType(policy.ChargeType,policy?.Currency) }}</td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </div>
+             </span>*
+            </h3>
+            <h5 style="margin: 0; font-size: 11px; text-transform: capitalize">
+              
+              Last Cancellation Date{{ getLastCancellationDate(room) }}
+           
+            </h5>
+            <h5 style="margin: 0; font-size: 11px; text-transform: capitalize">
+              
+            </h5>
+          </div>
+        </div>
+
+        <!-- price -->
+        <div
+          style="
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            height: 100%;
+          "
+        >
+          <h3 style="font-size: 24px">₹ {{ getPriceOfRoom(room) }}</h3>
+          <h3 style="font-size: 0.9rem">
+            Agent Incentive ₹ <span style="color: green;">{{ getAgentIncentive(room) }}</span>
+          </h3>
+        </div>
+
+        <!-- Selection btn -->
+        <div
+          style="
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            height: 100%;
+          "
+        >
+          <button
+            style="
+              border: none;
+              background-color: #ff5757;
+              padding: 8px 22px;
+              border-radius: 16px;
+              box-shadow: 4px 4px 10px 0 #000;
+              font-size: 15px;
+              font-weight: 600;
+              color: #fff;
+              letter-spacing: 0.5px;
+              cursor: pointer;
+            "
+            (click)="addToSelectedRooms(activeRoomSelection,room)"          >
+            Select Room {{activeRoomSelection}}
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- selected rooms  -->
+    <div
+      style="
+        width: 20%;
+        background-color: rgb(233, 233, 233);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      "
+    >
+    <div *ngFor="let roomDetails of tempRoomsArr;let i=index " style="background-color: red;" >
+      
+      <ng-container *ngIf="roomDetails.room; else defaultContent">
+        <!-- Render a div if the room is present -->
+        <div style="color: #000;">
+          {{ getRoomTypeName(roomDetails.room)}}
+        </div>
+      </ng-container>
+
+      <ng-template #defaultContent>
+        <!-- Render a button if the room is not present -->
+        <button  style="
+        border: none;
+        background-color: #ff5757;
+        padding: 4px 8px;
+        border-radius: 16px;
+        box-shadow: 4px 4px 10px 0 #000;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        width:130px
+      " 
+        >Select your Room{{ i + 1 }}</button>
+      </ng-template>
+
+
+    </div>
+      <!-- <button
+        style="
+          border: 2px dashed #fff;
+          background-color: rgb(136, 136, 218);
+          font-weight: 700;
+          font-size: 20px;
+          border-radius: 10px;
+        "
+        
+      >
+      
+      </button> -->
+    </div>
+
+  </div>
+  
+</section>
