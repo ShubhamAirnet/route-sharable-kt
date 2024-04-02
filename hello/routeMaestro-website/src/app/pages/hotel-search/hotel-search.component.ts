@@ -221,37 +221,7 @@ export class HotelSearchComponent implements OnInit {
 
   // to console the hotels which are IsUnderCancellationALlowed=false
   
-  IsUnderCancellation() {
-    const hotel = this.allHotels.map(item => ({
-      ...item,
-      Response: item.Response.filter(hotel => {
-        // Check if IsUnderCancellationAllowed is false for the room
-        return (
-          hotel?.room?.GetHotelRoomResult?.IsUnderCancellationAllowed === false
-        );
-      })
-    }));
-  
-    console.log(hotel);
-  
-    // Convert the filtered hotel data to a JSON string
-    const jsonString = JSON.stringify(hotel, null, 2);
-    
-    // Create a Blob containing the JSON string
-    const blob = new Blob([jsonString], { type: "text/plain" });
-    
-    // Create a link element
-    const link = document.createElement("a");
-    
-    // Set the download attribute and create a URL pointing to the Blob
-    link.download = "filteredHotels.json";
-    link.href = window.URL.createObjectURL(blob);
-    console.log(link)
-    // Append the link to the document body and trigger a click event to download
-    document.body.appendChild(link);
-    link.click();
-  }
-  
+ 
 //  to reset all the filters
   handleFilterReset(){
     this.threeStarRating = null 
